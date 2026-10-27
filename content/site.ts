@@ -27,7 +27,9 @@ export const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About Us", href: "#about" },
   { label: "Services", href: "#services" },
+  { label: "Service Area", href: "#service-area" },
   { label: "Reviews", href: "#reviews" },
+  { label: "FAQs", href: "#faqs" },
   { label: "Contact Us", href: "#contact" },
 ] as const;
 
@@ -36,8 +38,13 @@ export const footerLinks = [
   { label: "About Us", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Reviews", href: "#reviews" },
+  { label: "Service Area", href: "#service-area" },
+  { label: "FAQs", href: "#faqs" },
   { label: "Contact Us", href: "#contact" },
 ] as const;
+
+/** Optional verified social profile URLs for Organization sameAs schema. */
+export const socialProfiles = [] as const;
 
 export const heroContent = {
   eyebrow: "Joyner Construction LLC",

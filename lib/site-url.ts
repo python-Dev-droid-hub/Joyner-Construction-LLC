@@ -1,9 +1,15 @@
 /**
  * Production site origin. Canonical, OG, sitemap, and JSON-LD `@id`/`url`
- * are emitted only when this is set (e.g. https://example.com).
+ * prefer NEXT_PUBLIC_SITE_URL; fall back to Vercel production host when set.
  */
 export function getSiteUrl(): string | undefined {
-  const raw = process.env.NEXT_PUBLIC_SITE_URL?.trim();
-  if (!raw) return undefined;
-  return raw.replace(/\/$/, "");
+  const configured = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  if (configured) return configured.replace(/\/$/, "");
+
+  const vercelProd = process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim();
+  if (vercelProd) {
+    return `https://${vercelProd.replace(/^https?:\/\//, "").replace(/\/$/, "")}`;
+  }
+
+  return undefined;
 }

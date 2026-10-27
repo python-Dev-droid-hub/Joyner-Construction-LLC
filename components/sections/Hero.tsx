@@ -31,7 +31,10 @@ export function Hero() {
             {heroContent.eyebrow}
           </p>
 
-          <h1 className="max-w-3xl font-display text-[clamp(2.35rem,6.5vw,4.75rem)] font-semibold leading-[0.98] tracking-[-0.02em] text-ivory">
+          <h1
+            id="page-title"
+            className="max-w-3xl font-display text-[clamp(2.35rem,6.5vw,4.75rem)] font-semibold leading-[0.98] tracking-[-0.02em] text-ivory"
+          >
             {heroContent.headline}
           </h1>
 

@@ -56,7 +56,7 @@ export const metadata: Metadata = {
         url: seo.ogImagePath,
         width: 2400,
         height: 1600,
-        alt: "Residential framing structure for home construction",
+        alt: "Residential framing structure for home construction in Bellingham, WA",
       },
     ],
   },
@@ -65,6 +65,10 @@ export const metadata: Metadata = {
     title: seo.title,
     description: seo.description,
     images: [seo.ogImagePath],
+  },
+  other: {
+    "geo.region": "US-WA",
+    "geo.placename": "Bellingham",
   },
   // Avoid inventing icons beyond the logo we have
   icons: {

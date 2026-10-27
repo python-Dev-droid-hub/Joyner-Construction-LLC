@@ -33,12 +33,36 @@ export function About() {
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
-          <p className="about-locale mt-5 text-sm font-semibold uppercase tracking-[0.18em] text-charcoal/55">
-            Serving {site.location}
+          <p className="about-locale mt-5 text-sm leading-relaxed text-stone-ink">
+            Serving{" "}
+            <a
+              href="#service-area"
+              className="font-semibold text-charcoal underline decoration-copper/40 underline-offset-4 hover:decoration-copper"
+            >
+              {site.locationShort}
+            </a>{" "}
+            and nearby communities. See{" "}
+            <a
+              href="#services"
+              className="font-semibold text-charcoal underline decoration-copper/40 underline-offset-4 hover:decoration-copper"
+            >
+              framing services
+            </a>{" "}
+            or{" "}
+            <a
+              href="#contact"
+              className="font-semibold text-charcoal underline decoration-copper/40 underline-offset-4 hover:decoration-copper"
+            >
+              request an estimate
+            </a>
+            .
           </p>
-          <div className="about-cta mt-8">
+          <div className="about-cta mt-8 flex flex-wrap gap-3">
             <Button href={aboutContent.cta.href} variant="primaryOnLight">
               {aboutContent.cta.label}
+            </Button>
+            <Button href="#faqs" variant="secondaryOnLight">
+              Read FAQs
             </Button>
           </div>
         </div>
