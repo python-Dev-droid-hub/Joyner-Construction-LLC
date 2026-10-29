@@ -24,23 +24,21 @@ export const site = {
 } as const;
 
 export const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About Us", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Service Area", href: "#service-area" },
-  { label: "Reviews", href: "#reviews" },
-  { label: "FAQs", href: "#faqs" },
-  { label: "Contact Us", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/#about" },
+  { label: "Services", href: "/#services" },
+  { label: "Reviews", href: "/#reviews" },
+  { label: "Contact Us", href: "/#contact" },
+  { label: "Serving Areas", href: "/serving-areas" },
 ] as const;
 
 export const footerLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About Us", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Reviews", href: "#reviews" },
-  { label: "Service Area", href: "#service-area" },
-  { label: "FAQs", href: "#faqs" },
-  { label: "Contact Us", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/#about" },
+  { label: "Services", href: "/#services" },
+  { label: "Reviews", href: "/#reviews" },
+  { label: "Contact Us", href: "/#contact" },
+  { label: "Serving Areas", href: "/serving-areas" },
 ] as const;
 
 /** Optional verified social profile URLs for Organization sameAs schema. */
@@ -53,8 +51,8 @@ export const heroContent = {
   brandLine: "A Strong Frame. A Better Home.",
   supporting:
     "Structural framing for new homes, additions, and residential projects in the Bellingham area. Request an estimate from Joyner Construction LLC.",
-  primaryCta: { label: "Request an Estimate", href: "#contact" },
-  secondaryCta: { label: "About Us", href: "#about" },
+  primaryCta: { label: "Request an Estimate", href: "/#contact" },
+  secondaryCta: { label: "Serving Areas", href: "/serving-areas" },
 } as const;
 
 export const aboutContent = {

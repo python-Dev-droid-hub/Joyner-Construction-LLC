@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { areas } from "@/content/pages";
 import { footerLinks, site } from "@/content/site";
 
 export function Footer() {
@@ -6,7 +7,7 @@ export function Footer() {
     <footer className="border-t border-ivory/10 bg-charcoal text-ivory">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:grid-cols-2 lg:grid-cols-[1.35fr_0.85fr_0.85fr_0.95fr] md:px-8 md:py-14">
         <div className="sm:col-span-2 lg:col-span-1">
-          <Link href="#home" className="inline-block">
+          <Link href="/" className="inline-block">
             <img
               src="/logo.png"
               alt={`${site.businessName} logo`}
@@ -45,13 +46,13 @@ export function Footer() {
             Serving areas
           </p>
           <ul className="mt-4 space-y-2">
-            {site.servingAreas.map((area) => (
-              <li key={area}>
+            {areas.map((area) => (
+              <li key={area.slug}>
                 <Link
-                  href="#service-area"
+                  href={`/serving-areas#${area.slug}`}
                   className="text-sm text-ivory/75 transition-colors hover:text-ivory"
                 >
-                  {area}
+                  {area.name}
                 </Link>
               </li>
             ))}

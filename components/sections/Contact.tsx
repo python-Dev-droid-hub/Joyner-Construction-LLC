@@ -4,32 +4,43 @@ import { useRef } from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { EstimateForm } from "@/components/forms/EstimateForm";
 import { ContactMap } from "@/components/sections/ContactMap";
+import type { LandingPageContent } from "@/content/landing";
 import { contactContent, site } from "@/content/site";
 import { useReveal } from "@/hooks/useReveal";
 
-const details = [
-  {
-    label: "Phone",
-    value: site.phone,
-    href: site.phoneHref,
-    icon: Phone,
-  },
-  {
-    label: "Email",
-    value: site.email,
-    href: `mailto:${site.email}`,
-    icon: Mail,
-  },
-  {
-    label: "Serving area",
-    value: site.locationShort,
-    icon: MapPin,
-  },
-] as const;
+type ContactProps = {
+  content?: LandingPageContent["contact"];
+};
 
-export function Contact() {
+export function Contact({ content }: ContactProps = {}) {
   const ref = useRef<HTMLElement>(null);
   useReveal({ scope: ref, stagger: 0.08, id: "reveal-contact" });
+
+  const eyebrow = content?.eyebrow ?? contactContent.eyebrow;
+  const title = content?.title ?? contactContent.title;
+  const description = content?.description ?? contactContent.description;
+  const servingLabel = content?.servingLabel ?? site.locationShort;
+  const map = content?.map ?? contactContent.map;
+
+  const details = [
+    {
+      label: "Phone",
+      value: site.phone,
+      href: site.phoneHref,
+      icon: Phone,
+    },
+    {
+      label: "Email",
+      value: site.email,
+      href: `mailto:${site.email}`,
+      icon: Mail,
+    },
+    {
+      label: "Serving area",
+      value: servingLabel,
+      icon: MapPin,
+    },
+  ] as const;
 
   return (
     <section
@@ -41,16 +52,16 @@ export function Contact() {
       <div className="mx-auto max-w-7xl">
         <div data-reveal className="max-w-2xl">
           <p className="mb-3 text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-copper">
-            {contactContent.eyebrow}
+            {eyebrow}
           </p>
           <h2
             id="contact-heading"
             className="font-display text-[clamp(1.85rem,4vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-charcoal"
           >
-            {contactContent.title}
+            {title}
           </h2>
           <p className="mt-4 text-base leading-relaxed text-stone-ink md:text-lg">
-            {contactContent.description}
+            {description}
           </p>
         </div>
 
@@ -95,7 +106,10 @@ export function Contact() {
             </aside>
 
             <div data-reveal className="min-h-[20rem] flex-1">
-              <ContactMap />
+              <ContactMap
+                map={map}
+                title={`Map of service area in ${map.zoomLabel}`}
+              />
             </div>
           </div>
 

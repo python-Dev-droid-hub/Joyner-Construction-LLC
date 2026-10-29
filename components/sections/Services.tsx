@@ -4,10 +4,11 @@ import { useRef } from "react";
 import SpatialServiceShowcase, {
   type ServiceShowcaseItem,
 } from "@/components/ui/spatial-product-showcase";
+import type { LandingPageContent } from "@/content/landing";
 import { servicesContent } from "@/content/site";
 import { useReveal } from "@/hooks/useReveal";
 
-const showcaseItems: ServiceShowcaseItem[] = [
+const defaultShowcaseItems: ServiceShowcaseItem[] = [
   {
     id: "new-home",
     label: "New Home",
@@ -46,9 +47,16 @@ const showcaseItems: ServiceShowcaseItem[] = [
   },
 ];
 
-export function Services() {
+type ServicesProps = {
+  content?: LandingPageContent["services"];
+};
+
+export function Services({ content }: ServicesProps = {}) {
   const ref = useRef<HTMLElement>(null);
   useReveal({ scope: ref, stagger: 0.08, id: "reveal-services" });
+
+  const title = content?.title ?? servicesContent.title;
+  const items = content?.items ?? defaultShowcaseItems;
 
   return (
     <section
@@ -63,12 +71,12 @@ export function Services() {
             id="services-heading"
             className="font-display text-[clamp(1.85rem,4vw,2.75rem)] font-semibold leading-[1.12] tracking-[-0.02em] text-charcoal"
           >
-            {servicesContent.title}
+            {title}
           </h2>
         </div>
 
         <div className="mt-8" data-reveal>
-          <SpatialServiceShowcase items={showcaseItems} autoPlayMs={5000} />
+          <SpatialServiceShowcase items={items} autoPlayMs={5000} />
         </div>
       </div>
     </section>

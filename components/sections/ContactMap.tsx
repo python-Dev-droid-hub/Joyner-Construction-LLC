@@ -3,9 +3,21 @@
 import { MapPin } from "lucide-react";
 import { contactContent } from "@/content/site";
 
-/** OpenStreetMap embed — no API key. Bellingham only (no pin chips). */
-export function ContactMap() {
-  const { lat, lng, zoomLabel } = contactContent.map;
+type ContactMapProps = {
+  map?: {
+    lat: number;
+    lng: number;
+    zoomLabel: string;
+  };
+  title?: string;
+};
+
+/** OpenStreetMap embed — no API key. */
+export function ContactMap({
+  map = contactContent.map,
+  title = "Map of residential construction service area",
+}: ContactMapProps = {}) {
+  const { lat, lng, zoomLabel } = map;
   const delta = 0.09;
   const bbox = [
     lng - delta,
@@ -30,7 +42,7 @@ export function ContactMap() {
 
       <div className="relative min-h-[14rem] flex-1 bg-stone/10">
         <iframe
-          title="Map of residential framing service area in Bellingham, Washington"
+          title={title}
           src={src}
           className="absolute inset-0 h-full w-full border-0"
           loading="lazy"

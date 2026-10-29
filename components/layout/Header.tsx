@@ -54,7 +54,7 @@ export function Header() {
     >
       <div className="mx-auto flex h-[4.25rem] max-w-7xl items-center justify-between gap-4 px-5 md:h-[4.75rem] md:px-8">
         <Link
-          href="#home"
+          href="/"
           className="relative z-10 flex shrink-0 items-center text-ivory focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-copper"
           onClick={closeMenu}
         >
@@ -72,19 +72,26 @@ export function Header() {
           className="hidden items-center gap-8 lg:flex"
           aria-label="Primary"
         >
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-ivory/80 transition-colors hover:text-ivory focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-copper"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const isServingAreas = link.href === "/serving-areas";
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={
+                  isServingAreas
+                    ? "nav-serving-areas text-[0.7rem] font-semibold uppercase tracking-[0.2em] hover:bg-ivory/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-copper"
+                    : "text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-ivory/80 transition-colors hover:text-ivory focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-copper"
+                }
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="hidden lg:block">
-          <Button href="#contact" variant="primary" className="min-h-10 px-5">
+          <Button href="/#contact" variant="primary" className="min-h-10 px-5">
             Request an Estimate
           </Button>
         </div>
@@ -129,20 +136,27 @@ export function Header() {
           className="mx-auto flex max-w-7xl flex-col gap-1 px-5 py-6"
           aria-label="Mobile"
         >
-          {navLinks.map((link, index) => (
-            <Link
-              key={link.href}
-              ref={index === 0 ? firstLinkRef : undefined}
-              href={link.href}
-              onClick={closeMenu}
-              className="px-2 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-ivory/90 transition-colors hover:text-ivory focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-copper"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link, index) => {
+            const isServingAreas = link.href === "/serving-areas";
+            return (
+              <Link
+                key={link.href}
+                ref={index === 0 ? firstLinkRef : undefined}
+                href={link.href}
+                onClick={closeMenu}
+                className={
+                  isServingAreas
+                    ? "nav-serving-areas my-1 w-fit text-sm font-semibold uppercase tracking-[0.18em] hover:bg-ivory/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-copper"
+                    : "px-2 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-ivory/90 transition-colors hover:text-ivory focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-copper"
+                }
+              >
+                {link.label}
+              </Link>
+            );
+          })}
           <div className="mt-4 px-2">
             <Button
-              href="#contact"
+              href="/#contact"
               variant="primary"
               className="w-full"
               onClick={closeMenu}

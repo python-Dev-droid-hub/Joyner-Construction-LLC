@@ -2,10 +2,22 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import type { LandingPageContent } from "@/content/landing";
 import { faqContent } from "@/content/site";
 
-export function Faq() {
+type FaqProps = {
+  content?: LandingPageContent["faq"];
+};
+
+export function Faq({ content }: FaqProps = {}) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const data = content ?? {
+    eyebrow: faqContent.eyebrow,
+    title: faqContent.title,
+    description: faqContent.description,
+    image: faqContent.image,
+    items: [...faqContent.items],
+  };
 
   return (
     <section
@@ -13,28 +25,26 @@ export function Faq() {
       className="scroll-mt-24 border-t border-charcoal/10 bg-ivory text-charcoal"
       aria-labelledby="faq-heading"
     >
-      {/* Mobile image — stacked above content */}
       <div className="relative h-[52vh] min-h-[18rem] overflow-hidden lg:hidden">
         <Image
-          src={faqContent.image.src}
-          alt={faqContent.image.alt}
+          src={data.image.src}
+          alt={data.image.alt}
           fill
           sizes="100vw"
           className="object-cover object-center contrast-[1.04] saturate-[1.08]"
           priority={false}
         />
         <p className="absolute bottom-5 left-5 rounded-full border border-charcoal/10 bg-ivory/90 px-4 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-charcoal shadow-sm backdrop-blur-sm">
-          {faqContent.image.caption}
+          {data.image.caption}
         </p>
       </div>
 
       <div className="lg:grid lg:grid-cols-2 lg:items-stretch">
-        {/* Left: sticky full-viewport service image until FAQ content ends */}
         <aside className="relative hidden min-h-full lg:block">
           <div className="sticky top-0 h-svh w-full overflow-hidden">
             <Image
-              src={faqContent.image.src}
-              alt={faqContent.image.alt}
+              src={data.image.src}
+              alt={data.image.alt}
               fill
               sizes="50vw"
               className="object-cover object-center contrast-[1.04] saturate-[1.08]"
@@ -42,30 +52,29 @@ export function Faq() {
             />
             <div className="absolute inset-x-0 bottom-0 p-8 xl:p-10">
               <p className="inline-flex rounded-full border border-charcoal/10 bg-ivory/90 px-4 py-2.5 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-charcoal shadow-sm backdrop-blur-sm">
-                {faqContent.image.caption}
+                {data.image.caption}
               </p>
             </div>
           </div>
         </aside>
 
-        {/* Right: FAQ content scrolls with the page */}
         <div className="flex flex-col justify-center px-5 py-12 md:px-10 md:py-14 lg:px-12 lg:py-16 xl:px-14">
           <div className="mx-auto w-full max-w-xl">
             <p className="mb-3 text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-copper">
-              {faqContent.eyebrow}
+              {data.eyebrow}
             </p>
             <h2
               id="faq-heading"
               className="max-w-lg font-display text-[clamp(1.85rem,3.5vw,2.75rem)] font-semibold leading-[1.08] tracking-[-0.02em] text-charcoal"
             >
-              {faqContent.title}
+              {data.title}
             </h2>
             <p className="mt-4 max-w-md text-base leading-relaxed text-stone-ink">
-              {faqContent.description}
+              {data.description}
             </p>
 
             <div className="mt-10 divide-y divide-charcoal/10 border-y border-charcoal/10">
-              {faqContent.items.map((item, index) => {
+              {data.items.map((item, index) => {
                 const open = openIndex === index;
                 const panelId = `faq-panel-${index}`;
                 const buttonId = `faq-button-${index}`;

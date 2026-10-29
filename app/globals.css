@@ -73,6 +73,53 @@ html {
   background-size: 180px 180px;
 }
 
+/* Featured nav cue: ivory label stays readable; soft copper ring breathes */
+@keyframes nav-serving-ring {
+  0%,
+  100% {
+    border-color: color-mix(in srgb, var(--copper-bright) 35%, transparent);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--copper) 0%, transparent);
+  }
+  50% {
+    border-color: color-mix(in srgb, var(--copper-bright) 85%, transparent);
+    box-shadow: 0 0 14px 0 color-mix(in srgb, var(--copper) 28%, transparent);
+  }
+}
+
+@keyframes nav-serving-dot {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.nav-serving-areas {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid color-mix(in srgb, var(--copper-bright) 55%, transparent);
+  border-radius: 999px;
+  color: var(--ivory);
+  animation: nav-serving-ring 3.2s ease-in-out infinite;
+}
+
+.nav-serving-areas::before {
+  content: "";
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 999px;
+  background: var(--copper-bright);
+  flex-shrink: 0;
+  animation: nav-serving-dot 3.2s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -86,6 +133,18 @@ html {
   .animate-testimonials-marquee,
   .animate-testimonials-marquee-reverse {
     animation: none !important;
+  }
+
+  .nav-serving-areas {
+    animation: none;
+    border-color: color-mix(in srgb, var(--copper-bright) 70%, transparent);
+    box-shadow: none;
+  }
+
+  .nav-serving-areas::before {
+    animation: none;
+    opacity: 0.9;
+    transform: none;
   }
 }
 
