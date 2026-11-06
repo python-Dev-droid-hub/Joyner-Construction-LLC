@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { isSmtpConfigured, sendEstimateRequestEmail } from "@/lib/mail";
 
 type EstimatePayload = {
   name?: string;
@@ -50,6 +51,33 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, errors }, { status: 400 });
   }
 
+  if (isSmtpConfigured()) {
+    try {
+      await sendEstimateRequestEmail({
+        name,
+        email,
+        phone: phone || undefined,
+        projectDetails,
+      });
+
+      return NextResponse.json({
+        ok: true,
+        mode: "live",
+        message: "Thank you. Your estimate request has been sent.",
+      });
+    } catch (error) {
+      console.error("[estimate] Nodemailer delivery failed", error);
+      return NextResponse.json(
+        {
+          ok: false,
+          error:
+            "We could not send your request right now. Please email joynerconstllc@gmail.com or try again shortly.",
+        },
+        { status: 502 },
+      );
+    }
+  }
+
   const webhook = process.env.ESTIMATE_WEBHOOK_URL;
   const formspree = process.env.FORMSPREE_ENDPOINT;
 
@@ -89,8 +117,7 @@ export async function POST(request: Request) {
     });
   }
 
-  // Development / unset backend: acknowledge without claiming delivery.
-  console.info("[estimate] Development-mode submission (no backend configured)", {
+  console.info("[estimate] Development-mode submission (no SMTP configured)", {
     name,
     email,
     phone: phone || null,
@@ -101,6 +128,6 @@ export async function POST(request: Request) {
     ok: true,
     mode: "development",
     message:
-      "Request received in development mode. No email backend is configured yet—set ESTIMATE_WEBHOOK_URL or FORMSPREE_ENDPOINT to enable live delivery.",
+      "Request received in development mode. No email backend is configured yet—set SMTP_HOST, SMTP_USER, and SMTP_PASS to enable live delivery.",
   });
 }
