@@ -70,9 +70,9 @@ export const metadata: Metadata = {
     "geo.region": "US-WA",
     "geo.placename": "Bellingham",
   },
-  // Avoid inventing icons beyond the logo we have
   icons: {
     icon: [{ url: "/logo.png", type: "image/png" }],
+    shortcut: [{ url: "/logo.png", type: "image/png" }],
     apple: [{ url: "/logo.png", type: "image/png" }],
   },
 };
