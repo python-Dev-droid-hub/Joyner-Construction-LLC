@@ -11,6 +11,14 @@ const description = `Residential construction services in Bellingham, Ferndale, 
 export const metadata: Metadata = {
   title,
   description,
+  robots: {
+    index: false,
+    follow: true,
+    googleBot: {
+      index: false,
+      follow: true,
+    },
+  },
   alternates: { canonical: "/serving-areas" },
   openGraph: {
     title: `${title} | ${site.businessName}`,

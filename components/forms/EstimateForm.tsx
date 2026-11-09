@@ -18,6 +18,8 @@ const initial = {
   phone: "",
   projectDetails: "",
   consent: false,
+  /** Honeypot — leave empty; bots that fill it are rejected. */
+  companyWebsite: "",
 };
 
 export function EstimateForm() {
@@ -108,9 +110,28 @@ export function EstimateForm() {
     <form
       onSubmit={onSubmit}
       noValidate
-      className="space-y-5"
+      className="relative space-y-5"
       aria-describedby="estimate-form-status"
     >
+      {/* Honeypot: hidden from people, visible to simple bots */}
+      <div
+        aria-hidden="true"
+        className="absolute left-[-10000px] top-auto h-px w-px overflow-hidden"
+      >
+        <label htmlFor="estimate-company-website">Company website</label>
+        <input
+          id="estimate-company-website"
+          name="companyWebsite"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          value={values.companyWebsite}
+          onChange={(e) =>
+            setValues((v) => ({ ...v, companyWebsite: e.target.value }))
+          }
+        />
+      </div>
+
       <div>
         <label htmlFor="estimate-name" className={labelClass}>
           Name <span className="text-copper-bright">*</span>
@@ -254,13 +275,7 @@ export function EstimateForm() {
         className="min-h-[1.5rem] text-sm"
       >
         {status.type === "success" ? (
-          <p
-            className={
-              status.mode === "development" ? "text-copper" : "text-stone-ink"
-            }
-          >
-            {status.message}
-          </p>
+          <p className="text-stone-ink">{status.message}</p>
         ) : null}
         {status.type === "error" ? (
           <p className="text-copper">{status.message}</p>

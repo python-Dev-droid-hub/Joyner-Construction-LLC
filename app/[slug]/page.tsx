@@ -41,6 +41,14 @@ export async function generateMetadata({
   return {
     title: pageSeo.title,
     description: pageSeo.description,
+    robots: {
+      index: false,
+      follow: true,
+      googleBot: {
+        index: false,
+        follow: true,
+      },
+    },
     alternates: { canonical: pageSeo.path },
     openGraph: {
       title: `${pageSeo.title} | ${site.businessName}`,

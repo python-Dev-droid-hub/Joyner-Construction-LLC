@@ -53,6 +53,14 @@ function escapeHtml(value: string) {
     .replaceAll('"', "&quot;");
 }
 
+/** Strip CR/LF and control chars so values cannot inject email headers. */
+export function sanitizeHeaderValue(value: string, max = 200): string {
+  return value
+    .replace(/[\r\n\u0000-\u001f\u007f]/g, "")
+    .trim()
+    .slice(0, max);
+}
+
 export async function sendEstimateRequestEmail(payload: EstimateMailPayload) {
   const to =
     requiredEnv("CONTACT_TO_EMAIL") ??
@@ -62,19 +70,21 @@ export async function sendEstimateRequestEmail(payload: EstimateMailPayload) {
     requiredEnv("SMTP_FROM") ??
     `"${site.businessName}" <${requiredEnv("SMTP_USER") ?? site.email}>`;
 
+  const safeName = sanitizeHeaderValue(payload.name, 100);
+  const safeEmail = sanitizeHeaderValue(payload.email, 254);
   const phoneLine = payload.phone?.trim()
-    ? payload.phone.trim()
+    ? sanitizeHeaderValue(payload.phone, 40)
     : "Not provided";
 
   const text = [
     `New estimate request from the ${site.businessName} website`,
     "",
-    `Name: ${payload.name}`,
-    `Email: ${payload.email}`,
+    `Name: ${safeName}`,
+    `Email: ${safeEmail}`,
     `Phone: ${phoneLine}`,
     "",
     "Project details:",
-    payload.projectDetails,
+    payload.projectDetails.slice(0, 5000),
   ].join("\n");
 
   const html = `
@@ -84,11 +94,11 @@ export async function sendEstimateRequestEmail(payload: EstimateMailPayload) {
       <table style="border-collapse:collapse;width:100%;max-width:560px">
         <tr>
           <td style="padding:8px 0;font-weight:bold;width:120px">Name</td>
-          <td style="padding:8px 0">${escapeHtml(payload.name)}</td>
+          <td style="padding:8px 0">${escapeHtml(safeName)}</td>
         </tr>
         <tr>
           <td style="padding:8px 0;font-weight:bold">Email</td>
-          <td style="padding:8px 0"><a href="mailto:${escapeHtml(payload.email)}">${escapeHtml(payload.email)}</a></td>
+          <td style="padding:8px 0"><a href="mailto:${escapeHtml(safeEmail)}">${escapeHtml(safeEmail)}</a></td>
         </tr>
         <tr>
           <td style="padding:8px 0;font-weight:bold">Phone</td>
@@ -96,7 +106,7 @@ export async function sendEstimateRequestEmail(payload: EstimateMailPayload) {
         </tr>
       </table>
       <h3 style="margin:20px 0 8px">Project details</h3>
-      <p style="margin:0;white-space:pre-wrap">${escapeHtml(payload.projectDetails)}</p>
+      <p style="margin:0;white-space:pre-wrap">${escapeHtml(payload.projectDetails.slice(0, 5000))}</p>
     </div>
   `;
 
@@ -104,8 +114,8 @@ export async function sendEstimateRequestEmail(payload: EstimateMailPayload) {
   await transport.sendMail({
     from,
     to,
-    replyTo: payload.email,
-    subject: `Estimate request from ${payload.name}`,
+    replyTo: safeEmail,
+    subject: `Estimate request from ${safeName || "website visitor"}`,
     text,
     html,
   });

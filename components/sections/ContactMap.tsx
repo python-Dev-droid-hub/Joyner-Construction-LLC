@@ -47,6 +47,7 @@ export function ContactMap({
           className="absolute inset-0 h-full w-full border-0"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
+          sandbox="allow-scripts allow-same-origin allow-popups"
         />
       </div>
     </div>
