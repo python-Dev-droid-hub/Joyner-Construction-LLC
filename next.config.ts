@@ -58,6 +58,16 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        // Homepage is the Bellingham framing serving-area page.
+        source: "/framing-services-in-bellingham-wa",
+        destination: "/",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

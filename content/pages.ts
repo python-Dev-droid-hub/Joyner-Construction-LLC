@@ -19,11 +19,6 @@ import {
   isBurlingtonSiding,
 } from "@/content/siding-burlington";
 import {
-  bellinghamFramingHero,
-  bellinghamFramingSeo,
-  isBellinghamFraming,
-} from "@/content/framing-bellingham";
-import {
   burlingtonFramingHero,
   burlingtonFramingSeo,
   isBurlingtonFraming,
@@ -209,8 +204,22 @@ export function buildPageSlug(serviceSlug: string, areaSlug: string): string {
   return `${serviceSlug}${SLUG_JOIN}${areaSlug}`;
 }
 
+/**
+ * Homepage is the Bellingham framing serving-area page.
+ * All other service × area combos use dedicated landing URLs.
+ */
 export function pagePath(serviceSlug: string, areaSlug: string): string {
+  if (serviceSlug === "framing" && areaSlug === "bellingham-wa") {
+    return "/";
+  }
   return `/${buildPageSlug(serviceSlug, areaSlug)}`;
+}
+
+export function isHomepageFramingBellingham(
+  serviceSlug: string,
+  areaSlug: string,
+): boolean {
+  return serviceSlug === "framing" && areaSlug === "bellingham-wa";
 }
 
 /** City siding pages with custom content + metadata that should be indexed. */
@@ -251,9 +260,13 @@ export function parsePageSlug(
 
 export function allPageParams(): { slug: string }[] {
   return areas.flatMap((area) =>
-    services.map((service) => ({
-      slug: buildPageSlug(service.slug, area.slug),
-    })),
+    services
+      .filter(
+        (service) => !isHomepageFramingBellingham(service.slug, area.slug),
+      )
+      .map((service) => ({
+        slug: buildPageSlug(service.slug, area.slug),
+      })),
   );
 }
 
@@ -298,14 +311,6 @@ function getCustomPageCopy(
       supporting: burlingtonSidingHero.supporting,
       title: burlingtonSidingSeo.title,
       description: burlingtonSidingSeo.description,
-    };
-  }
-  if (isBellinghamFraming(service.slug, area.slug)) {
-    return {
-      headline: bellinghamFramingHero.headline,
-      supporting: bellinghamFramingHero.supporting,
-      title: bellinghamFramingSeo.title,
-      description: bellinghamFramingSeo.description,
     };
   }
   if (isBurlingtonFraming(service.slug, area.slug)) {

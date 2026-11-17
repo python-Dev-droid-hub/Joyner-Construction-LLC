@@ -20,10 +20,6 @@ import {
   isBurlingtonSiding,
 } from "@/content/siding-burlington";
 import {
-  applyBellinghamFramingContent,
-  isBellinghamFraming,
-} from "@/content/framing-bellingham";
-import {
   applyBurlingtonFramingContent,
   isBurlingtonFraming,
 } from "@/content/framing-burlington";
@@ -577,10 +573,6 @@ export function buildLandingContent(
 
   if (isBurlingtonSiding(service.slug, area.slug)) {
     return applyBurlingtonSidingContent(content);
-  }
-
-  if (isBellinghamFraming(service.slug, area.slug)) {
-    return applyBellinghamFramingContent(content);
   }
 
   if (isBurlingtonFraming(service.slug, area.slug)) {
