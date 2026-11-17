@@ -12,9 +12,10 @@ export const burlingtonSidingHero = {
 };
 
 export const burlingtonSidingSeo = {
-  title: "Siding Repair & Installation in Burlington, WA",
+  title:
+    "Expert Siding Solutions in Burlington, WA – Home Siding Installation, Repair & Replacement | Joyner Construction LLC",
   description:
-    "Improve your property's exterior with dependable siding solutions from Joyner Construction LLC. We help homeowners and commercial property owners in Burlington, WA, address damaged siding, replace aging materials, and plan new installations.",
+    "Enhance and protect your property with quality siding services in Burlington, WA. Joyner Construction LLC specializes in siding installation, repairs, and replacement for residential and commercial properties. Request an estimate today!",
 };
 
 /** Swap the shared template copy for the Burlington siding page. Images stay in place. */

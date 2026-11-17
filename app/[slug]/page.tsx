@@ -9,6 +9,7 @@ import {
   allPageParams,
   buildPageHeroCopy,
   buildPageSeo,
+  isIndexedLandingPage,
   parsePageSlug,
 } from "@/content/pages";
 import { getServiceImagePack } from "@/content/service-images.server";
@@ -37,21 +38,29 @@ export async function generateMetadata({
   const pageSeo = buildPageSeo(service, area);
   const siteUrl = getSiteUrl();
   const canonical = siteUrl ? `${siteUrl}${pageSeo.path}` : pageSeo.path;
+  const titleHasBrand = pageSeo.title.includes(site.businessName);
+  const documentTitle = titleHasBrand
+    ? { absolute: pageSeo.title }
+    : pageSeo.title;
+  const socialTitle = titleHasBrand
+    ? pageSeo.title
+    : `${pageSeo.title} | ${site.businessName}`;
+  const shouldIndex = isIndexedLandingPage(service.slug, area.slug);
 
   return {
-    title: pageSeo.title,
+    title: documentTitle,
     description: pageSeo.description,
     robots: {
-      index: false,
+      index: shouldIndex,
       follow: true,
       googleBot: {
-        index: false,
+        index: shouldIndex,
         follow: true,
       },
     },
     alternates: { canonical: pageSeo.path },
     openGraph: {
-      title: `${pageSeo.title} | ${site.businessName}`,
+      title: socialTitle,
       description: pageSeo.description,
       url: canonical,
       images: [
@@ -63,7 +72,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `${pageSeo.title} | ${site.businessName}`,
+      title: socialTitle,
       description: pageSeo.description,
       images: [pageSeo.ogImage],
     },

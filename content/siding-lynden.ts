@@ -12,9 +12,10 @@ export const lyndenSidingHero = {
 };
 
 export const lyndenSidingSeo = {
-  title: "Siding Repair & Installation in Lynden, WA",
+  title:
+    "Reliable Siding Contractors in Lynden, WA | Installation, Repairs & Home Exterior Upgrades – Joyner Construction LLC",
   description:
-    "Give your home or business a well-maintained exterior with Joyner Construction LLC. We provide siding repair, replacement, and installation services in Lynden, WA.",
+    "Upgrade your home's exterior with professional siding services in Lynden, WA. Joyner Construction LLC delivers dependable siding installation, repairs, and replacement solutions. Get in touch today!",
 };
 
 /** Swap the shared template copy for the Lynden siding page. Images stay in place. */

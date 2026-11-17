@@ -12,9 +12,10 @@ export const ferndaleSidingHero = {
 };
 
 export const ferndaleSidingSeo = {
-  title: "Siding Repair & Installation in Ferndale, WA",
+  title:
+    "Professional Siding Installation, Repair & Replacement Services in Ferndale, WA | Joyner Construction LLC",
   description:
-    "Give your property a refreshed exterior with Joyner Construction LLC. We provide residential and commercial siding repair, replacement, and installation services in Ferndale, WA.",
+    "Looking for professional siding services in Ferndale, WA? Joyner Construction LLC offers residential and commercial siding installation, repair, and replacement, including vinyl and fiber cement siding. Contact us today for an estimate!",
 };
 
 /** Swap the shared template copy for the Ferndale siding page. Images stay in place. */

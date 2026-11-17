@@ -193,6 +193,27 @@ export function pagePath(serviceSlug: string, areaSlug: string): string {
   return `/${buildPageSlug(serviceSlug, areaSlug)}`;
 }
 
+/** City siding pages with custom content + metadata that should be indexed. */
+export function isIndexedLandingPage(
+  serviceSlug: string,
+  areaSlug: string,
+): boolean {
+  return (
+    isBellinghamSiding(serviceSlug, areaSlug) ||
+    isFerndaleSiding(serviceSlug, areaSlug) ||
+    isLyndenSiding(serviceSlug, areaSlug) ||
+    isBurlingtonSiding(serviceSlug, areaSlug)
+  );
+}
+
+export function indexedLandingPaths(): string[] {
+  return areas.flatMap((area) =>
+    services
+      .filter((service) => isIndexedLandingPage(service.slug, area.slug))
+      .map((service) => pagePath(service.slug, area.slug)),
+  );
+}
+
 export function parsePageSlug(
   slug: string,
 ): { service: ServiceDef; area: AreaDef } | undefined {

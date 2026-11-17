@@ -12,9 +12,10 @@ export const bellinghamSidingHero = {
 };
 
 export const bellinghamSidingSeo = {
-  title: "Siding Repair & Installation in Bellingham, WA",
+  title:
+    "Professional Siding Installation, Repair & Replacement Services in Bellingham, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides best residential and commercial siding solutions in Bellingham, WA. From damaged exterior panels to complete siding upgrades, our team focuses on quality workmanship, suitable materials, and reliable improvements.",
+    "Looking for professional siding services in Bellingham, WA? Joyner Construction LLC provides quality siding installation, repair, and replacement to protect and enhance your home's appearance. Contact us today for a free estimate!",
 };
 
 /** Swap the shared template copy for the Bellingham siding page. Images stay in place. */
