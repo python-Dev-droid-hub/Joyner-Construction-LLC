@@ -407,6 +407,7 @@ export function buildLandingContent(
       orbit: {
         centerImage: images.orbitCenter,
         centerAlt: `${service.name} project work by Joyner Construction LLC in ${area.name}`,
+        centerTitle: `${service.name} orbit center — Joyner Construction LLC in ${area.name}`,
         centerLabel: `${area.nameShort} · ${service.name}`,
         nodes: {
           inquire: images.orbitInquire,
@@ -415,6 +416,22 @@ export function buildLandingContent(
           craft: images.orbitCraft,
           structure: images.orbitStructure,
           handoff: images.orbitHandoff,
+        },
+        nodeAlts: {
+          inquire: `Inquire stage — discussing ${serviceLower} project needs with Joyner Construction LLC in ${area.name}`,
+          scope: `Scope stage — outlining ${serviceLower} project requirements for Joyner Construction LLC in ${area.name}`,
+          layout: `Layout stage — planning ${serviceLower} measurements and site layout in ${area.name}`,
+          craft: `Craft stage — ${serviceLower} installation craftsmanship by Joyner Construction LLC in ${area.name}`,
+          structure: `Structure stage — building the ${serviceLower} framework in ${area.name}`,
+          handoff: `Handoff stage — completed ${serviceLower} work ready for next trades in ${area.name}`,
+        },
+        nodeTitles: {
+          inquire: `${service.name} inquire stage — Joyner Construction LLC, ${area.nameShort}`,
+          scope: `${service.name} scope stage — Joyner Construction LLC, ${area.nameShort}`,
+          layout: `${service.name} layout stage — Joyner Construction LLC, ${area.nameShort}`,
+          craft: `${service.name} craft stage — Joyner Construction LLC, ${area.nameShort}`,
+          structure: `${service.name} structure stage — Joyner Construction LLC, ${area.nameShort}`,
+          handoff: `${service.name} handoff stage — Joyner Construction LLC, ${area.nameShort}`,
         },
         serviceName: service.name,
         areaName: area.name,

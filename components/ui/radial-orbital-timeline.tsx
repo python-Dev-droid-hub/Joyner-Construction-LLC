@@ -24,6 +24,10 @@ export interface TimelineItem {
   status: "completed" | "in-progress" | "pending";
   energy: number;
   image: string;
+  /** Descriptive alt text for the orbit node photo. */
+  imageAlt: string;
+  /** HTML title attribute for the orbit node photo. */
+  imageTitle: string;
   borderClass: string;
 }
 
@@ -32,6 +36,7 @@ export interface RadialOrbitalTimelineProps {
   centerImage: string;
   centerLabel: string;
   centerAlt: string;
+  centerTitle?: string;
   className?: string;
 }
 
@@ -40,6 +45,7 @@ export default function RadialOrbitalTimeline({
   centerImage,
   centerLabel,
   centerAlt,
+  centerTitle,
   className,
 }: RadialOrbitalTimelineProps) {
   const [expandedItems, setExpandedItems] = useState<Record<number, boolean>>(
@@ -221,7 +227,7 @@ export default function RadialOrbitalTimeline({
             <Image
               src={centerImage}
               alt={centerAlt}
-              title={centerAlt}
+              title={centerTitle ?? centerAlt}
               fill
               sizes="160px"
               quality={92}
@@ -280,8 +286,8 @@ export default function RadialOrbitalTimeline({
                 >
                   <Image
                     src={item.image}
-                    alt={`${item.title} stage — ${centerLabel}`}
-                    title={`${item.title} stage — ${centerLabel}`}
+                    alt={item.imageAlt}
+                    title={item.imageTitle}
                     fill
                     sizes="96px"
                     quality={90}
