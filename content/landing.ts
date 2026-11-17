@@ -19,6 +19,22 @@ import {
   applyBurlingtonSidingContent,
   isBurlingtonSiding,
 } from "@/content/siding-burlington";
+import {
+  applyBellinghamFramingContent,
+  isBellinghamFraming,
+} from "@/content/framing-bellingham";
+import {
+  applyBurlingtonFramingContent,
+  isBurlingtonFraming,
+} from "@/content/framing-burlington";
+import {
+  applyFerndaleFramingContent,
+  isFerndaleFraming,
+} from "@/content/framing-ferndale";
+import {
+  applyLyndenFramingContent,
+  isLyndenFraming,
+} from "@/content/framing-lynden";
 import { reviewsContent } from "@/content/site";
 
 export type LandingPageContent = {
@@ -561,6 +577,22 @@ export function buildLandingContent(
 
   if (isBurlingtonSiding(service.slug, area.slug)) {
     return applyBurlingtonSidingContent(content);
+  }
+
+  if (isBellinghamFraming(service.slug, area.slug)) {
+    return applyBellinghamFramingContent(content);
+  }
+
+  if (isBurlingtonFraming(service.slug, area.slug)) {
+    return applyBurlingtonFramingContent(content);
+  }
+
+  if (isFerndaleFraming(service.slug, area.slug)) {
+    return applyFerndaleFramingContent(content);
+  }
+
+  if (isLyndenFraming(service.slug, area.slug)) {
+    return applyLyndenFramingContent(content);
   }
 
   return content;

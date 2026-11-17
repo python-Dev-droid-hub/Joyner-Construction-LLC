@@ -18,6 +18,26 @@ import {
   burlingtonSidingSeo,
   isBurlingtonSiding,
 } from "@/content/siding-burlington";
+import {
+  bellinghamFramingHero,
+  bellinghamFramingSeo,
+  isBellinghamFraming,
+} from "@/content/framing-bellingham";
+import {
+  burlingtonFramingHero,
+  burlingtonFramingSeo,
+  isBurlingtonFraming,
+} from "@/content/framing-burlington";
+import {
+  ferndaleFramingHero,
+  ferndaleFramingSeo,
+  isFerndaleFraming,
+} from "@/content/framing-ferndale";
+import {
+  lyndenFramingHero,
+  lyndenFramingSeo,
+  isLyndenFraming,
+} from "@/content/framing-lynden";
 
 export type ServiceDef = {
   slug: string;
@@ -237,36 +257,97 @@ export function allPageParams(): { slug: string }[] {
   );
 }
 
+type CustomPageCopy = {
+  headline: string;
+  supporting: string;
+  title: string;
+  description: string;
+};
+
+function getCustomPageCopy(
+  service: ServiceDef,
+  area: AreaDef,
+): CustomPageCopy | undefined {
+  if (isBellinghamSiding(service.slug, area.slug)) {
+    return {
+      headline: bellinghamSidingHero.headline,
+      supporting: bellinghamSidingHero.supporting,
+      title: bellinghamSidingSeo.title,
+      description: bellinghamSidingSeo.description,
+    };
+  }
+  if (isFerndaleSiding(service.slug, area.slug)) {
+    return {
+      headline: ferndaleSidingHero.headline,
+      supporting: ferndaleSidingHero.supporting,
+      title: ferndaleSidingSeo.title,
+      description: ferndaleSidingSeo.description,
+    };
+  }
+  if (isLyndenSiding(service.slug, area.slug)) {
+    return {
+      headline: lyndenSidingHero.headline,
+      supporting: lyndenSidingHero.supporting,
+      title: lyndenSidingSeo.title,
+      description: lyndenSidingSeo.description,
+    };
+  }
+  if (isBurlingtonSiding(service.slug, area.slug)) {
+    return {
+      headline: burlingtonSidingHero.headline,
+      supporting: burlingtonSidingHero.supporting,
+      title: burlingtonSidingSeo.title,
+      description: burlingtonSidingSeo.description,
+    };
+  }
+  if (isBellinghamFraming(service.slug, area.slug)) {
+    return {
+      headline: bellinghamFramingHero.headline,
+      supporting: bellinghamFramingHero.supporting,
+      title: bellinghamFramingSeo.title,
+      description: bellinghamFramingSeo.description,
+    };
+  }
+  if (isBurlingtonFraming(service.slug, area.slug)) {
+    return {
+      headline: burlingtonFramingHero.headline,
+      supporting: burlingtonFramingHero.supporting,
+      title: burlingtonFramingSeo.title,
+      description: burlingtonFramingSeo.description,
+    };
+  }
+  if (isFerndaleFraming(service.slug, area.slug)) {
+    return {
+      headline: ferndaleFramingHero.headline,
+      supporting: ferndaleFramingHero.supporting,
+      title: ferndaleFramingSeo.title,
+      description: ferndaleFramingSeo.description,
+    };
+  }
+  if (isLyndenFraming(service.slug, area.slug)) {
+    return {
+      headline: lyndenFramingHero.headline,
+      supporting: lyndenFramingHero.supporting,
+      title: lyndenFramingSeo.title,
+      description: lyndenFramingSeo.description,
+    };
+  }
+  return undefined;
+}
+
 export function buildPageHeroCopy(
   service: ServiceDef,
   area: AreaDef,
   heroImage: string = service.image,
 ) {
-  const bellingham = isBellinghamSiding(service.slug, area.slug);
-  const ferndale = isFerndaleSiding(service.slug, area.slug);
-  const lynden = isLyndenSiding(service.slug, area.slug);
-  const burlington = isBurlingtonSiding(service.slug, area.slug);
+  const custom = getCustomPageCopy(service, area);
 
   return {
     eyebrow: "Joyner Construction LLC",
-    headline: bellingham
-      ? bellinghamSidingHero.headline
-      : ferndale
-        ? ferndaleSidingHero.headline
-        : lynden
-          ? lyndenSidingHero.headline
-          : burlington
-            ? burlingtonSidingHero.headline
-            : `${service.name} in ${area.name}`,
-    supporting: bellingham
-      ? bellinghamSidingHero.supporting
-      : ferndale
-        ? ferndaleSidingHero.supporting
-        : lynden
-          ? lyndenSidingHero.supporting
-          : burlington
-            ? burlingtonSidingHero.supporting
-            : `${service.blurb} Serving homeowners in ${area.nameShort} and nearby communities. Request an estimate to discuss scope.`,
+    headline: custom?.headline ?? `${service.name} in ${area.name}`,
+    supporting:
+      custom?.supporting ??
+      `${service.blurb} Serving homeowners in ${area.nameShort} and nearby communities. Request an estimate to discuss scope.`,
     primaryCta: { label: "Request an Estimate", href: "#contact" },
     secondaryCta: { label: "Serving Areas", href: "/serving-areas" },
     image: heroImage,
@@ -275,31 +356,12 @@ export function buildPageHeroCopy(
 }
 
 export function buildPageSeo(service: ServiceDef, area: AreaDef) {
-  const bellingham = isBellinghamSiding(service.slug, area.slug);
-  const ferndale = isFerndaleSiding(service.slug, area.slug);
-  const lynden = isLyndenSiding(service.slug, area.slug);
-  const burlington = isBurlingtonSiding(service.slug, area.slug);
-  const title = bellingham
-    ? bellinghamSidingSeo.title
-    : ferndale
-      ? ferndaleSidingSeo.title
-      : lynden
-        ? lyndenSidingSeo.title
-        : burlington
-          ? burlingtonSidingSeo.title
-          : `${service.name} in ${area.name}`;
-  const description = bellingham
-    ? bellinghamSidingSeo.description
-    : ferndale
-      ? ferndaleSidingSeo.description
-      : lynden
-        ? lyndenSidingSeo.description
-        : burlington
-          ? burlingtonSidingSeo.description
-          : `${service.name} services in ${area.name} from Joyner Construction LLC. ${service.blurb} Call (360) 595-8365 or request an estimate.`;
+  const custom = getCustomPageCopy(service, area);
   return {
-    title,
-    description,
+    title: custom?.title ?? `${service.name} in ${area.name}`,
+    description:
+      custom?.description ??
+      `${service.name} services in ${area.name} from Joyner Construction LLC. ${service.blurb} Call (360) 595-8365 or request an estimate.`,
     path: pagePath(service.slug, area.slug),
     ogImage: service.image,
   };
