@@ -154,11 +154,23 @@ function buildTimeline(orbit: AboutOrbitContent): TimelineItem[] {
 }
 
 type AboutOrbitProps = {
-  content?: AboutOrbitContent;
+  /** Full orbit pack, or a partial override (e.g. homepage step copy). */
+  content?: Partial<AboutOrbitContent>;
 };
 
 export function AboutOrbit({ content }: AboutOrbitProps = {}) {
-  const orbit = content ?? DEFAULT_ORBIT;
+  const orbit: AboutOrbitContent = content
+    ? {
+        ...DEFAULT_ORBIT,
+        ...content,
+        nodes: { ...DEFAULT_ORBIT.nodes, ...content.nodes },
+        steps: content.steps
+          ? { ...content.steps }
+          : DEFAULT_ORBIT.steps
+            ? { ...DEFAULT_ORBIT.steps }
+            : undefined,
+      }
+    : DEFAULT_ORBIT;
 
   return (
     <RadialOrbitalTimeline

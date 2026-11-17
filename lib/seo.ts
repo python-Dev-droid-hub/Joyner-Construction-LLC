@@ -2,15 +2,16 @@ import { faqContent, site, socialProfiles } from "@/content/site";
 import { getSiteUrl } from "@/lib/site-url";
 
 export const seo = {
-  title: `Residential Framing in Bellingham, WA | ${site.businessName}`,
-  description: `Residential framing for new homes, additions, and renovations in Bellingham, Ferndale, Lynden, and Burlington, WA. Call ${site.phone} or email ${site.email}. Hours: ${site.hoursShort} Pacific Time.`,
+  title: `Structural Framing in Bellingham, WA | ${site.businessName}`,
+  description:
+    "Joyner Construction LLC provides structural framing services in Bellingham, WA, with wood and steel installation options for new buildings, property expansions, and renovation projects.",
   keywords: [
-    "residential framing Bellingham",
+    "structural framing Bellingham",
     "residential framing Bellingham WA",
+    "commercial framing Bellingham",
+    "wood framing contractor Bellingham",
+    "steel framing Bellingham WA",
     "home framing contractor Bellingham",
-    "residential framing Ferndale WA",
-    "residential framing Lynden WA",
-    "residential framing Burlington WA",
     "Joyner Construction LLC",
   ],
   ogImagePath: "/images/hero/framing-neighborhood.webp",

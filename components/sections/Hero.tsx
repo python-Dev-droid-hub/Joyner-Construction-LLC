@@ -9,7 +9,7 @@ export function Hero() {
     <section
       id="home"
       className="hero-root relative h-[100svh] min-h-[36rem] overflow-hidden bg-charcoal text-ivory"
-      aria-label="Residential framing in Bellingham"
+      aria-label="Structural framing in Bellingham"
     >
       <div className="absolute inset-0">
         <Image
@@ -33,14 +33,20 @@ export function Hero() {
 
           <h1
             id="page-title"
-            className="max-w-3xl font-display text-[clamp(2.35rem,6.5vw,4.75rem)] font-semibold leading-[0.98] tracking-[-0.02em] text-ivory"
+            className={
+              heroContent.headline.length > 90
+                ? "max-w-4xl font-display text-[clamp(1.55rem,4.2vw,2.85rem)] font-semibold leading-[1.08] tracking-[-0.02em] text-ivory"
+                : "max-w-3xl font-display text-[clamp(2.35rem,6.5vw,4.75rem)] font-semibold leading-[0.98] tracking-[-0.02em] text-ivory"
+            }
           >
             {heroContent.headline}
           </h1>
 
-          <p className="mt-4 max-w-2xl font-display text-[clamp(1.35rem,3.2vw,2.15rem)] font-semibold leading-tight tracking-[-0.01em] text-ivory/88 md:mt-5">
-            {heroContent.brandLine}
-          </p>
+          {heroContent.brandLine ? (
+            <p className="mt-4 max-w-2xl font-display text-[clamp(1.35rem,3.2vw,2.15rem)] font-semibold leading-tight tracking-[-0.01em] text-ivory/88 md:mt-5">
+              {heroContent.brandLine}
+            </p>
+          ) : null}
 
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ivory/78 md:mt-8 md:text-lg">
             {heroContent.supporting}

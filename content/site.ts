@@ -46,22 +46,39 @@ export const socialProfiles = [] as const;
 
 export const heroContent = {
   eyebrow: "Joyner Construction LLC",
-  /** Primary H1 — one service, one location */
-  headline: "Residential Framing in Bellingham, WA",
-  brandLine: "A Strong Frame. A Better Home.",
+  /** Primary H1 — Bellingham framing serving-area page */
+  headline:
+    "Your Trusted & Professional Residential or Commercial Structural Framing Services Contractor Bellingham, WA",
+  brandLine: "",
   supporting:
-    "Structural framing for new homes, additions, and residential projects in the Bellingham area. Request an estimate from Joyner Construction LLC.",
+    "From residential floor plans to commercial building layouts, framing requires careful attention to construction details. Joyner Construction LLC provides structural framing services in Bellingham, WA, with wood and steel installation options for new buildings, property expansions, and renovation projects.",
   primaryCta: { label: "Request an Estimate", href: "/#contact" },
   secondaryCta: { label: "Serving Areas", href: "/serving-areas" },
 } as const;
 
 export const aboutContent = {
   eyebrow: "About Us",
-  heading: "Framing the Foundation of Your Home.",
+  heading:
+    "Joyner Construction LLC Best Choice for Commercial or Residential Building House Framing Repair and Replacement Services Contractor or Company Bellingham, WA",
   paragraphs: [
-    "Quality framing is the structural backbone of a home. Walls, floors, and roofs depend on accurate layout, solid connections, and careful workmanship long before finishes go on.",
-    "Joyner Construction LLC provides residential framing for new construction and home projects in Bellingham, Washington—focused on clean, dependable structure that supports the rest of the build.",
+    "Different building designs require framing solutions that accommodate their layouts, materials, and construction specifications. Joyner Construction LLC is a structural framing company serving Bellingham, WA, with services for residential properties, commercial spaces, and office buildings. Our structural framing contractors discuss wood framing, steel structural framing, and metal framing services based on approved project documents.",
+    "We also coordinate interior wall framing and exterior wall framing for different building configurations. Whether you need framing for a new property, selected repairs, or replacement components, we focus on understanding the design, measurements, and installation requirements before work begins.",
   ],
+  visualCaption: "Tap a node to explore each stage of framing work.",
+  orbitSteps: {
+    inquire:
+      "Tell us about your building project and the framing assistance you need.",
+    scope:
+      "We discuss project complexity, material specifications, work areas, and installation scheduling.",
+    layout:
+      "We map out framing areas, review construction drawings, and identify dimensions that guide installation.",
+    craft:
+      "We focus on material preparation, appropriate construction methods, and attention to installation details.",
+    structure:
+      "We coordinate framing systems with building plans, structural specifications, and designated wall openings.",
+    handoff:
+      "We review the completed framing scope and communicate relevant details for the next trades.",
+  },
   cta: { label: "Request an Estimate", href: "#contact" },
   image: {
     src: "/images/hero/frame-beams.jpg",
@@ -71,104 +88,96 @@ export const aboutContent = {
 
 export const servicesContent = {
   eyebrow: "Framing Services",
-  title: "Residential Framing for Homes in Bellingham",
+  title: "New Home, Addition, and Renovation Framing",
   description:
-    "This page focuses on residential framing—the structural woodwork that shapes walls, floors, and roof systems. Scope is confirmed during project discussion so every estimate matches the work you need.",
+    "Residential and commercial structural framing for new homes, additions, and renovations in Bellingham, WA.",
   items: [
     {
       title: "New Home Framing",
-      body: "Structural framing for new residential construction, from layout through walls, floors, and roof framing as the project requires.",
+      body: "New residential construction requires framing that accommodates the planned floor plan and building specifications. Joyner Construction LLC coordinates new home framing in Bellingham, WA, with attention to wall layouts, openings, and specified structural materials.",
       image: "/images/hero/frame-main.jpg",
-      alt: "New residential home framing with exposed wall and floor structure",
+      alt: "New home framing under construction in Bellingham, WA",
     },
     {
       title: "Home Addition Framing",
-      body: "Framing support for residential additions, with careful attention to how new structure meets the existing home.",
+      body: "A home expansion changes the building's existing footprint and requires a coordinated framing plan. We discuss additional wall systems, structural connections, measurements, and material requirements for planned residential additions.",
       image: "/images/hero/frame-beams.jpg",
-      alt: "Timber framing details for a residential addition project",
+      alt: "Home addition framing in Bellingham, WA",
     },
     {
       title: "Renovation Framing",
-      body: "Framing work within renovation projects where walls, openings, or structural updates need precise carpentry.",
+      body: "Remodeling projects may require revised room divisions, replacement wall sections, or updated framing arrangements. Our renovation framing services follow project specifications while considering how new components connect with existing construction.",
       image: "/images/hero/frame-detail.jpg",
-      alt: "Structural framing work on an active residential construction site",
+      alt: "Renovation framing work in Bellingham, WA",
     },
   ],
 } as const;
 
+export const ctaContent = {
+  eyebrow: "Framing installation",
+  heading:
+    "Are You Looking for a Joyner Construction LLC for Your Residential or Commercial New Home or Offices Framing Contractors Installation Bellingham, WA?",
+  body: "Building a new home or updating commercial space in Bellingham? Contact Joyner Construction LLC to discuss your structural framing plans and arrange an estimate for your project.",
+  layout: "editorial" as const,
+} as const;
+
 export const serviceAreaContent = {
-  eyebrow: "Service Area",
-  title: "Residential Framing in Bellingham, WA",
+  eyebrow: "Framing Services",
+  title:
+    "Certified Or Trusted Reliable Building Framing Contractors Services Agency Bellingham, WA",
   intro:
-    "Joyner Construction LLC focuses this page on residential framing for homeowners and residential projects in Bellingham, Washington. If you are planning a new home, addition, or renovation that needs a clean, dependable structural frame, this is where that conversation starts.",
+    "Choosing the right framing approach starts with understanding the building's design and construction requirements. Joyner Construction LLC provides residential and commercial structural framing services in Bellingham, WA. We discuss material selections, wall configurations, measurements, and installation planning to help organize each project. From individual residential properties to commercial office interiors, our team considers the approved construction documents and required framing scope. Contact us to discuss your building plans and identify the next steps for your framing project.",
   sections: [
     {
-      heading: "Built around one city, one trade",
+      heading: "Residential Structural Framing Company",
       body: [
-        "Many construction sites try to cover every trade and every town at once. This page does the opposite. It is written for residential framing in Bellingham—walls, floors, roofs, and the structural skeleton that everything else depends on. That focus keeps the message honest: the work is structural, the geography is local, and the next step is a clear estimate conversation with Michael Joyner.",
-        "Bellingham homeowners plan projects against a specific backdrop—Pacific Northwest weather, mixed older and newer neighborhoods, hillside lots, and waterfront-adjacent sites. Framing decisions here are not abstract. Layout accuracy, fastening, openings, and sequencing all matter more when the rest of the build has to move through rain seasons, inspections, and coordination with other trades.",
+        "A home's framework determines the arrangement of walls and supports the construction plan for later building stages. Joyner Construction LLC provides residential structural framing services in Bellingham, WA, for new houses and property improvements. We coordinate wall layouts, openings, building dimensions, and specified materials using available project drawings. Homeowners and builders can discuss wood or steel framing options according to the design. Our goal is to establish a clearly defined framing scope before the installation process begins.",
       ],
     },
     {
-      heading: "New home framing in Bellingham",
+      heading: "Affordable House Framing Services",
       body: [
-        "New residential construction needs a frame that matches the plans and stands ready for mechanicals, insulation, and finishes. From sill plates and floor systems to wall panels and roof framing, the goal is square, solid structure—not shortcuts that show up later as out-of-plumb walls or uneven floors.",
-        "When you request an estimate for a new home in Bellingham, share whatever you already have: architectural drawings, engineer notes, preferred timing, and site access details. Scope is confirmed in discussion. Timelines depend on readiness of the site, material lead times, and how framing fits into the broader build schedule. Those variables are talked through directly instead of being buried in marketing promises.",
-      ],
-      subheadings: [
-        {
-          title: "What a strong new-home frame supports",
-          body: [
-            "A well-executed frame protects every trade that follows. Plumbers, electricians, HVAC crews, and finish carpenters all work more cleanly when openings are right, walls are true, and connections are solid. That is the practical standard Joyner Construction LLC brings to residential framing work in the Bellingham area.",
-          ],
-        },
+        "Finding a suitable framing solution involves considering the building design, available budget, and required materials. Joyner Construction LLC discusses affordable house framing services in Bellingham, WA, for residential construction and improvement projects. We review the proposed scope, building dimensions, and installation requirements to help clarify the work involved. Whether you are planning a compact residence or a larger home, discussing project specifications early can help you understand the framing needs and associated cost considerations.",
       ],
     },
     {
-      heading: "Home additions that tie into existing structure",
+      heading: "Local Structural Framing Specialists",
       body: [
-        "Additions are often more nuanced than new builds because the new frame has to meet an existing home. Matching floor elevations, aligning wall planes, protecting openings, and planning load paths all require careful layout. Homeowners in Bellingham commonly expand for bedrooms, living space, or multi-generational living—projects where the connection between old and new has to feel intentional, not patched on.",
-        "An addition estimate conversation usually covers access, temporary protection, sequencing around occupied living space, and how the framed addition will hand off to exterior and interior finishes. Bring sketches or plans if you have them. If you are earlier in the process, a short written description of the rooms and goals is still a useful starting point.",
+        "Structural framing requirements vary according to building size, architectural design, and intended use. Joyner Construction LLC provides framing services in Bellingham, WA, for residential and commercial construction projects. We review construction documents, discuss material specifications, and coordinate wall configurations and installation requirements. Our team can address wood framing, steel structural framing, and metal framing applications according to the project design. Contact us to discuss your property's construction needs and arrange a conversation about the framing scope.",
       ],
     },
     {
-      heading: "Renovation framing and structural changes",
+      heading: "New Home Framing Contractors",
       body: [
-        "Renovation framing can mean opening walls, reframing for new layouts, strengthening areas for new loads, or rebuilding portions of a structure after selective demolition. These jobs reward careful measuring and clear communication because the existing home sets constraints that a blank lot never will.",
-        "Joyner Construction LLC approaches renovation framing as structural work first. The conversation stays on scope: what is being removed, what is being rebuilt, what needs temporary support, and how the finished frame should leave the project ready for the next phase. No inflated claims—just a practical path from inquiry to scoped estimate.",
-      ],
-      subheadings: [
-        {
-          title: "When renovation framing is the right conversation",
-          body: [
-            "If your remodel changes room layouts, creates larger openings, or affects floors and roofs, you need framing clarity before finishes are selected. Starting that discussion early helps avoid redesign mid-project and keeps expectations aligned with what the structure can support.",
-          ],
-        },
+        "A new home's framework needs to reflect the architectural plan and specified structural requirements. Joyner Construction LLC offers new home framing services in Bellingham, WA, for homeowners and residential builders. We discuss room configurations, wall locations, openings, measurements, and required materials before installation. Our team works from project specifications to coordinate the framing stage with the wider construction schedule. This preparation helps establish the building layout before roofing, finishing, and other trades continue their work.",
       ],
     },
     {
-      heading: "Local context: weather, sites, and sequencing",
+      heading: "Experienced Wood Framing Contractors",
       body: [
-        "Bellingham’s climate and topography influence how residential framing projects should be planned. Moisture, access on narrower lots, and coordination around school-year or seasonal schedules can all affect when framing starts and how the site is kept organized. Those realities belong in the estimate conversation, not in generic national copy.",
-        "A focused Bellingham service-area page also helps you know what this business is—and is not—claiming. This page is for residential framing in Bellingham. Nearby communities may be discussed case by case, and separate location pages can be published later if coverage expands in a documented way. Until then, the commitment on this site stays specific.",
+        "Wood framing can accommodate a wide range of residential layouts, from traditional floor plans to customized living spaces. Joyner Construction LLC provides wood framing services in Bellingham, WA, based on approved building documents and material specifications. We consider measurements, wall arrangements, openings, and installation details when organizing the work. Whether you are constructing a new residence or modifying an existing property, our team discusses the framing requirements and helps coordinate the work with your construction plans.",
       ],
     },
     {
-      heading: "Working with plans, builders, and other trades",
+      heading: "Structural Framing Installation Company",
       body: [
-        "Residential framing rarely happens in isolation. Plans change, engineers issue clarifications, and other trades need access windows. A useful framing partner keeps communication practical: what is locked, what is still open, and what the frame must accommodate next. That matters whether you are a homeowner managing your own project or coordinating with a broader residential build team in Bellingham.",
-        "Bring questions about openings, bearing walls, roof transitions, and site logistics early. The clearer those details are, the cleaner the estimate and the smoother the handoff once framing is complete. Joyner Construction LLC stays focused on the structural stage so the rest of the home can proceed on a solid base.",
+        "Structural framing installation connects the building design with the physical framework required for construction. Joyner Construction LLC provides framing installation services in Bellingham, WA, for residential and commercial projects. Depending on the approved specifications, installation may involve wood framing, steel structural framing, or metal wall systems. We discuss measurements, material requirements, connection details, and scheduling before starting. Clear preparation helps builders and property owners understand the framing work and coordinate the remaining construction activities.",
       ],
     },
     {
-      heading: "How to start an estimate",
+      heading: "Residential Framing Construction Services",
       body: [
-        "Use the contact form on this page or email Michael Joyner directly. Include a short project description, your Bellingham location or neighborhood context, preferred timing, and any plans or sketches you can share. You will get a conversation focused on scope—not pressure and not invented reviews or ratings.",
-        "After the scope is understood, you receive an estimate tied to the discussed work. Scheduling depends on project readiness and coordination with other trades. That is the honest order of operations for residential framing: clarify the work, price the work, then plan the calendar.",
+        "Residential framing requires coordination between the architectural layout, material selections, and installation details. Joyner Construction LLC provides residential framing construction services in Bellingham, WA, for new construction, home expansions, and renovation work. We discuss the location of walls, openings, dimensions, and framing specifications according to the project drawings. Our team can review wood and steel framing options where appropriate. A defined scope helps homeowners and builders prepare for the next stages of their residential construction project.",
+      ],
+    },
+    {
+      heading: "Reliable Building Framing Contractors",
+      body: [
+        "Commercial and residential buildings require framing arrangements suited to their individual designs and intended functions. Joyner Construction LLC offers building framing services in Bellingham, WA, with project planning focused on approved construction documents. We discuss wall configurations, material specifications, installation areas, and scheduling requirements before work begins. Whether the project involves a residential wood framework or commercial metal wall systems, our team helps clarify the work needed to coordinate the framing stage with other construction activities.",
       ],
     },
   ],
-  note: "Other nearby communities may be covered on separate location pages when those pages are published.",
+  note: "",
   cta: { label: "Request an Estimate", href: "#contact" },
   image: {
     src: "/images/service-area/bellingham-landmark.jpg",
@@ -252,53 +261,53 @@ export const reviewsContent = {
 
 export const faqContent = {
   eyebrow: "FAQs",
-  title: "Questions About Residential Framing",
+  title: "Framing Services in Bellingham, WA",
   description:
-    "Straight answers about residential framing in Bellingham—scope, estimates, and what to share before we talk.",
+    "Answers to frequently asked structural framing questions in Bellingham, WA.",
   image: {
     src: "/images/hero/framing-neighborhood.webp",
     alt: "Residential wood framing under construction in a neighborhood setting",
-    caption: "Residential framing · Bellingham",
+    caption: "Framing · Bellingham",
   },
   items: [
     {
-      question: "What residential framing work do you focus on?",
+      question: "What residential framing services do you provide?",
       answer:
-        "This page covers residential framing for new construction, additions, and renovation projects in the Bellingham area. Specific scope is confirmed during project discussion.",
+        "Our residential framing services include new home framing, additions, renovation framing, wood framing, and selected structural framing work based on approved building plans and project specifications.",
     },
     {
-      question: "How do I request an estimate?",
+      question: "Do you work on commercial framing projects?",
       answer:
-        "Use the estimate form on this page or email Michael Joyner directly. Include a short project description, location in Bellingham, and any plans or sketches you can share.",
+        "Yes. We can discuss commercial framing requirements for office buildings and other business properties, including metal wall systems, structural layouts, and installation coordination.",
     },
     {
-      question: "What should I prepare before we talk?",
+      question: "Can I choose between wood and steel framing?",
       answer:
-        "Helpful details include project address, whether the work is new construction or renovation, approximate size, and preferred timing. Plans are useful when available, but early conversations can start without a full drawing set.",
+        "Material selection depends on your building design, engineering requirements, project specifications, and intended use. Our team can discuss the available options for your construction plans.",
     },
     {
-      question: "How is scheduling handled?",
+      question: "Do you provide interior and exterior wall framing?",
       answer:
-        "Scheduling depends on project scope, site readiness, and coordination with other trades. Timeline expectations are discussed after the scope is understood—not before.",
+        "We can discuss both interior and exterior wall framing requirements for residential and commercial properties. The specific installation scope depends on the approved drawings and building specifications.",
     },
     {
-      question: "Do you serve areas outside Bellingham?",
+      question: "How do I prepare for a framing estimate?",
       answer:
-        "This page is focused on Bellingham, WA. If you are elsewhere, contact us and we can tell you whether the project can be considered or whether a different location page applies.",
+        "Gather your architectural drawings, project dimensions, material preferences, site information, and estimated schedule. These details help clarify the required work and project expectations.",
     },
     {
-      question: "Will I get a fixed price on first contact?",
+      question: "Why should I plan framing before construction starts?",
       answer:
-        "Estimates are based on discussed scope. Early outreach helps start the conversation; a meaningful estimate follows once the framing work is clearly defined.",
+        "Early framing coordination helps establish material requirements, wall locations, dimensions, and installation sequencing. This preparation supports communication between the framing team and other construction trades.",
     },
   ],
 } as const;
 
 export const contactContent = {
   eyebrow: "Contact",
-  title: "Request an Estimate",
+  title: "Request an Estimate!",
   description:
-    "Tell us about your residential framing project in Bellingham. Michael Joyner will follow up using the contact details you provide.",
+    "Ready to discuss your Bellingham framing project? Contact Joyner Construction LLC today to review your plans and request a construction estimate.",
   map: {
     /** Downtown Bellingham, WA */
     lat: 48.7519,

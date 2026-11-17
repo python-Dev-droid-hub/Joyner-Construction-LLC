@@ -20,8 +20,10 @@ export function About({ content }: AboutProps = {}) {
   const paragraphs = content?.paragraphs ?? [...aboutContent.paragraphs];
   const cta = content?.cta ?? aboutContent.cta;
   const visualCaption =
-    content?.visualCaption ??
-    "Tap a node to explore each stage of residential framing.";
+    content?.visualCaption ?? aboutContent.visualCaption;
+  const orbit = content?.orbit
+    ? content.orbit
+    : { steps: { ...aboutContent.orbitSteps } };
 
   return (
     <section
@@ -61,7 +63,7 @@ export function About({ content }: AboutProps = {}) {
         </div>
 
         <div className="about-visual w-full overflow-visible" data-reveal>
-          <AboutOrbit content={content?.orbit} />
+          <AboutOrbit content={orbit} />
           <p className="mt-2 text-center text-xs text-stone">{visualCaption}</p>
         </div>
       </div>
