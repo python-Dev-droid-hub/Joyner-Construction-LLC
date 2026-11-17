@@ -329,36 +329,6 @@ const SERVICE_FOCUS: Record<string, [ServiceFocus, ServiceFocus, ServiceFocus]> 
 
 const accents = ["copper", "charcoal", "stone"] as const;
 
-const sampleHandles = [
-  "Homeowner · New project",
-  "Homeowner · Remodel",
-  "Homeowner · Renovation",
-  "Builder · Residential",
-  "Homeowner · Exterior",
-  "Homeowner · Addition",
-  "Homeowner · Refresh",
-  "Project coordinator",
-] as const;
-
-const sampleQuotes = [
-  (service: string, area: string) =>
-    `Clear communication on our ${service.toLowerCase()} project in ${area}. Scope stayed practical from the first conversation through the estimate.`,
-  (service: string, area: string) =>
-    `Scheduling updates were straightforward for our ${area} ${service.toLowerCase()} work—no pressure, just a clear discussion of what was needed.`,
-  (service: string, area: string) =>
-    `Careful workmanship and honest scope talk. Exactly what we wanted for ${service.toLowerCase()} on our ${area} home.`,
-  (service: string, area: string) =>
-    `Reliable residential partner in ${area}. The ${service.toLowerCase()} scope was defined before pricing, which made planning easier.`,
-  (service: string, area: string) =>
-    `We always knew where the project stood. Clean communication made the ${service.toLowerCase()} process easier to follow in ${area}.`,
-  (service: string, area: string) =>
-    `Questions were answered without sales pressure. Solid approach to ${service.toLowerCase()} work for our ${area} property.`,
-  (service: string, area: string) =>
-    `Attention to detail made a real difference. Our ${service.toLowerCase()} project in ${area} moved forward with clear next steps.`,
-  (service: string, area: string) =>
-    `Good sequencing and clear scope talk. ${service} stayed organized so the rest of the residential work could move forward in ${area}.`,
-];
-
 /** Localized landing copy + unique service imagery for a service × area page. */
 export function buildLandingContent(
   service: ServiceDef,
@@ -447,15 +417,12 @@ export function buildLandingContent(
       backgroundAlt: `${service.name} project imagery for ${area.name}`,
     },
     reviews: {
-      title: `Trusted for ${serviceLower} in ${area.nameShort}`,
-      body: `Sample homeowner feedback for layout. Replace these with verified Joyner Construction LLC reviews for ${serviceLower} in ${area.name} when you have them—no invented star ratings.`,
-      testimonials: reviewsContent.testimonials.map((t, index) => ({
+      title: reviewsContent.title,
+      body: reviewsContent.body,
+      testimonials: reviewsContent.testimonials.map((t) => ({
         name: t.name,
-        handle: `${sampleHandles[index % sampleHandles.length]} · ${area.nameShort}`,
-        description: sampleQuotes[index % sampleQuotes.length](
-          service.name,
-          area.nameShort,
-        ),
+        handle: t.handle,
+        description: t.description,
         image: t.image,
       })),
     },

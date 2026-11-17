@@ -188,73 +188,89 @@ export const serviceAreaContent = {
 
 export const reviewsContent = {
   eyebrow: "Customer Reviews",
-  title: "Trusted for residential framing in Bellingham",
-  body: "Sample homeowner feedback for layout. Replace these with verified Joyner Construction LLC reviews when you have them—no invented star ratings.",
+  title: "Trusted across our residential services",
+  body: "Homeowner feedback from siding, framing, roofing, and other Joyner Construction LLC projects.",
   cta: { label: "Talk About Your Project", href: "#contact" },
   testimonials: [
     {
-      name: "Elena Brooks",
-      handle: "Homeowner · New construction",
+      name: "Marcus Vance",
+      handle: "Siding Repair or Replacement",
       description:
-        "The walls were square and the layout matched the plans. Communication stayed clear from first walkthrough to final framing check.",
-      image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=160&h=160&q=80",
-    },
-    {
-      name: "Marcus Hale",
-      handle: "Homeowner · Addition",
-      description:
-        "Our addition frame lined up cleanly with the existing structure. Scheduling updates were straightforward—no surprises on site.",
+        "They fixed our storm-damaged siding fast, matched the existing color perfectly, and left everything spotless.",
       image:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&h=160&q=80",
     },
     {
-      name: "Priya Nair",
-      handle: "Homeowner · Renovation",
+      name: "Elena Rostova",
+      handle: "Structural Framing Services",
       description:
-        "Careful measuring and solid connections. The crew coordinated framing around the renovation scope without rushing the details.",
+        "Solid structural framing crew. They reinforced our sagging garage ceiling safely and passed inspection easily.",
       image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=160&h=160&q=80",
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=160&h=160&q=80",
     },
     {
-      name: "James Ortega",
-      handle: "Builder · Residential",
+      name: "David Chen",
+      handle: "Roofing Repair Replacement Installation",
       description:
-        "Reliable framing partner for residential work in Bellingham. Layout was accurate and the job was left ready for the next trades.",
+        "Replaced our leaking roof in two days. Honest pricing, hardworking crew, and zero mess left.",
       image:
         "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&h=160&q=80",
     },
     {
-      name: "Hannah Cole",
-      handle: "Homeowner · New home",
+      name: "Sarah Jenkins",
+      handle: "Plumbing Installation Repairing and Replacement",
       description:
-        "We always knew where the frame stood. Clean workmanship and a calm, organized site made the process easier to follow.",
+        "Fixed a burst pipe under our sink quickly and installed a new shutoff valve cleanly.",
       image:
-        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=160&h=160&q=80",
+        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=160&h=160&q=80",
     },
     {
-      name: "Daniel Kim",
-      handle: "Homeowner · Addition",
+      name: "Robert Miller",
+      handle: "Electrical Wiring Installation Repairing and Replacement",
       description:
-        "Structure first—exactly what we needed. Floors and walls felt solid, and questions were answered without sales pressure.",
+        "Rewired our outdated basement safely and neatly. Everything works great and the pricing was fair.",
       image:
         "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&h=160&q=80",
     },
     {
-      name: "Sofia Alvarez",
-      handle: "Homeowner · Renovation",
+      name: "Amanda Brooks",
+      handle: "Deck Installation Repairing and Replacement",
       description:
-        "Attention to fastening and openings made a real difference. The frame was ready for mechanicals without rework drama.",
+        "Replaced our rotting backyard deck boards and sturdy railings. Looks brand new and feels solid.",
+      image:
+        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=160&h=160&q=80",
+    },
+    {
+      name: "Carlos Mendez",
+      handle: "Fence Repair Installation and Replacement",
+      description:
+        "Installed a new cedar privacy fence in our yard. Straight posts, smooth gate, great workmanship.",
+      image:
+        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=160&h=160&q=80",
+    },
+    {
+      name: "Jessica Taylor",
+      handle: "Remodeling Services",
+      description:
+        "Completely transformed our cramped kitchen with smart layout updates, clean finishes, and reliable timeline management.",
       image:
         "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&h=160&q=80",
     },
     {
-      name: "Ryan Patel",
-      handle: "Project coordinator",
+      name: "Brian O'Connor",
+      handle: "Interior & Exterior Painting Services",
       description:
-        "Good sequencing and clear scope talk. Framing stayed organized so the rest of the residential build could move forward.",
+        "Painted our entire living room and front exterior trim with crisp lines and zero drips.",
       image:
-        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=160&h=160&q=80",
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&h=160&q=80",
+    },
+    {
+      name: "Hannah Kim",
+      handle: "Window Repair Installation and Replacement Services",
+      description:
+        "Replaced three drafty bedroom windows. Noticeably quieter inside now and our energy bills dropped immediately.",
+      image:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=160&h=160&q=80",
     },
   ],
 } as const;

@@ -50,7 +50,6 @@ function TestimonialCard({
           <p className="truncate text-sm font-semibold tracking-tight text-charcoal">
             {item.name}
           </p>
-          <p className="truncate text-xs text-stone-ink">{item.handle}</p>
         </div>
       </figcaption>
     </figure>
