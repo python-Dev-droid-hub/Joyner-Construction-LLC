@@ -12,9 +12,10 @@ export const bellinghamRoofingHero = {
 };
 
 export const bellinghamRoofingSeo = {
-  title: "Roofing Services in Bellingham, WA",
+  title:
+    "Professional Residential & Commercial Roof Repair, Replacement and Installation Services in Bellingham, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial roofing services in Bellingham, WA. From storm-related repairs to complete roof replacements, we help property owners address roofing concerns with suitable materials and careful installation planning.",
+    "Upgrade your property with trusted roofing services in Bellingham, WA. Joyner Construction LLC specializes in residential and commercial roofing, offering dependable roof installation, replacement, and repair solutions. Get quality construction support and professional service for your roofing project. Contact us today!",
 };
 
 /** Swap the shared template copy for the Bellingham roofing page. Images stay in place. */

@@ -12,9 +12,10 @@ export const burlingtonRoofingHero = {
 };
 
 export const burlingtonRoofingSeo = {
-  title: "Roofing Services in Burlington, WA",
+  title:
+    "Professional Roofing Contractors for Residential & Commercial Roof Repair, Installation and Replacement in Burlington, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial roofing services in Burlington, WA—shingle repairs, flat roof replacement, and new roofing systems tailored to your building.",
+    "Enhance your property's safety and durability with expert roofing services in Burlington, WA. Joyner Construction LLC offers residential and commercial roof installation, replacement, repair, and customized roofing solutions. Our team focuses on quality results and dependable service for every project. Get in touch today!",
 };
 
 /** Swap the shared template copy for the Burlington roofing page. Images stay in place. */

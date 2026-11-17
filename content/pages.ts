@@ -242,7 +242,10 @@ export function isHomepageFramingBellingham(
   return serviceSlug === "framing" && areaSlug === "bellingham-wa";
 }
 
-/** City siding pages with custom content + metadata that should be indexed. */
+/**
+ * Landing pages with custom content + metadata that should be indexed.
+ * Bellingham framing is the homepage (`/`) — already indexed separately.
+ */
 export function isIndexedLandingPage(
   serviceSlug: string,
   areaSlug: string,
@@ -251,7 +254,14 @@ export function isIndexedLandingPage(
     isBellinghamSiding(serviceSlug, areaSlug) ||
     isFerndaleSiding(serviceSlug, areaSlug) ||
     isLyndenSiding(serviceSlug, areaSlug) ||
-    isBurlingtonSiding(serviceSlug, areaSlug)
+    isBurlingtonSiding(serviceSlug, areaSlug) ||
+    isBurlingtonFraming(serviceSlug, areaSlug) ||
+    isFerndaleFraming(serviceSlug, areaSlug) ||
+    isLyndenFraming(serviceSlug, areaSlug) ||
+    isBellinghamRoofing(serviceSlug, areaSlug) ||
+    isFerndaleRoofing(serviceSlug, areaSlug) ||
+    isLyndenRoofing(serviceSlug, areaSlug) ||
+    isBurlingtonRoofing(serviceSlug, areaSlug)
   );
 }
 

@@ -12,9 +12,10 @@ export const ferndaleRoofingHero = {
 };
 
 export const ferndaleRoofingSeo = {
-  title: "Roofing Services in Ferndale, WA",
+  title:
+    "Affordable Residential & Commercial Roofing Installation, Repair and Replacement Contractors in Ferndale, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC helps Ferndale, WA, property owners address residential and commercial roofing needs—from replacing worn roofing materials to repairing weather-damaged sections.",
+    "Give your property lasting protection with professional roofing services in Ferndale, WA. Joyner Construction LLC provides residential and commercial roof installation, repair, replacement, and dependable roofing solutions designed to meet your building needs. Get started with our experienced team today!",
 };
 
 /** Swap the shared template copy for the Ferndale roofing page. Images stay in place. */

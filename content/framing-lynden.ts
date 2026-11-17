@@ -12,9 +12,10 @@ export const lyndenFramingHero = {
 };
 
 export const lyndenFramingSeo = {
-  title: "Structural Framing in Lynden, WA",
+  title:
+    "Reliable Residential & Commercial Building Framing Services in Lynden, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC offers residential and commercial structural framing in Lynden, WA, helping property owners and builders coordinate wood and steel framing installations for new construction, additions, and building improvements.",
+    "Looking for experienced framing professionals in Lynden, WA? Joyner Construction LLC offers quality home framing, commercial framing, structural framing, and new construction services for lasting construction results. Contact us today to discuss your project!",
 };
 
 /** Swap the shared template copy for the Lynden framing page. Images stay in place. */

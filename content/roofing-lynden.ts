@@ -12,9 +12,10 @@ export const lyndenRoofingHero = {
 };
 
 export const lyndenRoofingSeo = {
-  title: "Roofing Services in Lynden, WA",
+  title:
+    "Local Roofing Contractors for Residential & Commercial Roof Installation, Repair and Replacement in Lynden, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC delivers residential and commercial roofing solutions in Lynden, WA—repairs, replacements, and installations with suitable materials for your building.",
+    "Protect your home or business with reliable roofing solutions in Lynden, WA. Joyner Construction LLC delivers professional roof installation, replacement, repairs, and residential and commercial roofing services. Count on quality workmanship and practical solutions for your next roofing project. Contact us today!",
 };
 
 /** Swap the shared template copy for the Lynden roofing page. Images stay in place. */

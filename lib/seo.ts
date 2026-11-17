@@ -2,9 +2,10 @@ import { faqContent, site, socialProfiles } from "@/content/site";
 import { getSiteUrl } from "@/lib/site-url";
 
 export const seo = {
-  title: `Structural Framing in Bellingham, WA | ${site.businessName}`,
+  title:
+    "Professional Residential & Commercial Structural Framing Contractors in Bellingham, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides structural framing services in Bellingham, WA, with wood and steel installation options for new buildings, property expansions, and renovation projects.",
+    "Looking for reliable structural framing services in Bellingham, WA? Joyner Construction LLC provides professional residential and commercial framing, wood framing, steel framing, new home framing, and renovation framing solutions. Contact us today for a construction estimate!",
   keywords: [
     "structural framing Bellingham",
     "residential framing Bellingham WA",

@@ -12,9 +12,10 @@ export const burlingtonFramingHero = {
 };
 
 export const burlingtonFramingSeo = {
-  title: "Structural Framing in Burlington, WA",
+  title:
+    "Trusted Local Building & Structural Framing Experts in Burlington, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides reliable residential and commercial structural framing in Burlington, WA. From new homes to office buildings, our team delivers carefully planned wood and steel framing.",
+    "Need dependable framing contractors in Burlington, WA? Joyner Construction LLC offers quality residential and commercial framing, structural wood framing, and new construction framing services. Get professional workmanship and affordable construction solutions for your next project. Contact us today!",
 };
 
 /** Swap the shared template copy for the Burlington framing page. Images stay in place. */

@@ -12,9 +12,10 @@ export const ferndaleFramingHero = {
 };
 
 export const ferndaleFramingSeo = {
-  title: "Structural Framing in Ferndale, WA",
+  title:
+    "Expert Residential & Commercial Framing Contractors in Ferndale, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial structural framing in Ferndale, WA, offering wood and steel framing solutions, organized installation, and careful project coordination.",
+    "Searching for professional framing services in Ferndale, WA? Joyner Construction LLC delivers dependable residential framing, commercial building framing, structural wood framing, and new construction solutions. Choose skilled contractors for quality workmanship and reliable project results. Contact us today for an estimate!",
 };
 
 /** Swap the shared template copy for the Ferndale framing page. Images stay in place. */
