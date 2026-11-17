@@ -14,17 +14,19 @@ export function ServiceArea({ content }: ServiceAreaProps = {}) {
     eyebrow: serviceAreaContent.eyebrow,
     title: serviceAreaContent.title,
     intro: serviceAreaContent.intro,
-    sections: serviceAreaContent.sections.map((section) => ({
-      heading: section.heading,
-      body: [...section.body],
-      subheadings:
-        "subheadings" in section && section.subheadings
-          ? section.subheadings.map((sub) => ({
-              title: sub.title,
-              body: [...sub.body],
-            }))
-          : undefined,
-    })),
+    sections: serviceAreaContent.sections.map((section) => {
+      const withSubs = section as typeof section & {
+        subheadings?: { title: string; body: readonly string[] }[];
+      };
+      return {
+        heading: section.heading,
+        body: [...section.body],
+        subheadings: withSubs.subheadings?.map((sub) => ({
+          title: sub.title,
+          body: [...sub.body],
+        })),
+      };
+    }),
     note: serviceAreaContent.note,
     cta: { ...serviceAreaContent.cta },
     image: { ...serviceAreaContent.image },
