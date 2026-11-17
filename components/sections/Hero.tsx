@@ -15,6 +15,7 @@ export function Hero() {
         <Image
           src={heroImages.main.src}
           alt={heroImages.main.alt}
+          title={heroImages.main.alt}
           fill
           priority
           sizes="100vw"

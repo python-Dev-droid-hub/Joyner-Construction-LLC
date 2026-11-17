@@ -11,6 +11,7 @@ export function Footer() {
             <img
               src="/logo.png"
               alt={`${site.businessName} logo`}
+              title={site.businessName}
               width={160}
               height={64}
               className="block h-14 w-auto object-contain object-left invert md:h-16"

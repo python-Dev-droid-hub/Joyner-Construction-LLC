@@ -42,7 +42,8 @@ export type AboutOrbitContent = {
 /** Homepage default — same framing orbit assets as framing service pages. */
 const DEFAULT_ORBIT: AboutOrbitContent = {
   centerImage: "/images/services/framing/02-orbit-center.jpg",
-  centerAlt: "Residential wood framing under construction",
+  centerAlt:
+    "Residential wood framing under construction by Joyner Construction LLC in Bellingham, WA",
   centerLabel: "Bellingham · Framing",
   nodes: {
     inquire: "/images/services/framing/03-orbit-inquire.jpg",

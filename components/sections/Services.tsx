@@ -16,7 +16,8 @@ const defaultShowcaseItems: ServiceShowcaseItem[] = [
     description:
       "New residential construction requires framing that accommodates the planned floor plan and building specifications. Joyner Construction LLC coordinates new home framing in Bellingham, WA, with attention to wall layouts, openings, and specified structural materials.",
     image: "/images/hero/framing-neighborhood.webp",
-    imageAlt: "New home framing under construction in Bellingham, WA",
+    imageAlt:
+      "New home framing under construction in Bellingham, WA by Joyner Construction LLC",
     accent: "copper",
     ctaHref: "#contact",
     ctaLabel: "Request an Estimate",
@@ -28,7 +29,8 @@ const defaultShowcaseItems: ServiceShowcaseItem[] = [
     description:
       "A home expansion changes the building's existing footprint and requires a coordinated framing plan. We discuss additional wall systems, structural connections, measurements, and material requirements for planned residential additions.",
     image: "/images/hero/frame-beams.jpg",
-    imageAlt: "Home addition framing in Bellingham, WA",
+    imageAlt:
+      "Home addition framing in Bellingham, WA by Joyner Construction LLC",
     accent: "charcoal",
     ctaHref: "#contact",
     ctaLabel: "Request an Estimate",
@@ -40,7 +42,8 @@ const defaultShowcaseItems: ServiceShowcaseItem[] = [
     description:
       "Remodeling projects may require revised room divisions, replacement wall sections, or updated framing arrangements. Our renovation framing services follow project specifications while considering how new components connect with existing construction.",
     image: "/images/hero/framing-crew.webp",
-    imageAlt: "Renovation framing work in Bellingham, WA",
+    imageAlt:
+      "Renovation framing work in Bellingham, WA by Joyner Construction LLC",
     accent: "stone",
     ctaHref: "#contact",
     ctaLabel: "Request an Estimate",

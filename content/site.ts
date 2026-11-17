@@ -181,7 +181,7 @@ export const serviceAreaContent = {
   cta: { label: "Request an Estimate", href: "#contact" },
   image: {
     src: "/images/service-area/bellingham-landmark.jpg",
-    alt: "Historic 1892 brick landmark with clock tower in snowy Bellingham, Washington",
+    alt: "Historic 1892 brick landmark with clock tower in snowy Bellingham, Washington — Joyner Construction LLC service area",
     caption: "Bellingham, WA",
   },
 } as const;
@@ -282,7 +282,7 @@ export const faqContent = {
     "Answers to frequently asked structural framing questions in Bellingham, WA.",
   image: {
     src: "/images/hero/framing-neighborhood.webp",
-    alt: "Residential wood framing under construction in a neighborhood setting",
+    alt: "Residential wood framing under construction in Bellingham, WA by Joyner Construction LLC",
     caption: "Framing · Bellingham",
   },
   items: [
@@ -335,6 +335,6 @@ export const contactContent = {
 export const heroImages = {
   main: {
     src: "/images/hero/framing-neighborhood.webp",
-    alt: "Residential wood framing on new home construction sites under a clear sky",
+    alt: "Residential structural framing by Joyner Construction LLC on new home construction sites in Bellingham, WA",
   },
 } as const;

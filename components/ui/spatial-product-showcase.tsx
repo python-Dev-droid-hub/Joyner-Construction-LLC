@@ -171,6 +171,7 @@ export default function SpatialServiceShowcase({
                   <Image
                     src={current.image}
                     alt={current.imageAlt}
+                    title={current.imageAlt}
                     fill
                     sizes="(max-width: 768px) 90vw, 420px"
                     quality={92}

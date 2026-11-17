@@ -31,7 +31,8 @@ export function ServingAreasDirectory() {
               >
                 <Image
                   src={landmark}
-                  alt={`${area.name} landmark`}
+                  alt={`${area.name} landmark for Joyner Construction LLC service area`}
+                  title={`${area.name} — Joyner Construction LLC serving area`}
                   fill
                   sizes="(max-width: 1024px) 100vw, 45vw"
                   className="object-cover object-center"

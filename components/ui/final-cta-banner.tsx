@@ -528,6 +528,7 @@ export default function FinalCtaBanner({
             <Image
               src={backgroundImage}
               alt={backgroundAlt}
+              title={backgroundAlt}
               fill
               sizes="(max-width: 1280px) 100vw, 82rem"
               quality={85}

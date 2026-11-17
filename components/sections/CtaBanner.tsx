@@ -15,7 +15,7 @@ export function CtaBanner({ content }: CtaBannerProps = {}) {
     content?.backgroundImage ?? "/images/hero/framing-crew.webp";
   const backgroundAlt =
     content?.backgroundAlt ??
-    "Residential framing crew on a construction site";
+    "Residential framing crew on a Joyner Construction LLC job site in Bellingham, WA";
   const eyebrow = content?.eyebrow ?? ctaContent.eyebrow;
   const layout = content?.layout ?? ctaContent.layout;
 

@@ -33,6 +33,7 @@ export function PageHero({
         <Image
           src={image}
           alt={imageAlt}
+          title={imageAlt}
           fill
           priority
           sizes="100vw"

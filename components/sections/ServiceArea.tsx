@@ -42,6 +42,7 @@ export function ServiceArea({ content }: ServiceAreaProps = {}) {
         <Image
           src={data.image.src}
           alt={data.image.alt}
+          title={data.image.alt}
           fill
           sizes="100vw"
           className="object-cover object-center"
@@ -121,6 +122,7 @@ export function ServiceArea({ content }: ServiceAreaProps = {}) {
             <Image
               src={data.image.src}
               alt={data.image.alt}
+              title={data.image.alt}
               fill
               sizes="50vw"
               className="object-cover object-[center_35%]"

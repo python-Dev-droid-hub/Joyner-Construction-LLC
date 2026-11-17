@@ -62,6 +62,7 @@ export function Header() {
           <img
             src="/logo.png"
             alt={`${site.businessName} logo`}
+            title={site.businessName}
             width={160}
             height={64}
             className="block h-9 w-auto object-contain object-left invert md:h-10"

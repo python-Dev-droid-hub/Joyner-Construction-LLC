@@ -221,6 +221,7 @@ export default function RadialOrbitalTimeline({
             <Image
               src={centerImage}
               alt={centerAlt}
+              title={centerAlt}
               fill
               sizes="160px"
               quality={92}
@@ -279,12 +280,12 @@ export default function RadialOrbitalTimeline({
                 >
                   <Image
                     src={item.image}
-                    alt=""
+                    alt={`${item.title} stage — ${centerLabel}`}
+                    title={`${item.title} stage — ${centerLabel}`}
                     fill
                     sizes="96px"
                     quality={90}
                     className="object-cover object-center contrast-[1.06] saturate-[1.1]"
-                    aria-hidden="true"
                   />
                 </span>
                 <span className="absolute bottom-0 right-0 flex h-7 w-7 translate-x-0.5 translate-y-0.5 items-center justify-center rounded-full border border-charcoal/10 bg-ivory text-charcoal shadow-md">

@@ -29,6 +29,7 @@ export function Faq({ content }: FaqProps = {}) {
         <Image
           src={data.image.src}
           alt={data.image.alt}
+          title={data.image.alt}
           fill
           sizes="100vw"
           className="object-cover object-center contrast-[1.04] saturate-[1.08]"
@@ -45,6 +46,7 @@ export function Faq({ content }: FaqProps = {}) {
             <Image
               src={data.image.src}
               alt={data.image.alt}
+              title={data.image.alt}
               fill
               sizes="50vw"
               className="object-cover object-center contrast-[1.04] saturate-[1.08]"

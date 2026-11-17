@@ -418,7 +418,7 @@ export function buildPageHeroCopy(
     primaryCta: { label: "Request an Estimate", href: "#contact" },
     secondaryCta: { label: "Serving Areas", href: "/serving-areas" },
     image: heroImage,
-    imageAlt: `${service.name} — ${service.imageAlt} in ${area.name}`,
+    imageAlt: `${service.name} by Joyner Construction LLC — ${service.imageAlt} in ${area.name}`,
   };
 }
 

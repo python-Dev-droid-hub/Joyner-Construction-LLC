@@ -40,7 +40,8 @@ function TestimonialCard({
         <div className="relative size-10 overflow-hidden rounded-full bg-stone/20 ring-1 ring-charcoal/10">
           <Image
             src={item.image}
-            alt=""
+            alt={`Photo of ${item.name}`}
+            title={item.name}
             fill
             sizes="40px"
             className="object-cover"

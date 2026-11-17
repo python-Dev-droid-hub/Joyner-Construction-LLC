@@ -52,7 +52,7 @@ export default function ServingAreasPage() {
           supporting="Residential services in Bellingham, Ferndale, Lynden, and Burlington, WA. Pick your city, then open the service page that matches your project."
           primaryCta={{ label: "Request an Estimate", href: "/#contact" }}
           image="/images/service-area/bellingham-landmark.jpg"
-          imageAlt="Historic landmark in Bellingham, Washington"
+          imageAlt="Historic landmark in Bellingham, Washington — Joyner Construction LLC serving areas"
         />
         <ServingAreasDirectory />
       </main>

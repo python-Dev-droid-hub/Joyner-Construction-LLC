@@ -383,7 +383,7 @@ export function buildLandingContent(
     title: focus.title,
     description: `${focus.body} Serving homeowners in ${area.name}. Share plans, photos, access notes, and timing when you request an estimate so the conversation stays practical—work is discussed before it is priced.`,
     image: showcaseImages[index],
-    imageAlt: `${focus.title} — ${service.imageAlt} in ${area.name}`,
+    imageAlt: `${focus.title} by Joyner Construction LLC — ${service.imageAlt} in ${area.name}`,
     accent: accents[index % accents.length],
     ctaHref: "#contact",
     ctaLabel: "Request an Estimate",
@@ -406,7 +406,7 @@ export function buildLandingContent(
       visualCaption: `Tap a node to explore each stage of ${serviceLower} work.`,
       orbit: {
         centerImage: images.orbitCenter,
-        centerAlt: `${service.name} in ${area.name}`,
+        centerAlt: `${service.name} project work by Joyner Construction LLC in ${area.name}`,
         centerLabel: `${area.nameShort} · ${service.name}`,
         nodes: {
           inquire: images.orbitInquire,
@@ -430,7 +430,7 @@ export function buildLandingContent(
       heading: `Let's talk ${serviceLower} for your next project in ${area.nameShort}.`,
       body: `Tell Michael Joyner about your ${serviceLower} needs in ${area.name}. You'll get a clear conversation focused on scope—not pressure.`,
       backgroundImage: images.cta,
-      backgroundAlt: `${service.name} project imagery for ${area.name}`,
+      backgroundAlt: `${service.name} crew and job site imagery for Joyner Construction LLC in ${area.name}`,
     },
     reviews: {
       title: reviewsContent.title,
@@ -488,7 +488,7 @@ export function buildLandingContent(
       cta: { label: "Request an Estimate", href: "#contact" },
       image: {
         src: landmark,
-        alt: `${area.name} service area`,
+        alt: `${area.name} landmark — Joyner Construction LLC ${serviceLower} service area`,
         caption: area.name,
       },
     },
@@ -498,7 +498,7 @@ export function buildLandingContent(
       description: `Straight answers about ${serviceLower} in ${area.name}—scope, estimates, and what to share before we talk.`,
       image: {
         src: images.faq,
-        alt: `${service.name} work in ${area.name}`,
+        alt: `${service.name} services by Joyner Construction LLC in ${area.name}`,
         caption: `${service.name} · ${area.nameShort}`,
       },
       items: [
