@@ -28,6 +28,15 @@ export type AboutOrbitContent = {
   serviceName: string;
   areaName: string;
   areaShort: string;
+  /** Optional per-page step copy. Falls back to the shared service wording. */
+  steps?: {
+    inquire: string;
+    scope: string;
+    layout: string;
+    craft: string;
+    structure: string;
+    handoff: string;
+  };
 };
 
 /** Homepage default — same framing orbit assets as framing service pages. */
@@ -55,7 +64,9 @@ function buildTimeline(orbit: AboutOrbitContent): TimelineItem[] {
       id: 1,
       title: "Inquire",
       date: "Step 01",
-      content: `Share your residential ${service} needs in ${orbit.areaShort}—new work, updates, or a full project.`,
+      content:
+        orbit.steps?.inquire ??
+        `Share your residential ${service} needs in ${orbit.areaShort}—new work, updates, or a full project.`,
       category: "Start",
       icon: MessagesSquare,
       relatedIds: [2],
@@ -68,7 +79,9 @@ function buildTimeline(orbit: AboutOrbitContent): TimelineItem[] {
       id: 2,
       title: "Scope",
       date: "Step 02",
-      content: `We review plans, access, and project goals so the ${service} scope is clear before estimating.`,
+      content:
+        orbit.steps?.scope ??
+        `We review plans, access, and project goals so the ${service} scope is clear before estimating.`,
       category: "Planning",
       icon: ClipboardList,
       relatedIds: [1, 3],
@@ -81,7 +94,9 @@ function buildTimeline(orbit: AboutOrbitContent): TimelineItem[] {
       id: 3,
       title: "Layout",
       date: "Step 03",
-      content: `Accurate planning and layout keep ${service} work aligned with the home, site, and next trades.`,
+      content:
+        orbit.steps?.layout ??
+        `Accurate planning and layout keep ${service} work aligned with the home, site, and next trades.`,
       category: "Craft",
       icon: Ruler,
       relatedIds: [2, 4],
@@ -94,7 +109,9 @@ function buildTimeline(orbit: AboutOrbitContent): TimelineItem[] {
       id: 4,
       title: "Craft",
       date: "Step 04",
-      content: `Residential ${service} built with careful workmanship and clear communication on site.`,
+      content:
+        orbit.steps?.craft ??
+        `Residential ${service} built with careful workmanship and clear communication on site.`,
       category: "Build",
       icon: Hammer,
       relatedIds: [3, 5],
@@ -107,7 +124,9 @@ function buildTimeline(orbit: AboutOrbitContent): TimelineItem[] {
       id: 5,
       title: "Structure",
       date: "Step 05",
-      content: `${orbit.serviceName} work comes together as a dependable stage of the home project in ${orbit.areaShort}.`,
+      content:
+        orbit.steps?.structure ??
+        `${orbit.serviceName} work comes together as a dependable stage of the home project in ${orbit.areaShort}.`,
       category: "Build",
       icon: Home,
       relatedIds: [4, 6],
@@ -120,7 +139,9 @@ function buildTimeline(orbit: AboutOrbitContent): TimelineItem[] {
       id: 6,
       title: "Handoff",
       date: "Step 06",
-      content: `We wrap this stage and coordinate follow-up so the next steps of your ${orbit.areaShort} project can move forward.`,
+      content:
+        orbit.steps?.handoff ??
+        `We wrap this stage and coordinate follow-up so the next steps of your ${orbit.areaShort} project can move forward.`,
       category: "Finish",
       icon: CheckCircle2,
       relatedIds: [5],

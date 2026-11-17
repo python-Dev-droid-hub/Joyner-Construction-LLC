@@ -49,12 +49,16 @@ export function PageHero({
 
         <h1
           id="page-title"
-          className="max-w-3xl font-display text-[clamp(1.85rem,4.5vw,3.25rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-ivory"
+          className={
+            headline.length > 90
+              ? "max-w-4xl font-display text-[clamp(1.45rem,3vw,2.35rem)] font-semibold leading-[1.15] tracking-[-0.02em] text-ivory"
+              : "max-w-3xl font-display text-[clamp(1.85rem,4.5vw,3.25rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-ivory"
+          }
         >
           {headline}
         </h1>
 
-        <p className="mt-4 max-w-xl text-base leading-relaxed text-ivory/78 md:text-lg">
+        <p className="mt-4 max-w-2xl text-base leading-relaxed text-ivory/78 md:text-lg">
           {supporting}
         </p>
 

@@ -34,6 +34,7 @@ export function CtaBanner({ content }: CtaBannerProps = {}) {
         secondaryHref={`mailto:${site.email}`}
         backgroundImage={backgroundImage}
         backgroundAlt={backgroundAlt}
+        className={content?.layout === "editorial" ? "fcb-editorial" : ""}
         gradientColors={["#c98a5e", "#b8734a", "#5c3d2e", "#141210"]}
       />
     </div>

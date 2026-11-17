@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { AboutOrbit } from "@/components/sections/AboutOrbit";
 import { Button } from "@/components/ui/Button";
 import type { LandingPageContent } from "@/content/landing";
-import { aboutContent, site } from "@/content/site";
+import { aboutContent } from "@/content/site";
 import { useReveal } from "@/hooks/useReveal";
 
 type AboutProps = {
@@ -18,8 +18,6 @@ export function About({ content }: AboutProps = {}) {
   const eyebrow = content?.eyebrow ?? aboutContent.eyebrow;
   const heading = content?.heading ?? aboutContent.heading;
   const paragraphs = content?.paragraphs ?? [...aboutContent.paragraphs];
-  const areaLabel = content?.areaLabel ?? site.locationShort;
-  const serviceLinkLabel = content?.serviceLinkLabel ?? "framing services";
   const cta = content?.cta ?? aboutContent.cta;
   const visualCaption =
     content?.visualCaption ??
@@ -39,7 +37,11 @@ export function About({ content }: AboutProps = {}) {
           </p>
           <h2
             id="about-heading"
-            className="about-heading font-display text-[clamp(1.85rem,4.2vw,3.25rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-charcoal"
+            className={
+              heading.length > 90
+                ? "about-heading font-display text-[clamp(1.35rem,2.6vw,2rem)] font-semibold leading-[1.18] tracking-[-0.02em] text-charcoal"
+                : "about-heading font-display text-[clamp(1.85rem,4.2vw,3.25rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-charcoal"
+            }
           >
             {heading}
           </h2>
@@ -48,30 +50,6 @@ export function About({ content }: AboutProps = {}) {
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
-          <p className="about-locale mt-5 text-sm leading-relaxed text-stone-ink">
-            Serving{" "}
-            <a
-              href="#service-area"
-              className="font-semibold text-charcoal underline decoration-copper/40 underline-offset-4 hover:decoration-copper"
-            >
-              {areaLabel}
-            </a>{" "}
-            and nearby communities. See{" "}
-            <a
-              href="#services"
-              className="font-semibold text-charcoal underline decoration-copper/40 underline-offset-4 hover:decoration-copper"
-            >
-              {serviceLinkLabel}
-            </a>{" "}
-            or{" "}
-            <a
-              href="#contact"
-              className="font-semibold text-charcoal underline decoration-copper/40 underline-offset-4 hover:decoration-copper"
-            >
-              request an estimate
-            </a>
-            .
-          </p>
           <div className="about-cta mt-8 flex flex-wrap gap-3">
             <Button href={cta.href} variant="primaryOnLight">
               {cta.label}

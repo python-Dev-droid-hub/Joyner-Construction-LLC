@@ -1,3 +1,24 @@
+import {
+  bellinghamSidingHero,
+  bellinghamSidingSeo,
+  isBellinghamSiding,
+} from "@/content/siding-bellingham";
+import {
+  ferndaleSidingHero,
+  ferndaleSidingSeo,
+  isFerndaleSiding,
+} from "@/content/siding-ferndale";
+import {
+  lyndenSidingHero,
+  lyndenSidingSeo,
+  isLyndenSiding,
+} from "@/content/siding-lynden";
+import {
+  burlingtonSidingHero,
+  burlingtonSidingSeo,
+  isBurlingtonSiding,
+} from "@/content/siding-burlington";
+
 export type ServiceDef = {
   slug: string;
   name: string;
@@ -200,10 +221,31 @@ export function buildPageHeroCopy(
   area: AreaDef,
   heroImage: string = service.image,
 ) {
+  const bellingham = isBellinghamSiding(service.slug, area.slug);
+  const ferndale = isFerndaleSiding(service.slug, area.slug);
+  const lynden = isLyndenSiding(service.slug, area.slug);
+  const burlington = isBurlingtonSiding(service.slug, area.slug);
+
   return {
     eyebrow: "Joyner Construction LLC",
-    headline: `${service.name} in ${area.name}`,
-    supporting: `${service.blurb} Serving homeowners in ${area.nameShort} and nearby communities. Request an estimate to discuss scope.`,
+    headline: bellingham
+      ? bellinghamSidingHero.headline
+      : ferndale
+        ? ferndaleSidingHero.headline
+        : lynden
+          ? lyndenSidingHero.headline
+          : burlington
+            ? burlingtonSidingHero.headline
+            : `${service.name} in ${area.name}`,
+    supporting: bellingham
+      ? bellinghamSidingHero.supporting
+      : ferndale
+        ? ferndaleSidingHero.supporting
+        : lynden
+          ? lyndenSidingHero.supporting
+          : burlington
+            ? burlingtonSidingHero.supporting
+            : `${service.blurb} Serving homeowners in ${area.nameShort} and nearby communities. Request an estimate to discuss scope.`,
     primaryCta: { label: "Request an Estimate", href: "#contact" },
     secondaryCta: { label: "Serving Areas", href: "/serving-areas" },
     image: heroImage,
@@ -212,8 +254,28 @@ export function buildPageHeroCopy(
 }
 
 export function buildPageSeo(service: ServiceDef, area: AreaDef) {
-  const title = `${service.name} in ${area.name}`;
-  const description = `${service.name} services in ${area.name} from Joyner Construction LLC. ${service.blurb} Call (360) 595-8365 or request an estimate.`;
+  const bellingham = isBellinghamSiding(service.slug, area.slug);
+  const ferndale = isFerndaleSiding(service.slug, area.slug);
+  const lynden = isLyndenSiding(service.slug, area.slug);
+  const burlington = isBurlingtonSiding(service.slug, area.slug);
+  const title = bellingham
+    ? bellinghamSidingSeo.title
+    : ferndale
+      ? ferndaleSidingSeo.title
+      : lynden
+        ? lyndenSidingSeo.title
+        : burlington
+          ? burlingtonSidingSeo.title
+          : `${service.name} in ${area.name}`;
+  const description = bellingham
+    ? bellinghamSidingSeo.description
+    : ferndale
+      ? ferndaleSidingSeo.description
+      : lynden
+        ? lyndenSidingSeo.description
+        : burlington
+          ? burlingtonSidingSeo.description
+          : `${service.name} services in ${area.name} from Joyner Construction LLC. ${service.blurb} Call (360) 595-8365 or request an estimate.`;
   return {
     title,
     description,

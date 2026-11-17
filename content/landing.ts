@@ -3,6 +3,22 @@ import type { ServiceShowcaseItem } from "@/components/ui/spatial-product-showca
 import type { AreaDef, ServiceDef } from "@/content/pages";
 import type { ServiceImagePack } from "@/content/service-images";
 import { getAreaLandmark } from "@/content/service-images";
+import {
+  applyBellinghamSidingContent,
+  isBellinghamSiding,
+} from "@/content/siding-bellingham";
+import {
+  applyFerndaleSidingContent,
+  isFerndaleSiding,
+} from "@/content/siding-ferndale";
+import {
+  applyLyndenSidingContent,
+  isLyndenSiding,
+} from "@/content/siding-lynden";
+import {
+  applyBurlingtonSidingContent,
+  isBurlingtonSiding,
+} from "@/content/siding-burlington";
 import { reviewsContent } from "@/content/site";
 
 export type LandingPageContent = {
@@ -26,6 +42,8 @@ export type LandingPageContent = {
     body: string;
     backgroundImage: string;
     backgroundAlt: string;
+    /** Longer copy needs a banner that can grow instead of clipping. */
+    layout?: "editorial";
   };
   reviews: {
     title: string;
@@ -376,7 +394,7 @@ export function buildLandingContent(
   const serviceLower = service.name.toLowerCase();
   const landmark = getAreaLandmark(area.slug);
 
-  return {
+  const content: LandingPageContent = {
     about: {
       eyebrow: "About Us",
       heading: `${service.name} Built Around Your ${area.nameShort} Home.`,
@@ -528,4 +546,22 @@ export function buildLandingContent(
       },
     },
   };
+
+  if (isBellinghamSiding(service.slug, area.slug)) {
+    return applyBellinghamSidingContent(content);
+  }
+
+  if (isFerndaleSiding(service.slug, area.slug)) {
+    return applyFerndaleSidingContent(content);
+  }
+
+  if (isLyndenSiding(service.slug, area.slug)) {
+    return applyLyndenSidingContent(content);
+  }
+
+  if (isBurlingtonSiding(service.slug, area.slug)) {
+    return applyBurlingtonSidingContent(content);
+  }
+
+  return content;
 }

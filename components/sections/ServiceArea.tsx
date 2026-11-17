@@ -58,7 +58,11 @@ export function ServiceArea({ content }: ServiceAreaProps = {}) {
             </p>
             <h2
               id="area-heading"
-              className="mt-4 font-display text-[clamp(2rem,4.2vw,3.25rem)] font-semibold leading-[1.08] tracking-[-0.02em] text-charcoal"
+              className={
+                data.title.length > 90
+                  ? "mt-4 font-display text-[clamp(1.45rem,2.8vw,2.15rem)] font-semibold leading-[1.18] tracking-[-0.02em] text-charcoal"
+                  : "mt-4 font-display text-[clamp(2rem,4.2vw,3.25rem)] font-semibold leading-[1.08] tracking-[-0.02em] text-charcoal"
+              }
             >
               {data.title}
             </h2>
@@ -102,11 +106,7 @@ export function ServiceArea({ content }: ServiceAreaProps = {}) {
               ))}
             </div>
 
-            <p className="mt-12 text-sm leading-relaxed text-stone">
-              {data.note}
-            </p>
-
-            <div className="mt-10">
+            <div className="mt-12">
               <Button href={data.cta.href} variant="primaryOnLight">
                 {data.cta.label}
               </Button>

@@ -56,7 +56,11 @@ export function Contact({ content }: ContactProps = {}) {
           </p>
           <h2
             id="contact-heading"
-            className="font-display text-[clamp(1.85rem,4vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-charcoal"
+            className={
+              title.length > 90
+                ? "font-display text-[clamp(1.35rem,2.6vw,2rem)] font-semibold leading-[1.18] tracking-[-0.02em] text-charcoal"
+                : "font-display text-[clamp(1.85rem,4vw,3rem)] font-semibold leading-[1.05] tracking-[-0.02em] text-charcoal"
+            }
           >
             {title}
           </h2>
