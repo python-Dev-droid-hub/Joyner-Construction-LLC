@@ -51,6 +51,8 @@ const nextConfig: NextConfig = {
   cacheComponents: true,
   partialPrefetching: true,
   images: {
+    // Allow qualities used by hero, orbit, showcase, and CTA Image components.
+    qualities: [75, 85, 90, 92],
     remotePatterns: [
       {
         protocol: "https",

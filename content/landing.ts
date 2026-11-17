@@ -31,6 +31,22 @@ import {
   applyLyndenFramingContent,
   isLyndenFraming,
 } from "@/content/framing-lynden";
+import {
+  applyBellinghamRoofingContent,
+  isBellinghamRoofing,
+} from "@/content/roofing-bellingham";
+import {
+  applyFerndaleRoofingContent,
+  isFerndaleRoofing,
+} from "@/content/roofing-ferndale";
+import {
+  applyLyndenRoofingContent,
+  isLyndenRoofing,
+} from "@/content/roofing-lynden";
+import {
+  applyBurlingtonRoofingContent,
+  isBurlingtonRoofing,
+} from "@/content/roofing-burlington";
 import { reviewsContent } from "@/content/site";
 
 export type LandingPageContent = {
@@ -552,6 +568,22 @@ export function buildLandingContent(
 
   if (isLyndenFraming(service.slug, area.slug)) {
     return applyLyndenFramingContent(content);
+  }
+
+  if (isBellinghamRoofing(service.slug, area.slug)) {
+    return applyBellinghamRoofingContent(content);
+  }
+
+  if (isFerndaleRoofing(service.slug, area.slug)) {
+    return applyFerndaleRoofingContent(content);
+  }
+
+  if (isLyndenRoofing(service.slug, area.slug)) {
+    return applyLyndenRoofingContent(content);
+  }
+
+  if (isBurlingtonRoofing(service.slug, area.slug)) {
+    return applyBurlingtonRoofingContent(content);
   }
 
   return content;

@@ -33,6 +33,26 @@ import {
   lyndenFramingSeo,
   isLyndenFraming,
 } from "@/content/framing-lynden";
+import {
+  bellinghamRoofingHero,
+  bellinghamRoofingSeo,
+  isBellinghamRoofing,
+} from "@/content/roofing-bellingham";
+import {
+  ferndaleRoofingHero,
+  ferndaleRoofingSeo,
+  isFerndaleRoofing,
+} from "@/content/roofing-ferndale";
+import {
+  lyndenRoofingHero,
+  lyndenRoofingSeo,
+  isLyndenRoofing,
+} from "@/content/roofing-lynden";
+import {
+  burlingtonRoofingHero,
+  burlingtonRoofingSeo,
+  isBurlingtonRoofing,
+} from "@/content/roofing-burlington";
 
 export type ServiceDef = {
   slug: string;
@@ -335,6 +355,38 @@ function getCustomPageCopy(
       supporting: lyndenFramingHero.supporting,
       title: lyndenFramingSeo.title,
       description: lyndenFramingSeo.description,
+    };
+  }
+  if (isBellinghamRoofing(service.slug, area.slug)) {
+    return {
+      headline: bellinghamRoofingHero.headline,
+      supporting: bellinghamRoofingHero.supporting,
+      title: bellinghamRoofingSeo.title,
+      description: bellinghamRoofingSeo.description,
+    };
+  }
+  if (isFerndaleRoofing(service.slug, area.slug)) {
+    return {
+      headline: ferndaleRoofingHero.headline,
+      supporting: ferndaleRoofingHero.supporting,
+      title: ferndaleRoofingSeo.title,
+      description: ferndaleRoofingSeo.description,
+    };
+  }
+  if (isLyndenRoofing(service.slug, area.slug)) {
+    return {
+      headline: lyndenRoofingHero.headline,
+      supporting: lyndenRoofingHero.supporting,
+      title: lyndenRoofingSeo.title,
+      description: lyndenRoofingSeo.description,
+    };
+  }
+  if (isBurlingtonRoofing(service.slug, area.slug)) {
+    return {
+      headline: burlingtonRoofingHero.headline,
+      supporting: burlingtonRoofingHero.supporting,
+      title: burlingtonRoofingSeo.title,
+      description: burlingtonRoofingSeo.description,
     };
   }
   return undefined;
