@@ -47,6 +47,42 @@ import {
   applyBurlingtonRoofingContent,
   isBurlingtonRoofing,
 } from "@/content/roofing-burlington";
+import {
+  applyBellinghamPlumbingContent,
+  isBellinghamPlumbing,
+} from "@/content/plumbing-bellingham";
+import {
+  applyFerndalePlumbingContent,
+  isFerndalePlumbing,
+} from "@/content/plumbing-ferndale";
+import {
+  applyLyndenPlumbingContent,
+  isLyndenPlumbing,
+} from "@/content/plumbing-lynden";
+import {
+  applyBurlingtonPlumbingContent,
+  isBurlingtonPlumbing,
+} from "@/content/plumbing-burlington";
+import {
+  applyBellinghamElectricalContent,
+  isBellinghamElectrical,
+} from "@/content/electrical-bellingham";
+import {
+  applyFerndaleElectricalContent,
+  isFerndaleElectrical,
+} from "@/content/electrical-ferndale";
+import {
+  applyLyndenElectricalContent,
+  isLyndenElectrical,
+} from "@/content/electrical-lynden";
+import {
+  applyBurlingtonElectricalContent,
+  isBurlingtonElectrical,
+} from "@/content/electrical-burlington";
+import {
+  applyBellinghamDecksContent,
+  isBellinghamDecks,
+} from "@/content/decks-bellingham";
 import { reviewsContent } from "@/content/site";
 
 export type LandingPageContent = {
@@ -601,6 +637,42 @@ export function buildLandingContent(
 
   if (isBurlingtonRoofing(service.slug, area.slug)) {
     return applyBurlingtonRoofingContent(content);
+  }
+
+  if (isBellinghamPlumbing(service.slug, area.slug)) {
+    return applyBellinghamPlumbingContent(content);
+  }
+
+  if (isFerndalePlumbing(service.slug, area.slug)) {
+    return applyFerndalePlumbingContent(content);
+  }
+
+  if (isLyndenPlumbing(service.slug, area.slug)) {
+    return applyLyndenPlumbingContent(content);
+  }
+
+  if (isBurlingtonPlumbing(service.slug, area.slug)) {
+    return applyBurlingtonPlumbingContent(content);
+  }
+
+  if (isBellinghamElectrical(service.slug, area.slug)) {
+    return applyBellinghamElectricalContent(content);
+  }
+
+  if (isFerndaleElectrical(service.slug, area.slug)) {
+    return applyFerndaleElectricalContent(content);
+  }
+
+  if (isLyndenElectrical(service.slug, area.slug)) {
+    return applyLyndenElectricalContent(content);
+  }
+
+  if (isBurlingtonElectrical(service.slug, area.slug)) {
+    return applyBurlingtonElectricalContent(content);
+  }
+
+  if (isBellinghamDecks(service.slug, area.slug)) {
+    return applyBellinghamDecksContent(content);
   }
 
   return content;

@@ -53,6 +53,51 @@ import {
   burlingtonRoofingSeo,
   isBurlingtonRoofing,
 } from "@/content/roofing-burlington";
+import {
+  bellinghamPlumbingHero,
+  bellinghamPlumbingSeo,
+  isBellinghamPlumbing,
+} from "@/content/plumbing-bellingham";
+import {
+  ferndalePlumbingHero,
+  ferndalePlumbingSeo,
+  isFerndalePlumbing,
+} from "@/content/plumbing-ferndale";
+import {
+  lyndenPlumbingHero,
+  lyndenPlumbingSeo,
+  isLyndenPlumbing,
+} from "@/content/plumbing-lynden";
+import {
+  burlingtonPlumbingHero,
+  burlingtonPlumbingSeo,
+  isBurlingtonPlumbing,
+} from "@/content/plumbing-burlington";
+import {
+  bellinghamElectricalHero,
+  bellinghamElectricalSeo,
+  isBellinghamElectrical,
+} from "@/content/electrical-bellingham";
+import {
+  ferndaleElectricalHero,
+  ferndaleElectricalSeo,
+  isFerndaleElectrical,
+} from "@/content/electrical-ferndale";
+import {
+  lyndenElectricalHero,
+  lyndenElectricalSeo,
+  isLyndenElectrical,
+} from "@/content/electrical-lynden";
+import {
+  burlingtonElectricalHero,
+  burlingtonElectricalSeo,
+  isBurlingtonElectrical,
+} from "@/content/electrical-burlington";
+import {
+  bellinghamDecksHero,
+  bellinghamDecksSeo,
+  isBellinghamDecks,
+} from "@/content/decks-bellingham";
 
 export type ServiceDef = {
   slug: string;
@@ -397,6 +442,78 @@ function getCustomPageCopy(
       supporting: burlingtonRoofingHero.supporting,
       title: burlingtonRoofingSeo.title,
       description: burlingtonRoofingSeo.description,
+    };
+  }
+  if (isBellinghamPlumbing(service.slug, area.slug)) {
+    return {
+      headline: bellinghamPlumbingHero.headline,
+      supporting: bellinghamPlumbingHero.supporting,
+      title: bellinghamPlumbingSeo.title,
+      description: bellinghamPlumbingSeo.description,
+    };
+  }
+  if (isFerndalePlumbing(service.slug, area.slug)) {
+    return {
+      headline: ferndalePlumbingHero.headline,
+      supporting: ferndalePlumbingHero.supporting,
+      title: ferndalePlumbingSeo.title,
+      description: ferndalePlumbingSeo.description,
+    };
+  }
+  if (isLyndenPlumbing(service.slug, area.slug)) {
+    return {
+      headline: lyndenPlumbingHero.headline,
+      supporting: lyndenPlumbingHero.supporting,
+      title: lyndenPlumbingSeo.title,
+      description: lyndenPlumbingSeo.description,
+    };
+  }
+  if (isBurlingtonPlumbing(service.slug, area.slug)) {
+    return {
+      headline: burlingtonPlumbingHero.headline,
+      supporting: burlingtonPlumbingHero.supporting,
+      title: burlingtonPlumbingSeo.title,
+      description: burlingtonPlumbingSeo.description,
+    };
+  }
+  if (isBellinghamElectrical(service.slug, area.slug)) {
+    return {
+      headline: bellinghamElectricalHero.headline,
+      supporting: bellinghamElectricalHero.supporting,
+      title: bellinghamElectricalSeo.title,
+      description: bellinghamElectricalSeo.description,
+    };
+  }
+  if (isFerndaleElectrical(service.slug, area.slug)) {
+    return {
+      headline: ferndaleElectricalHero.headline,
+      supporting: ferndaleElectricalHero.supporting,
+      title: ferndaleElectricalSeo.title,
+      description: ferndaleElectricalSeo.description,
+    };
+  }
+  if (isLyndenElectrical(service.slug, area.slug)) {
+    return {
+      headline: lyndenElectricalHero.headline,
+      supporting: lyndenElectricalHero.supporting,
+      title: lyndenElectricalSeo.title,
+      description: lyndenElectricalSeo.description,
+    };
+  }
+  if (isBurlingtonElectrical(service.slug, area.slug)) {
+    return {
+      headline: burlingtonElectricalHero.headline,
+      supporting: burlingtonElectricalHero.supporting,
+      title: burlingtonElectricalSeo.title,
+      description: burlingtonElectricalSeo.description,
+    };
+  }
+  if (isBellinghamDecks(service.slug, area.slug)) {
+    return {
+      headline: bellinghamDecksHero.headline,
+      supporting: bellinghamDecksHero.supporting,
+      title: bellinghamDecksSeo.title,
+      description: bellinghamDecksSeo.description,
     };
   }
   return undefined;
