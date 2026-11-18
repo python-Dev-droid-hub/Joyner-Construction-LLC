@@ -12,9 +12,10 @@ export const ferndalePlumbingHero = {
 };
 
 export const ferndalePlumbingSeo = {
-  title: "Plumbing Services in Ferndale, WA",
+  title:
+    "Ferndale, WA Plumbing Experts | Professional Plumbing Installation, Repairs, Drain Cleaning & Water Heater Services – Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial plumbing services in Ferndale, WA—leaking pipes, fixture upgrades, drainage concerns, and plumbing installations.",
+    "Need reliable plumbing services in Ferndale, WA? Joyner Construction LLC offers professional plumbing solutions, including pipe repairs, drain cleaning, water heater services, plumbing installations, and residential plumbing improvements. Count on quality workmanship and dependable service for your plumbing needs.",
 };
 
 /** Swap the shared template copy for the Ferndale plumbing page. Images stay in place. */

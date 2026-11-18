@@ -306,7 +306,15 @@ export function isIndexedLandingPage(
     isBellinghamRoofing(serviceSlug, areaSlug) ||
     isFerndaleRoofing(serviceSlug, areaSlug) ||
     isLyndenRoofing(serviceSlug, areaSlug) ||
-    isBurlingtonRoofing(serviceSlug, areaSlug)
+    isBurlingtonRoofing(serviceSlug, areaSlug) ||
+    isFerndalePlumbing(serviceSlug, areaSlug) ||
+    isLyndenPlumbing(serviceSlug, areaSlug) ||
+    isBurlingtonPlumbing(serviceSlug, areaSlug) ||
+    isBellinghamElectrical(serviceSlug, areaSlug) ||
+    isFerndaleElectrical(serviceSlug, areaSlug) ||
+    isLyndenElectrical(serviceSlug, areaSlug) ||
+    isBurlingtonElectrical(serviceSlug, areaSlug) ||
+    isBellinghamDecks(serviceSlug, areaSlug)
   );
 }
 

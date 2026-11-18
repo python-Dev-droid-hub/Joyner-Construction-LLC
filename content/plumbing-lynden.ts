@@ -12,9 +12,10 @@ export const lyndenPlumbingHero = {
 };
 
 export const lyndenPlumbingSeo = {
-  title: "Plumbing Services in Lynden, WA",
+  title:
+    "Expert Plumbing Services in Lynden, WA | Residential & Commercial Plumbing Installation, Pipe Repair, Drain Cleaning, Water Heater Replacement & Emergency Plumbing – Joyner Construction LLC",
   description:
-    "Joyner Construction LLC helps homeowners and businesses in Lynden, WA, with plumbing repairs, fixture installations, pipe replacements, and water line concerns.",
+    "Looking for dependable plumbing services in Lynden, WA? Joyner Construction LLC provides professional plumbing installation, pipe repair, water line replacement, drain cleaning, water heater installation, kitchen and bathroom plumbing, whole-house repiping, and emergency plumbing solutions. Get reliable workmanship for your residential or commercial property.",
 };
 
 /** Swap the shared template copy for the Lynden plumbing page. Images stay in place. */

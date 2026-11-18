@@ -12,9 +12,10 @@ export const ferndaleElectricalHero = {
 };
 
 export const ferndaleElectricalSeo = {
-  title: "Electrical Wiring Services in Ferndale, WA",
+  title:
+    "Professional Electrical Services in Ferndale, WA | Expert Installation, Wiring, Repairs & Lighting Solutions – Joyner Construction LLC",
   description:
-    "Joyner Construction LLC helps Ferndale, WA, homeowners and businesses with professional electrical wiring installation, repair, and replacement.",
+    "Joyner Construction LLC offers professional electrical services in Ferndale, WA, including electrical installation, wiring, repairs, lighting upgrades, fixture replacement, and residential electrical solutions. Contact us for reliable service and quality workmanship.",
 };
 
 /** Swap the shared template copy for the Ferndale electrical page. Images stay in place. */

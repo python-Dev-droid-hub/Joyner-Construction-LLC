@@ -12,9 +12,10 @@ export const bellinghamElectricalHero = {
 };
 
 export const bellinghamElectricalSeo = {
-  title: "Electrical Wiring Services in Bellingham, WA",
+  title:
+    "Electrical Services in Bellingham, WA | Installation & Repair – Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial electrical wiring installation, repair, and replacement services in Bellingham, WA.",
+    "Joyner Construction LLC offers reliable electrical services in Bellingham, WA, including electrical installation, repairs, wiring, and lighting solutions. Contact us for quality workmanship and dependable service.",
 };
 
 /** Swap the shared template copy for the Bellingham electrical page. Images stay in place. */

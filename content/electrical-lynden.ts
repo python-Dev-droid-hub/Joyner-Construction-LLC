@@ -12,9 +12,10 @@ export const lyndenElectricalHero = {
 };
 
 export const lyndenElectricalSeo = {
-  title: "Electrical Wiring Services in Lynden, WA",
+  title:
+    "Trusted Electricians in Lynden, WA | Complete Home Electrical Upgrades, Wiring, Lighting & Repair Services – Joyner Construction LLC",
   description:
-    "Joyner Construction LLC delivers practical electrical wiring solutions for homes and commercial properties in Lynden, WA—installation, repair, and replacement.",
+    "Upgrade your home's electrical system with Joyner Construction LLC in Lynden, WA. Get dependable electrical repairs, wiring, lighting installation, fixture upgrades, and professional residential electrical solutions.",
 };
 
 /** Swap the shared template copy for the Lynden electrical page. Images stay in place. */

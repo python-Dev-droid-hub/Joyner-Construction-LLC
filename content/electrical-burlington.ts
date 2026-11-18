@@ -12,9 +12,10 @@ export const burlingtonElectricalHero = {
 };
 
 export const burlingtonElectricalSeo = {
-  title: "Electrical Wiring Services in Burlington, WA",
+  title:
+    "Quality Electrical Contractors in Burlington, WA | Residential Electrical Installation, Wiring, Lighting Upgrades & Repair Solutions – Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial electrical wiring services in Burlington, WA—installation, repairs, and complete replacements.",
+    "Need dependable electrical work in Burlington, WA? Joyner Construction LLC delivers quality electrical installations, wiring improvements, lighting upgrades, fixture replacements, and repair services to keep your property's electrical systems safe and efficient.",
 };
 
 /** Swap the shared template copy for the Burlington electrical page. Images stay in place. */

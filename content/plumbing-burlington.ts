@@ -12,9 +12,10 @@ export const burlingtonPlumbingHero = {
 };
 
 export const burlingtonPlumbingSeo = {
-  title: "Plumbing Services in Burlington, WA",
+  title:
+    "Professional Plumbing Services in Burlington, WA | Expert Plumbers for Plumbing Installation, Repairs, Drain Cleaning, Water Heater Services & Residential Plumbing – Joyner Construction LLC",
   description:
-    "Joyner Construction LLC helps residential and commercial property owners in Burlington, WA, with plumbing repairs, fixture upgrades, water line work, and new installations.",
+    "Searching for trusted plumbing services in Burlington, WA? Joyner Construction LLC delivers dependable plumbing solutions, including pipe installation and repairs, drain cleaning, water heater installation, plumbing replacements, kitchen and bathroom plumbing, and residential plumbing improvements. Experience quality workmanship and reliable service for your plumbing needs.",
 };
 
 /** Swap the shared template copy for the Burlington plumbing page. Images stay in place. */

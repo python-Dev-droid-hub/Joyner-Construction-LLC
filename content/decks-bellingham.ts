@@ -12,9 +12,10 @@ export const bellinghamDecksHero = {
 };
 
 export const bellinghamDecksSeo = {
-  title: "Deck Installation Services in Bellingham, WA",
+  title:
+    "Custom Deck Builders in Bellingham, WA | Professional Deck Design, Installation, Restoration & Outdoor Living Solutions – Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial deck installation, repair, and replacement services in Bellingham, WA.",
+    "Enhance your outdoor space with Joyner Construction LLC in Bellingham, WA. We provide quality deck construction, custom designs, deck repairs, replacements, and outdoor living improvements to create beautiful and durable spaces.",
 };
 
 /** Swap the shared template copy for the Bellingham decks page. Images stay in place. */
