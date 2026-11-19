@@ -15,9 +15,10 @@ export const bellinghamFlatWorkConcreteHero = {
 };
 
 export const bellinghamFlatWorkConcreteSeo = {
-  title: "Flatwork Concrete Services in Bellingham, WA",
+  title:
+    "Hire Concrete Contractors for Flatwork & Installation in Bellingham, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial flatwork concrete installation, repair, and replacement services in Bellingham, WA.",
+    "Need professional concrete services in Bellingham, WA? Choose Joyner Construction LLC for concrete flatwork, driveways, patios, sidewalks, and quality concrete installation. Contact us today to discuss your project and request a competitive quote!",
 };
 
 /** Swap the shared template copy for the Bellingham flatwork concrete page. Images stay in place. */

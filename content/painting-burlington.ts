@@ -12,9 +12,10 @@ export const burlingtonPaintingHero = {
 };
 
 export const burlingtonPaintingSeo = {
-  title: "Painting Services in Burlington, WA",
+  title:
+    "Professional Home Painters for Interior, Exterior & Residential Painting in Burlington, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial interior and exterior painting services in Burlington, WA.",
+    "Looking to upgrade your property in Burlington, WA? Choose Joyner Construction LLC for expert interior painting, exterior painting, house repainting, and wall finishing services. Give your home a beautiful new look with quality craftsmanship. Contact us today to schedule your painting project and request a quote!",
 };
 
 /** Swap the shared template copy for the Burlington painting page. Images stay in place. */

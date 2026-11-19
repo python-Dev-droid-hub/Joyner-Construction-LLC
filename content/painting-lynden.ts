@@ -12,9 +12,10 @@ export const lyndenPaintingHero = {
 };
 
 export const lyndenPaintingSeo = {
-  title: "Painting Services in Lynden, WA",
+  title:
+    "Get Expert Residential Painting, Home Repainting & Wall Finishing in Lynden, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial interior and exterior painting services in Lynden, WA.",
+    "Planning to refresh your property in Lynden, WA? Hire Joyner Construction LLC for reliable interior painting, exterior house painting, residential repainting, and wall finishing. Enhance your home's beauty with professional painting solutions. Contact us today to discuss your project and get a competitive quote!",
 };
 
 /** Swap the shared template copy for the Lynden painting page. Images stay in place. */

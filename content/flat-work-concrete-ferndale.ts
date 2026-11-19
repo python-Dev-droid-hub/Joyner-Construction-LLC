@@ -15,9 +15,10 @@ export const ferndaleFlatWorkConcreteHero = {
 };
 
 export const ferndaleFlatWorkConcreteSeo = {
-  title: "Flatwork Concrete Services in Ferndale, WA",
+  title:
+    "Professional Concrete Flatwork, Driveways & Patio Services in Ferndale, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial flatwork concrete installation, repair, and replacement services in Ferndale, WA.",
+    "Planning a concrete project in Ferndale, WA? Hire Joyner Construction LLC for reliable concrete flatwork, driveway installation, patio construction, sidewalks, and concrete repairs. Get durable results and quality workmanship. Contact us today for a project estimate!",
 };
 
 /** Swap the shared template copy for the Ferndale flatwork concrete page. Images stay in place. */

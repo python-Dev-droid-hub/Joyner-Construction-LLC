@@ -15,9 +15,10 @@ export const burlingtonFlatWorkConcreteHero = {
 };
 
 export const burlingtonFlatWorkConcreteSeo = {
-  title: "Flatwork Concrete Services in Burlington, WA",
+  title:
+    "Custom Concrete Flatwork, Driveway & Patio Contractors in Burlington, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial flatwork concrete installation, repair, and replacement services in Burlington, WA.",
+    "Looking for trusted concrete specialists in Burlington, WA? Joyner Construction LLC offers professional flatwork, concrete driveway installation, patio construction, sidewalk services, and repairs. Enhance your property's functionality with quality concrete work. Contact us today to get a project quote!",
 };
 
 /** Swap the shared template copy for the Burlington flatwork concrete page. Images stay in place. */

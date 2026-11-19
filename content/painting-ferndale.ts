@@ -12,9 +12,10 @@ export const ferndalePaintingHero = {
 };
 
 export const ferndalePaintingSeo = {
-  title: "Painting Services in Ferndale, WA",
+  title:
+    "Affordable House Painting, Interior & Exterior Painting Experts in Ferndale, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial interior and exterior painting services in Ferndale, WA.",
+    "Want to enhance your home's appearance in Ferndale, WA? Trust Joyner Construction LLC for quality interior painting, exterior painting, residential repainting, and professional wall finishing. Give your property a clean, refreshed look with expert service. Contact us today to request a free estimate!",
 };
 
 /** Swap the shared template copy for the Ferndale painting page. Images stay in place. */

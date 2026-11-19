@@ -12,9 +12,10 @@ export const bellinghamPaintingHero = {
 };
 
 export const bellinghamPaintingSeo = {
-  title: "Painting Services in Bellingham, WA",
+  title:
+    "Transform Your Home with Expert Painting & Color Upgrade Services in Bellingham, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial interior and exterior painting services in Bellingham, WA.",
+    "Give your property a fresh new appearance with Joyner Construction LLC. We provide dependable interior and exterior painting, home repainting, wall finishing, and professional paint application in Bellingham, WA. Contact us today to discuss your painting needs and request a competitive estimate!",
 };
 
 /** Swap the shared template copy for the Bellingham painting page. Images stay in place. */

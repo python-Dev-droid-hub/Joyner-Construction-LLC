@@ -15,9 +15,10 @@ export const lyndenFlatWorkConcreteHero = {
 };
 
 export const lyndenFlatWorkConcreteSeo = {
-  title: "Flatwork Concrete Services in Lynden, WA",
+  title:
+    "Hire Expert Concrete Contractors for Flatwork & Driveways in Lynden, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial flatwork concrete installation, repair, and replacement services in Lynden, WA.",
+    "Ready to improve your property in Lynden, WA? Choose Joyner Construction LLC for professional concrete flatwork, driveway construction, patio installation, sidewalks, and concrete repairs. Get dependable service and quality results. Contact us today for a competitive estimate!",
 };
 
 /** Swap the shared template copy for the Lynden flatwork concrete page. Images stay in place. */

@@ -396,7 +396,15 @@ export function isIndexedLandingPage(
     isBellinghamWindows(serviceSlug, areaSlug) ||
     isFerndaleWindows(serviceSlug, areaSlug) ||
     isLyndenWindows(serviceSlug, areaSlug) ||
-    isBurlingtonWindows(serviceSlug, areaSlug)
+    isBurlingtonWindows(serviceSlug, areaSlug) ||
+    isBellinghamFlatWorkConcrete(serviceSlug, areaSlug) ||
+    isFerndaleFlatWorkConcrete(serviceSlug, areaSlug) ||
+    isLyndenFlatWorkConcrete(serviceSlug, areaSlug) ||
+    isBurlingtonFlatWorkConcrete(serviceSlug, areaSlug) ||
+    isBellinghamPainting(serviceSlug, areaSlug) ||
+    isFerndalePainting(serviceSlug, areaSlug) ||
+    isLyndenPainting(serviceSlug, areaSlug) ||
+    isBurlingtonPainting(serviceSlug, areaSlug)
   );
 }
 
