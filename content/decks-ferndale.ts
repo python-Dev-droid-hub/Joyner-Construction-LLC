@@ -12,9 +12,10 @@ export const ferndaleDecksHero = {
 };
 
 export const ferndaleDecksSeo = {
-  title: "Deck Installation Services in Ferndale, WA",
+  title:
+    "Professional Custom Deck Builders & Installation in Ferndale, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial deck installation, repair, and replacement services in Ferndale, WA.",
+    "Looking to hire professional deck builders in Ferndale, WA? Joyner Construction LLC specializes in custom deck design, new deck construction, deck installation, repairs, and replacement. Get quality workmanship, reliable service, and request your free estimate today!",
 };
 
 /** Swap the shared template copy for the Ferndale decks page. Images stay in place. */

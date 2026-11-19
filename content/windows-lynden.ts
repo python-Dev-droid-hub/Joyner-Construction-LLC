@@ -12,9 +12,10 @@ export const lyndenWindowsHero = {
 };
 
 export const lyndenWindowsSeo = {
-  title: "Window Installation Services in Lynden, WA",
+  title:
+    "Get Professional Window Installation, Replacement & Repair Solutions in Lynden, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial window repair, installation, and replacement services in Lynden, WA.",
+    "Need reliable window services in Lynden, WA? Choose Joyner Construction LLC for professional window installation, replacement, and repair. Upgrade your home today and request a competitive quote!",
 };
 
 /** Swap the shared template copy for the Lynden windows page. Images stay in place. */

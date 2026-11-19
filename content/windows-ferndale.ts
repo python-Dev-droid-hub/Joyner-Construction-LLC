@@ -12,9 +12,10 @@ export const ferndaleWindowsHero = {
 };
 
 export const ferndaleWindowsSeo = {
-  title: "Window Installation Services in Ferndale, WA",
+  title:
+    "Upgrade Your Home with Expert Window Installation & Replacement in Ferndale, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial window repair, installation, and replacement services in Ferndale, WA.",
+    "Hire Joyner Construction LLC for professional window installation, replacement, repair, and home window upgrades in Ferndale, WA. Enhance your home's appearance, comfort, and energy efficiency. Contact us today to discuss your project and request a free estimate!",
 };
 
 /** Swap the shared template copy for the Ferndale windows page. Images stay in place. */

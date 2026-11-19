@@ -349,7 +349,14 @@ export function isIndexedLandingPage(
     isFerndaleElectrical(serviceSlug, areaSlug) ||
     isLyndenElectrical(serviceSlug, areaSlug) ||
     isBurlingtonElectrical(serviceSlug, areaSlug) ||
-    isBellinghamDecks(serviceSlug, areaSlug)
+    isBellinghamDecks(serviceSlug, areaSlug) ||
+    isFerndaleDecks(serviceSlug, areaSlug) ||
+    isLyndenDecks(serviceSlug, areaSlug) ||
+    isBurlingtonDecks(serviceSlug, areaSlug) ||
+    isBellinghamWindows(serviceSlug, areaSlug) ||
+    isFerndaleWindows(serviceSlug, areaSlug) ||
+    isLyndenWindows(serviceSlug, areaSlug) ||
+    isBurlingtonWindows(serviceSlug, areaSlug)
   );
 }
 

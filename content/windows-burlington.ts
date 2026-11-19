@@ -12,9 +12,10 @@ export const burlingtonWindowsHero = {
 };
 
 export const burlingtonWindowsSeo = {
-  title: "Window Installation Services in Burlington, WA",
+  title:
+    "Professional Window Replacement & Installation in Burlington, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial window repair, installation, and replacement services in Burlington, WA.",
+    "Looking for quality window contractors in Burlington, WA? Trust Joyner Construction LLC for expert window installation, replacement, and repair services. Improve your home's comfort and appearance. Contact us today for a project quote!",
 };
 
 /** Swap the shared template copy for the Burlington windows page. Images stay in place. */

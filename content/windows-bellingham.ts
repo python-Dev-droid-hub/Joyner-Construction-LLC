@@ -12,9 +12,10 @@ export const bellinghamWindowsHero = {
 };
 
 export const bellinghamWindowsSeo = {
-  title: "Window Installation Services in Bellingham, WA",
+  title:
+    "Upgrade Your Home with Professional Window Installation, Repair & Replacement in Bellingham, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial window repair, installation, and replacement services in Bellingham, WA.",
+    "Need new or replacement windows in Bellingham, WA? Trust Joyner Construction LLC for quality window upgrades, professional installation, replacement, and repair. Improve your home's comfort, appearance, and energy efficiency. Contact us today to schedule your project and get a free estimate!",
 };
 
 /** Swap the shared template copy for the Bellingham windows page. Images stay in place. */

@@ -12,9 +12,10 @@ export const burlingtonDecksHero = {
 };
 
 export const burlingtonDecksSeo = {
-  title: "Deck Installation Services in Burlington, WA",
+  title:
+    "Transform Your Backyard with Custom Deck Building, Installation & Repair in Burlington, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial deck installation, repair, and replacement services in Burlington, WA.",
+    "Hire Joyner Construction LLC for professional deck building, custom deck design, wood deck installation, railing replacement, deck remodeling, and repair services in Burlington, WA. Contact our team today to discuss your project and request a competitive estimate!",
 };
 
 /** Swap the shared template copy for the Burlington decks page. Images stay in place. */

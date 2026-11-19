@@ -12,9 +12,10 @@ export const lyndenDecksHero = {
 };
 
 export const lyndenDecksSeo = {
-  title: "Deck Installation Services in Lynden, WA",
+  title:
+    "Get Custom Deck Installation, Building & Repair in Lynden, WA | Joyner Construction",
   description:
-    "Joyner Construction LLC provides residential and commercial deck installation, repair, and replacement services in Lynden, WA.",
+    "Ready to upgrade your outdoor space? Choose Joyner Construction LLC for expert deck construction, custom deck installation, wood deck repairs, remodeling, and replacement in Lynden, WA. Contact our team today to discuss your project and get a competitive estimate!",
 };
 
 /** Swap the shared template copy for the Lynden decks page. Images stay in place. */
