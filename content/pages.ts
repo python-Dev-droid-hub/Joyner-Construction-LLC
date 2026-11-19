@@ -153,6 +153,26 @@ import {
   burlingtonFlatWorkConcreteSeo,
   isBurlingtonFlatWorkConcrete,
 } from "@/content/flat-work-concrete-burlington";
+import {
+  lyndenPaintingHero,
+  lyndenPaintingSeo,
+  isLyndenPainting,
+} from "@/content/painting-lynden";
+import {
+  burlingtonPaintingHero,
+  burlingtonPaintingSeo,
+  isBurlingtonPainting,
+} from "@/content/painting-burlington";
+import {
+  bellinghamPaintingHero,
+  bellinghamPaintingSeo,
+  isBellinghamPainting,
+} from "@/content/painting-bellingham";
+import {
+  ferndalePaintingHero,
+  ferndalePaintingSeo,
+  isFerndalePainting,
+} from "@/content/painting-ferndale";
 
 export type ServiceDef = {
   slug: string;
@@ -672,6 +692,38 @@ function getCustomPageCopy(
       supporting: burlingtonFlatWorkConcreteHero.supporting,
       title: burlingtonFlatWorkConcreteSeo.title,
       description: burlingtonFlatWorkConcreteSeo.description,
+    };
+  }
+  if (isLyndenPainting(service.slug, area.slug)) {
+    return {
+      headline: lyndenPaintingHero.headline,
+      supporting: lyndenPaintingHero.supporting,
+      title: lyndenPaintingSeo.title,
+      description: lyndenPaintingSeo.description,
+    };
+  }
+  if (isBurlingtonPainting(service.slug, area.slug)) {
+    return {
+      headline: burlingtonPaintingHero.headline,
+      supporting: burlingtonPaintingHero.supporting,
+      title: burlingtonPaintingSeo.title,
+      description: burlingtonPaintingSeo.description,
+    };
+  }
+  if (isBellinghamPainting(service.slug, area.slug)) {
+    return {
+      headline: bellinghamPaintingHero.headline,
+      supporting: bellinghamPaintingHero.supporting,
+      title: bellinghamPaintingSeo.title,
+      description: bellinghamPaintingSeo.description,
+    };
+  }
+  if (isFerndalePainting(service.slug, area.slug)) {
+    return {
+      headline: ferndalePaintingHero.headline,
+      supporting: ferndalePaintingHero.supporting,
+      title: ferndalePaintingSeo.title,
+      description: ferndalePaintingSeo.description,
     };
   }
   return undefined;
