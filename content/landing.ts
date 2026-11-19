@@ -111,6 +111,22 @@ import {
   applyBurlingtonWindowsContent,
   isBurlingtonWindows,
 } from "@/content/windows-burlington";
+import {
+  applyBellinghamFlatWorkConcreteContent,
+  isBellinghamFlatWorkConcrete,
+} from "@/content/flat-work-concrete-bellingham";
+import {
+  applyFerndaleFlatWorkConcreteContent,
+  isFerndaleFlatWorkConcrete,
+} from "@/content/flat-work-concrete-ferndale";
+import {
+  applyLyndenFlatWorkConcreteContent,
+  isLyndenFlatWorkConcrete,
+} from "@/content/flat-work-concrete-lynden";
+import {
+  applyBurlingtonFlatWorkConcreteContent,
+  isBurlingtonFlatWorkConcrete,
+} from "@/content/flat-work-concrete-burlington";
 import { reviewsContent } from "@/content/site";
 
 export type LandingPageContent = {
@@ -729,6 +745,22 @@ export function buildLandingContent(
 
   if (isBurlingtonWindows(service.slug, area.slug)) {
     return applyBurlingtonWindowsContent(content);
+  }
+
+  if (isBellinghamFlatWorkConcrete(service.slug, area.slug)) {
+    return applyBellinghamFlatWorkConcreteContent(content);
+  }
+
+  if (isFerndaleFlatWorkConcrete(service.slug, area.slug)) {
+    return applyFerndaleFlatWorkConcreteContent(content);
+  }
+
+  if (isLyndenFlatWorkConcrete(service.slug, area.slug)) {
+    return applyLyndenFlatWorkConcreteContent(content);
+  }
+
+  if (isBurlingtonFlatWorkConcrete(service.slug, area.slug)) {
+    return applyBurlingtonFlatWorkConcreteContent(content);
   }
 
   return content;

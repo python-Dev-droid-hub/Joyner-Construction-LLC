@@ -133,6 +133,26 @@ import {
   burlingtonWindowsSeo,
   isBurlingtonWindows,
 } from "@/content/windows-burlington";
+import {
+  bellinghamFlatWorkConcreteHero,
+  bellinghamFlatWorkConcreteSeo,
+  isBellinghamFlatWorkConcrete,
+} from "@/content/flat-work-concrete-bellingham";
+import {
+  ferndaleFlatWorkConcreteHero,
+  ferndaleFlatWorkConcreteSeo,
+  isFerndaleFlatWorkConcrete,
+} from "@/content/flat-work-concrete-ferndale";
+import {
+  lyndenFlatWorkConcreteHero,
+  lyndenFlatWorkConcreteSeo,
+  isLyndenFlatWorkConcrete,
+} from "@/content/flat-work-concrete-lynden";
+import {
+  burlingtonFlatWorkConcreteHero,
+  burlingtonFlatWorkConcreteSeo,
+  isBurlingtonFlatWorkConcrete,
+} from "@/content/flat-work-concrete-burlington";
 
 export type ServiceDef = {
   slug: string;
@@ -620,6 +640,38 @@ function getCustomPageCopy(
       supporting: burlingtonWindowsHero.supporting,
       title: burlingtonWindowsSeo.title,
       description: burlingtonWindowsSeo.description,
+    };
+  }
+  if (isBellinghamFlatWorkConcrete(service.slug, area.slug)) {
+    return {
+      headline: bellinghamFlatWorkConcreteHero.headline,
+      supporting: bellinghamFlatWorkConcreteHero.supporting,
+      title: bellinghamFlatWorkConcreteSeo.title,
+      description: bellinghamFlatWorkConcreteSeo.description,
+    };
+  }
+  if (isFerndaleFlatWorkConcrete(service.slug, area.slug)) {
+    return {
+      headline: ferndaleFlatWorkConcreteHero.headline,
+      supporting: ferndaleFlatWorkConcreteHero.supporting,
+      title: ferndaleFlatWorkConcreteSeo.title,
+      description: ferndaleFlatWorkConcreteSeo.description,
+    };
+  }
+  if (isLyndenFlatWorkConcrete(service.slug, area.slug)) {
+    return {
+      headline: lyndenFlatWorkConcreteHero.headline,
+      supporting: lyndenFlatWorkConcreteHero.supporting,
+      title: lyndenFlatWorkConcreteSeo.title,
+      description: lyndenFlatWorkConcreteSeo.description,
+    };
+  }
+  if (isBurlingtonFlatWorkConcrete(service.slug, area.slug)) {
+    return {
+      headline: burlingtonFlatWorkConcreteHero.headline,
+      supporting: burlingtonFlatWorkConcreteHero.supporting,
+      title: burlingtonFlatWorkConcreteSeo.title,
+      description: burlingtonFlatWorkConcreteSeo.description,
     };
   }
   return undefined;
