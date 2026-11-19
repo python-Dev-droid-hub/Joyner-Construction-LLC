@@ -98,6 +98,41 @@ import {
   bellinghamDecksSeo,
   isBellinghamDecks,
 } from "@/content/decks-bellingham";
+import {
+  ferndaleDecksHero,
+  ferndaleDecksSeo,
+  isFerndaleDecks,
+} from "@/content/decks-ferndale";
+import {
+  lyndenDecksHero,
+  lyndenDecksSeo,
+  isLyndenDecks,
+} from "@/content/decks-lynden";
+import {
+  burlingtonDecksHero,
+  burlingtonDecksSeo,
+  isBurlingtonDecks,
+} from "@/content/decks-burlington";
+import {
+  bellinghamWindowsHero,
+  bellinghamWindowsSeo,
+  isBellinghamWindows,
+} from "@/content/windows-bellingham";
+import {
+  ferndaleWindowsHero,
+  ferndaleWindowsSeo,
+  isFerndaleWindows,
+} from "@/content/windows-ferndale";
+import {
+  lyndenWindowsHero,
+  lyndenWindowsSeo,
+  isLyndenWindows,
+} from "@/content/windows-lynden";
+import {
+  burlingtonWindowsHero,
+  burlingtonWindowsSeo,
+  isBurlingtonWindows,
+} from "@/content/windows-burlington";
 
 export type ServiceDef = {
   slug: string;
@@ -522,6 +557,62 @@ function getCustomPageCopy(
       supporting: bellinghamDecksHero.supporting,
       title: bellinghamDecksSeo.title,
       description: bellinghamDecksSeo.description,
+    };
+  }
+  if (isFerndaleDecks(service.slug, area.slug)) {
+    return {
+      headline: ferndaleDecksHero.headline,
+      supporting: ferndaleDecksHero.supporting,
+      title: ferndaleDecksSeo.title,
+      description: ferndaleDecksSeo.description,
+    };
+  }
+  if (isLyndenDecks(service.slug, area.slug)) {
+    return {
+      headline: lyndenDecksHero.headline,
+      supporting: lyndenDecksHero.supporting,
+      title: lyndenDecksSeo.title,
+      description: lyndenDecksSeo.description,
+    };
+  }
+  if (isBurlingtonDecks(service.slug, area.slug)) {
+    return {
+      headline: burlingtonDecksHero.headline,
+      supporting: burlingtonDecksHero.supporting,
+      title: burlingtonDecksSeo.title,
+      description: burlingtonDecksSeo.description,
+    };
+  }
+  if (isBellinghamWindows(service.slug, area.slug)) {
+    return {
+      headline: bellinghamWindowsHero.headline,
+      supporting: bellinghamWindowsHero.supporting,
+      title: bellinghamWindowsSeo.title,
+      description: bellinghamWindowsSeo.description,
+    };
+  }
+  if (isFerndaleWindows(service.slug, area.slug)) {
+    return {
+      headline: ferndaleWindowsHero.headline,
+      supporting: ferndaleWindowsHero.supporting,
+      title: ferndaleWindowsSeo.title,
+      description: ferndaleWindowsSeo.description,
+    };
+  }
+  if (isLyndenWindows(service.slug, area.slug)) {
+    return {
+      headline: lyndenWindowsHero.headline,
+      supporting: lyndenWindowsHero.supporting,
+      title: lyndenWindowsSeo.title,
+      description: lyndenWindowsSeo.description,
+    };
+  }
+  if (isBurlingtonWindows(service.slug, area.slug)) {
+    return {
+      headline: burlingtonWindowsHero.headline,
+      supporting: burlingtonWindowsHero.supporting,
+      title: burlingtonWindowsSeo.title,
+      description: burlingtonWindowsSeo.description,
     };
   }
   return undefined;

@@ -83,6 +83,34 @@ import {
   applyBellinghamDecksContent,
   isBellinghamDecks,
 } from "@/content/decks-bellingham";
+import {
+  applyFerndaleDecksContent,
+  isFerndaleDecks,
+} from "@/content/decks-ferndale";
+import {
+  applyLyndenDecksContent,
+  isLyndenDecks,
+} from "@/content/decks-lynden";
+import {
+  applyBurlingtonDecksContent,
+  isBurlingtonDecks,
+} from "@/content/decks-burlington";
+import {
+  applyBellinghamWindowsContent,
+  isBellinghamWindows,
+} from "@/content/windows-bellingham";
+import {
+  applyFerndaleWindowsContent,
+  isFerndaleWindows,
+} from "@/content/windows-ferndale";
+import {
+  applyLyndenWindowsContent,
+  isLyndenWindows,
+} from "@/content/windows-lynden";
+import {
+  applyBurlingtonWindowsContent,
+  isBurlingtonWindows,
+} from "@/content/windows-burlington";
 import { reviewsContent } from "@/content/site";
 
 export type LandingPageContent = {
@@ -673,6 +701,34 @@ export function buildLandingContent(
 
   if (isBellinghamDecks(service.slug, area.slug)) {
     return applyBellinghamDecksContent(content);
+  }
+
+  if (isFerndaleDecks(service.slug, area.slug)) {
+    return applyFerndaleDecksContent(content);
+  }
+
+  if (isLyndenDecks(service.slug, area.slug)) {
+    return applyLyndenDecksContent(content);
+  }
+
+  if (isBurlingtonDecks(service.slug, area.slug)) {
+    return applyBurlingtonDecksContent(content);
+  }
+
+  if (isBellinghamWindows(service.slug, area.slug)) {
+    return applyBellinghamWindowsContent(content);
+  }
+
+  if (isFerndaleWindows(service.slug, area.slug)) {
+    return applyFerndaleWindowsContent(content);
+  }
+
+  if (isLyndenWindows(service.slug, area.slug)) {
+    return applyLyndenWindowsContent(content);
+  }
+
+  if (isBurlingtonWindows(service.slug, area.slug)) {
+    return applyBurlingtonWindowsContent(content);
   }
 
   return content;
