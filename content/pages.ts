@@ -228,6 +228,11 @@ import {
   lyndenFencesSeo,
   isLyndenFences,
 } from "@/content/fences-lynden";
+import {
+  burlingtonFencesHero,
+  burlingtonFencesSeo,
+  isBurlingtonFences,
+} from "@/content/fences-burlington";
 
 export type ServiceDef = {
   slug: string;
@@ -883,6 +888,14 @@ function getCustomPageCopy(
       supporting: lyndenFencesHero.supporting,
       title: lyndenFencesSeo.title,
       description: lyndenFencesSeo.description,
+    };
+  }
+  if (isBurlingtonFences(service.slug, area.slug)) {
+    return {
+      headline: burlingtonFencesHero.headline,
+      supporting: burlingtonFencesHero.supporting,
+      title: burlingtonFencesSeo.title,
+      description: burlingtonFencesSeo.description,
     };
   }
   return undefined;

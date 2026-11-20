@@ -187,6 +187,10 @@ import {
   applyLyndenFencesContent,
   isLyndenFences,
 } from "@/content/fences-lynden";
+import {
+  applyBurlingtonFencesContent,
+  isBurlingtonFences,
+} from "@/content/fences-burlington";
 import { reviewsContent } from "@/content/site";
 
 export type LandingPageContent = {
@@ -881,6 +885,10 @@ export function buildLandingContent(
 
   if (isLyndenFences(service.slug, area.slug)) {
     return applyLyndenFencesContent(content);
+  }
+
+  if (isBurlingtonFences(service.slug, area.slug)) {
+    return applyBurlingtonFencesContent(content);
   }
 
   return content;
