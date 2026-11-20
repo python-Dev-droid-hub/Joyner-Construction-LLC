@@ -12,9 +12,10 @@ export const lyndenFencesHero = {
 };
 
 export const lyndenFencesSeo = {
-  title: "Fence Installation, Repair & Replacement in Lynden, WA",
+  title:
+    "Affordable Fence Installation, Repair & Replacement Services in Lynden, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial fence installation, repair, and replacement services in Lynden, WA.",
+    "Looking for trusted fence services in Lynden, WA? Joyner Construction LLC provides professional fence installation, repair, replacement, and custom fencing solutions to meet your property needs. Improve your home's privacy, security, and curb appeal with quality materials and expert craftsmanship. Contact us today!",
 };
 
 /** Swap the shared template copy for the Lynden fences page. Images stay in place. */

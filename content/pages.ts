@@ -472,7 +472,11 @@ export function isIndexedLandingPage(
     isBellinghamAduAdditions(serviceSlug, areaSlug) ||
     isFerndaleAduAdditions(serviceSlug, areaSlug) ||
     isLyndenAduAdditions(serviceSlug, areaSlug) ||
-    isBurlingtonAduAdditions(serviceSlug, areaSlug)
+    isBurlingtonAduAdditions(serviceSlug, areaSlug) ||
+    isBellinghamFences(serviceSlug, areaSlug) ||
+    isFerndaleFences(serviceSlug, areaSlug) ||
+    isLyndenFences(serviceSlug, areaSlug) ||
+    isBurlingtonFences(serviceSlug, areaSlug)
   );
 }
 

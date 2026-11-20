@@ -12,9 +12,10 @@ export const bellinghamFencesHero = {
 };
 
 export const bellinghamFencesSeo = {
-  title: "Fence Installation, Repair & Replacement in Bellingham, WA",
+  title:
+    "Professional Fence Installation & Repair Services in Bellingham, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial fence installation, repair, and replacement services in Bellingham, WA.",
+    "Looking for reliable fence installation services in Bellingham, WA? Joyner Construction LLC provides professional fence installation, replacement, repair, and custom fencing solutions for residential properties. Improve your property's privacy, security, and appearance with quality craftsmanship and dependable service. Contact us today!",
 };
 
 /** Swap the shared template copy for the Bellingham fences page. Images stay in place. */

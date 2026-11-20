@@ -12,9 +12,10 @@ export const burlingtonFencesHero = {
 };
 
 export const burlingtonFencesSeo = {
-  title: "Fence Installation, Repair & Replacement in Burlington, WA",
+  title:
+    "Reliable Fence Installation & Custom Fencing Services in Burlington, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial fence installation, repair, and replacement services in Burlington, WA.",
+    "Need dependable fence services in Burlington, WA? Joyner Construction LLC offers expert fence installation, repair, replacement, and customized fencing solutions for residential properties. Enhance your property's security, privacy, and outdoor appearance with durable materials and professional workmanship. Contact us today for quality fencing services!",
 };
 
 /** Swap the shared template copy for the Burlington fences page. Images stay in place. */

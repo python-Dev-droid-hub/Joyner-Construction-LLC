@@ -12,9 +12,10 @@ export const ferndaleFencesHero = {
 };
 
 export const ferndaleFencesSeo = {
-  title: "Fence Installation, Repair & Replacement in Ferndale, WA",
+  title:
+    "Expert Fence Installation & Replacement Services in Ferndale, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial fence installation, repair, and replacement services in Ferndale, WA.",
+    "Need professional fence services in Ferndale, WA? Joyner Construction LLC offers reliable fence installation, repair, replacement, and custom fencing solutions for residential properties. Enhance your outdoor space with durable materials, expert workmanship, and dependable construction services. Contact us today for a consultation!",
 };
 
 /** Swap the shared template copy for the Ferndale fences page. Images stay in place. */
