@@ -12,9 +12,10 @@ export const ferndaleRemodelingHero = {
 };
 
 export const ferndaleRemodelingSeo = {
-  title: "Remodeling Services in Ferndale, WA",
+  title:
+    "Professional Home Remodeling & Renovation Services in Ferndale, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial remodeling services in Ferndale, WA—kitchen, bathroom, interior, and whole-home renovations.",
+    "Transform your home or commercial property with professional remodeling services in Ferndale, WA. Joyner Construction LLC specializes in kitchen remodeling, bathroom renovations, interior upgrades, whole-home remodeling, and customized renovation solutions designed to improve comfort, functionality, and property value.",
 };
 
 /** Swap the shared template copy for the Ferndale remodeling page. Images stay in place. */

@@ -12,9 +12,10 @@ export const burlingtonRemodelingHero = {
 };
 
 export const burlingtonRemodelingSeo = {
-  title: "Remodeling Services in Burlington, WA",
+  title:
+    "Custom Home Remodeling & Property Renovation Services in Burlington, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial remodeling services in Burlington, WA—kitchen, bathroom, interior, and whole-home renovations.",
+    "Give your property a fresh, updated look with trusted remodeling services in Burlington, WA. Joyner Construction LLC offers professional home renovations, kitchen and bathroom upgrades, interior remodeling, and personalized improvement solutions focused on enhancing your space, comfort, and overall property value.",
 };
 
 /** Swap the shared template copy for the Burlington remodeling page. Images stay in place. */

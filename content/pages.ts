@@ -424,7 +424,11 @@ export function isIndexedLandingPage(
     isBellinghamPainting(serviceSlug, areaSlug) ||
     isFerndalePainting(serviceSlug, areaSlug) ||
     isLyndenPainting(serviceSlug, areaSlug) ||
-    isBurlingtonPainting(serviceSlug, areaSlug)
+    isBurlingtonPainting(serviceSlug, areaSlug) ||
+    isBellinghamRemodeling(serviceSlug, areaSlug) ||
+    isFerndaleRemodeling(serviceSlug, areaSlug) ||
+    isLyndenRemodeling(serviceSlug, areaSlug) ||
+    isBurlingtonRemodeling(serviceSlug, areaSlug)
   );
 }
 

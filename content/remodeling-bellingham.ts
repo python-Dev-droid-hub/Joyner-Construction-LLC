@@ -12,9 +12,10 @@ export const bellinghamRemodelingHero = {
 };
 
 export const bellinghamRemodelingSeo = {
-  title: "Remodeling Services in Bellingham, WA",
+  title:
+    "Home Renovation & Remodeling Experts in Bellingham, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial remodeling services in Bellingham, WA—kitchen, bathroom, interior, and whole-home renovations.",
+    "Upgrade your living space with expert remodeling services in Bellingham, WA. Joyner Construction LLC delivers customized home renovations, kitchen and bathroom remodeling, interior upgrades, and quality construction solutions to bring your ideas to life.",
 };
 
 /** Swap the shared template copy for the Bellingham remodeling page. Images stay in place. */
