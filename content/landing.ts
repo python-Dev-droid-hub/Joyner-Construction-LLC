@@ -143,6 +143,22 @@ import {
   applyFerndalePaintingContent,
   isFerndalePainting,
 } from "@/content/painting-ferndale";
+import {
+  applyBellinghamRemodelingContent,
+  isBellinghamRemodeling,
+} from "@/content/remodeling-bellingham";
+import {
+  applyFerndaleRemodelingContent,
+  isFerndaleRemodeling,
+} from "@/content/remodeling-ferndale";
+import {
+  applyLyndenRemodelingContent,
+  isLyndenRemodeling,
+} from "@/content/remodeling-lynden";
+import {
+  applyBurlingtonRemodelingContent,
+  isBurlingtonRemodeling,
+} from "@/content/remodeling-burlington";
 import { reviewsContent } from "@/content/site";
 
 export type LandingPageContent = {
@@ -793,6 +809,22 @@ export function buildLandingContent(
 
   if (isFerndalePainting(service.slug, area.slug)) {
     return applyFerndalePaintingContent(content);
+  }
+
+  if (isBellinghamRemodeling(service.slug, area.slug)) {
+    return applyBellinghamRemodelingContent(content);
+  }
+
+  if (isFerndaleRemodeling(service.slug, area.slug)) {
+    return applyFerndaleRemodelingContent(content);
+  }
+
+  if (isLyndenRemodeling(service.slug, area.slug)) {
+    return applyLyndenRemodelingContent(content);
+  }
+
+  if (isBurlingtonRemodeling(service.slug, area.slug)) {
+    return applyBurlingtonRemodelingContent(content);
   }
 
   return content;

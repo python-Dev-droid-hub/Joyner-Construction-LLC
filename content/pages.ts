@@ -173,6 +173,26 @@ import {
   ferndalePaintingSeo,
   isFerndalePainting,
 } from "@/content/painting-ferndale";
+import {
+  bellinghamRemodelingHero,
+  bellinghamRemodelingSeo,
+  isBellinghamRemodeling,
+} from "@/content/remodeling-bellingham";
+import {
+  ferndaleRemodelingHero,
+  ferndaleRemodelingSeo,
+  isFerndaleRemodeling,
+} from "@/content/remodeling-ferndale";
+import {
+  lyndenRemodelingHero,
+  lyndenRemodelingSeo,
+  isLyndenRemodeling,
+} from "@/content/remodeling-lynden";
+import {
+  burlingtonRemodelingHero,
+  burlingtonRemodelingSeo,
+  isBurlingtonRemodeling,
+} from "@/content/remodeling-burlington";
 
 export type ServiceDef = {
   slug: string;
@@ -732,6 +752,38 @@ function getCustomPageCopy(
       supporting: ferndalePaintingHero.supporting,
       title: ferndalePaintingSeo.title,
       description: ferndalePaintingSeo.description,
+    };
+  }
+  if (isBellinghamRemodeling(service.slug, area.slug)) {
+    return {
+      headline: bellinghamRemodelingHero.headline,
+      supporting: bellinghamRemodelingHero.supporting,
+      title: bellinghamRemodelingSeo.title,
+      description: bellinghamRemodelingSeo.description,
+    };
+  }
+  if (isFerndaleRemodeling(service.slug, area.slug)) {
+    return {
+      headline: ferndaleRemodelingHero.headline,
+      supporting: ferndaleRemodelingHero.supporting,
+      title: ferndaleRemodelingSeo.title,
+      description: ferndaleRemodelingSeo.description,
+    };
+  }
+  if (isLyndenRemodeling(service.slug, area.slug)) {
+    return {
+      headline: lyndenRemodelingHero.headline,
+      supporting: lyndenRemodelingHero.supporting,
+      title: lyndenRemodelingSeo.title,
+      description: lyndenRemodelingSeo.description,
+    };
+  }
+  if (isBurlingtonRemodeling(service.slug, area.slug)) {
+    return {
+      headline: burlingtonRemodelingHero.headline,
+      supporting: burlingtonRemodelingHero.supporting,
+      title: burlingtonRemodelingSeo.title,
+      description: burlingtonRemodelingSeo.description,
     };
   }
   return undefined;
