@@ -197,80 +197,70 @@ export const reviewsContent = {
       handle: "Siding Repair or Replacement",
       description:
         "They fixed our storm-damaged siding fast, matched the existing color perfectly, and left everything spotless.",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=160&h=160&q=80",
+      image: "/images/reviews/marcus.jpg",
     },
     {
       name: "Elena Rostova",
       handle: "Structural Framing Services",
       description:
         "Solid structural framing crew. They reinforced our sagging garage ceiling safely and passed inspection easily.",
-      image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=160&h=160&q=80",
+      image: "/images/reviews/elena.jpg",
     },
     {
       name: "David Chen",
       handle: "Roofing Repair Replacement Installation",
       description:
         "Replaced our leaking roof in two days. Honest pricing, hardworking crew, and zero mess left.",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=160&h=160&q=80",
+      image: "/images/reviews/david.jpg",
     },
     {
       name: "Sarah Jenkins",
       handle: "Plumbing Installation Repairing and Replacement",
       description:
         "Fixed a burst pipe under our sink quickly and installed a new shutoff valve cleanly.",
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=160&h=160&q=80",
+      image: "/images/reviews/sarah.jpg",
     },
     {
       name: "Robert Miller",
       handle: "Electrical Wiring Installation Repairing and Replacement",
       description:
         "Rewired our outdated basement safely and neatly. Everything works great and the pricing was fair.",
-      image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&h=160&q=80",
+      image: "/images/reviews/robert.jpg",
     },
     {
       name: "Amanda Brooks",
       handle: "Deck Installation Repairing and Replacement",
       description:
         "Replaced our rotting backyard deck boards and sturdy railings. Looks brand new and feels solid.",
-      image:
-        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=160&h=160&q=80",
+      image: "/images/reviews/amanda.jpg",
     },
     {
       name: "Carlos Mendez",
       handle: "Fence Repair Installation and Replacement",
       description:
         "Installed a new cedar privacy fence in our yard. Straight posts, smooth gate, great workmanship.",
-      image:
-        "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=160&h=160&q=80",
+      image: "/images/reviews/carlos.jpg",
     },
     {
       name: "Jessica Taylor",
       handle: "Remodeling Services",
       description:
         "Completely transformed our cramped kitchen with smart layout updates, clean finishes, and reliable timeline management.",
-      image:
-        "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=160&h=160&q=80",
+      image: "/images/reviews/jessica.jpg",
     },
     {
       name: "Brian O'Connor",
       handle: "Interior & Exterior Painting Services",
       description:
         "Painted our entire living room and front exterior trim with crisp lines and zero drips.",
-      image:
-        "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=160&h=160&q=80",
+      image: "/images/reviews/brian.jpg",
     },
     {
       name: "Hannah Kim",
       handle: "Window Repair Installation and Replacement Services",
       description:
         "Replaced three drafty bedroom windows. Noticeably quieter inside now and our energy bills dropped immediately.",
-      image:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=160&h=160&q=80",
+      image: "/images/reviews/hannah.jpg",
     },
   ],
 } as const;
