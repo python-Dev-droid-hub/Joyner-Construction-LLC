@@ -12,9 +12,10 @@ export const burlingtonAduAdditionsHero = {
 };
 
 export const burlingtonAduAdditionsSeo = {
-  title: "ADU Addition Services in Burlington, WA",
+  title:
+    "Trusted ADU Additions & Custom Home Expansion Services in Burlington, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial ADU addition, home addition, and living space expansion services in Burlington, WA.",
+    "Searching for reliable ADU additions services in Burlington, WA? Joyner Construction LLC offers expert accessory dwelling unit construction, custom home additions, and professional remodeling solutions. Create additional living space with quality craftsmanship and dependable construction services. Contact us today for a free consultation!",
 };
 
 /** Swap the shared template copy for the Burlington ADU additions page. Images stay in place. */

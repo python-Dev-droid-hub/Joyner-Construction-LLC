@@ -448,7 +448,11 @@ export function isIndexedLandingPage(
     isBellinghamRemodeling(serviceSlug, areaSlug) ||
     isFerndaleRemodeling(serviceSlug, areaSlug) ||
     isLyndenRemodeling(serviceSlug, areaSlug) ||
-    isBurlingtonRemodeling(serviceSlug, areaSlug)
+    isBurlingtonRemodeling(serviceSlug, areaSlug) ||
+    isBellinghamAduAdditions(serviceSlug, areaSlug) ||
+    isFerndaleAduAdditions(serviceSlug, areaSlug) ||
+    isLyndenAduAdditions(serviceSlug, areaSlug) ||
+    isBurlingtonAduAdditions(serviceSlug, areaSlug)
   );
 }
 

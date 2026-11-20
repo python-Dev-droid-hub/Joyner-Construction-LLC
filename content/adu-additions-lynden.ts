@@ -12,9 +12,10 @@ export const lyndenAduAdditionsHero = {
 };
 
 export const lyndenAduAdditionsSeo = {
-  title: "ADU Addition Services in Lynden, WA",
+  title:
+    "Affordable & Professional ADU Additions Services in Lynden, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial ADU addition, home addition, and living space expansion services in Lynden, WA.",
+    "Looking for trusted ADU additions services in Lynden, WA? Joyner Construction LLC provides professional accessory dwelling unit construction, custom home additions, and reliable building solutions. Expand your living space with quality workmanship and expert construction services. Contact us today to discuss your project!",
 };
 
 /** Swap the shared template copy for the Lynden ADU additions page. Images stay in place. */

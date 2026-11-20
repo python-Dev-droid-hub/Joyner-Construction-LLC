@@ -15,9 +15,10 @@ export const ferndaleAduAdditionsHero = {
 };
 
 export const ferndaleAduAdditionsSeo = {
-  title: "ADU Addition Services in Ferndale, WA",
+  title:
+    "Expert ADU Additions Services in Ferndale, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial ADU addition, home addition, and living space expansion services in Ferndale, WA.",
+    "Need professional ADU additions services in Ferndale, WA? Joyner Construction LLC offers reliable accessory dwelling unit construction, custom home additions, and quality building solutions. Enhance your property's space and value with skilled craftsmanship and dependable construction services. Contact us today!",
 };
 
 /** Swap the shared template copy for the Ferndale ADU additions page. Images stay in place. */

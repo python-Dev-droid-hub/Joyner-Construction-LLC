@@ -15,9 +15,10 @@ export const bellinghamAduAdditionsHero = {
 };
 
 export const bellinghamAduAdditionsSeo = {
-  title: "ADU Addition Services in Bellingham, WA",
+  title:
+    "Professional ADU Additions Services in Bellingham, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides residential and commercial ADU addition, home addition, and living space expansion services in Bellingham, WA.",
+    "Looking for reliable ADU additions services in Bellingham, WA? Joyner Construction LLC provides professional accessory dwelling unit construction, home additions, and customized building solutions. Upgrade your property with quality craftsmanship and trusted construction services. Contact us today for a consultation!",
 };
 
 /** Swap the shared template copy for the Bellingham ADU additions page. Images stay in place. */
