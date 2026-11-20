@@ -193,6 +193,26 @@ import {
   burlingtonRemodelingSeo,
   isBurlingtonRemodeling,
 } from "@/content/remodeling-burlington";
+import {
+  bellinghamAduAdditionsHero,
+  bellinghamAduAdditionsSeo,
+  isBellinghamAduAdditions,
+} from "@/content/adu-additions-bellingham";
+import {
+  ferndaleAduAdditionsHero,
+  ferndaleAduAdditionsSeo,
+  isFerndaleAduAdditions,
+} from "@/content/adu-additions-ferndale";
+import {
+  lyndenAduAdditionsHero,
+  lyndenAduAdditionsSeo,
+  isLyndenAduAdditions,
+} from "@/content/adu-additions-lynden";
+import {
+  burlingtonAduAdditionsHero,
+  burlingtonAduAdditionsSeo,
+  isBurlingtonAduAdditions,
+} from "@/content/adu-additions-burlington";
 
 export type ServiceDef = {
   slug: string;
@@ -788,6 +808,38 @@ function getCustomPageCopy(
       supporting: burlingtonRemodelingHero.supporting,
       title: burlingtonRemodelingSeo.title,
       description: burlingtonRemodelingSeo.description,
+    };
+  }
+  if (isBellinghamAduAdditions(service.slug, area.slug)) {
+    return {
+      headline: bellinghamAduAdditionsHero.headline,
+      supporting: bellinghamAduAdditionsHero.supporting,
+      title: bellinghamAduAdditionsSeo.title,
+      description: bellinghamAduAdditionsSeo.description,
+    };
+  }
+  if (isFerndaleAduAdditions(service.slug, area.slug)) {
+    return {
+      headline: ferndaleAduAdditionsHero.headline,
+      supporting: ferndaleAduAdditionsHero.supporting,
+      title: ferndaleAduAdditionsSeo.title,
+      description: ferndaleAduAdditionsSeo.description,
+    };
+  }
+  if (isLyndenAduAdditions(service.slug, area.slug)) {
+    return {
+      headline: lyndenAduAdditionsHero.headline,
+      supporting: lyndenAduAdditionsHero.supporting,
+      title: lyndenAduAdditionsSeo.title,
+      description: lyndenAduAdditionsSeo.description,
+    };
+  }
+  if (isBurlingtonAduAdditions(service.slug, area.slug)) {
+    return {
+      headline: burlingtonAduAdditionsHero.headline,
+      supporting: burlingtonAduAdditionsHero.supporting,
+      title: burlingtonAduAdditionsSeo.title,
+      description: burlingtonAduAdditionsSeo.description,
     };
   }
   return undefined;

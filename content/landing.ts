@@ -159,6 +159,22 @@ import {
   applyBurlingtonRemodelingContent,
   isBurlingtonRemodeling,
 } from "@/content/remodeling-burlington";
+import {
+  applyBellinghamAduAdditionsContent,
+  isBellinghamAduAdditions,
+} from "@/content/adu-additions-bellingham";
+import {
+  applyFerndaleAduAdditionsContent,
+  isFerndaleAduAdditions,
+} from "@/content/adu-additions-ferndale";
+import {
+  applyLyndenAduAdditionsContent,
+  isLyndenAduAdditions,
+} from "@/content/adu-additions-lynden";
+import {
+  applyBurlingtonAduAdditionsContent,
+  isBurlingtonAduAdditions,
+} from "@/content/adu-additions-burlington";
 import { reviewsContent } from "@/content/site";
 
 export type LandingPageContent = {
@@ -825,6 +841,22 @@ export function buildLandingContent(
 
   if (isBurlingtonRemodeling(service.slug, area.slug)) {
     return applyBurlingtonRemodelingContent(content);
+  }
+
+  if (isBellinghamAduAdditions(service.slug, area.slug)) {
+    return applyBellinghamAduAdditionsContent(content);
+  }
+
+  if (isFerndaleAduAdditions(service.slug, area.slug)) {
+    return applyFerndaleAduAdditionsContent(content);
+  }
+
+  if (isLyndenAduAdditions(service.slug, area.slug)) {
+    return applyLyndenAduAdditionsContent(content);
+  }
+
+  if (isBurlingtonAduAdditions(service.slug, area.slug)) {
+    return applyBurlingtonAduAdditionsContent(content);
   }
 
   return content;
