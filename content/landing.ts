@@ -175,6 +175,18 @@ import {
   applyBurlingtonAduAdditionsContent,
   isBurlingtonAduAdditions,
 } from "@/content/adu-additions-burlington";
+import {
+  applyBellinghamFencesContent,
+  isBellinghamFences,
+} from "@/content/fences-bellingham";
+import {
+  applyFerndaleFencesContent,
+  isFerndaleFences,
+} from "@/content/fences-ferndale";
+import {
+  applyLyndenFencesContent,
+  isLyndenFences,
+} from "@/content/fences-lynden";
 import { reviewsContent } from "@/content/site";
 
 export type LandingPageContent = {
@@ -857,6 +869,18 @@ export function buildLandingContent(
 
   if (isBurlingtonAduAdditions(service.slug, area.slug)) {
     return applyBurlingtonAduAdditionsContent(content);
+  }
+
+  if (isBellinghamFences(service.slug, area.slug)) {
+    return applyBellinghamFencesContent(content);
+  }
+
+  if (isFerndaleFences(service.slug, area.slug)) {
+    return applyFerndaleFencesContent(content);
+  }
+
+  if (isLyndenFences(service.slug, area.slug)) {
+    return applyLyndenFencesContent(content);
   }
 
   return content;

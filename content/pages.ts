@@ -213,6 +213,21 @@ import {
   burlingtonAduAdditionsSeo,
   isBurlingtonAduAdditions,
 } from "@/content/adu-additions-burlington";
+import {
+  bellinghamFencesHero,
+  bellinghamFencesSeo,
+  isBellinghamFences,
+} from "@/content/fences-bellingham";
+import {
+  ferndaleFencesHero,
+  ferndaleFencesSeo,
+  isFerndaleFences,
+} from "@/content/fences-ferndale";
+import {
+  lyndenFencesHero,
+  lyndenFencesSeo,
+  isLyndenFences,
+} from "@/content/fences-lynden";
 
 export type ServiceDef = {
   slug: string;
@@ -844,6 +859,30 @@ function getCustomPageCopy(
       supporting: burlingtonAduAdditionsHero.supporting,
       title: burlingtonAduAdditionsSeo.title,
       description: burlingtonAduAdditionsSeo.description,
+    };
+  }
+  if (isBellinghamFences(service.slug, area.slug)) {
+    return {
+      headline: bellinghamFencesHero.headline,
+      supporting: bellinghamFencesHero.supporting,
+      title: bellinghamFencesSeo.title,
+      description: bellinghamFencesSeo.description,
+    };
+  }
+  if (isFerndaleFences(service.slug, area.slug)) {
+    return {
+      headline: ferndaleFencesHero.headline,
+      supporting: ferndaleFencesHero.supporting,
+      title: ferndaleFencesSeo.title,
+      description: ferndaleFencesSeo.description,
+    };
+  }
+  if (isLyndenFences(service.slug, area.slug)) {
+    return {
+      headline: lyndenFencesHero.headline,
+      supporting: lyndenFencesHero.supporting,
+      title: lyndenFencesSeo.title,
+      description: lyndenFencesSeo.description,
     };
   }
   return undefined;
