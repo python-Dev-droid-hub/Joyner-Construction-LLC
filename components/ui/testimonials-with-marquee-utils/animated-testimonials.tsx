@@ -45,6 +45,7 @@ function TestimonialCard({
             fill
             sizes="40px"
             className="object-cover"
+            unoptimized
           />
         </div>
         <div className="min-w-0 text-left">
