@@ -34,6 +34,9 @@ export const metadata: Metadata = {
   authors: [{ name: site.businessName }],
   creator: site.businessName,
   keywords: [...seo.keywords],
+  verification: {
+    google: "BFcECrzGoLf1u8AvFsGzSb4wDdW99vgrA4q6Bha1-So",
+  },
   // Canonical only when production URL is configured
   alternates: siteUrl ? { canonical: "/" } : undefined,
   robots: {
