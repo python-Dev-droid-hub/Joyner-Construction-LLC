@@ -62,9 +62,12 @@ export default function RadialOrbitalTimeline({
 
   useEffect(() => {
     const updateRadius = () => {
-      const width = containerRef.current?.clientWidth ?? 480;
-      // Keep orbit large enough that the hub sits clearly inside the ring
-      setRadius(Math.min(220, Math.max(150, width * 0.38)));
+      const width = containerRef.current?.clientWidth ?? 320;
+      // Nodes + stage labels sit outside the dashed ring — keep the full
+      // composition inside the available column width (esp. mobile).
+      const edgePad = width < 420 ? 64 : 88;
+      const fitted = (width - edgePad) / 2;
+      setRadius(Math.min(220, Math.max(108, fitted)));
     };
     updateRadius();
     window.addEventListener("resize", updateRadius);
@@ -162,32 +165,35 @@ export default function RadialOrbitalTimeline({
     }
   };
 
-  const hubSize = Math.min(136, Math.max(104, radius * 0.58));
-  const nodeSize = Math.min(84, Math.max(68, radius * 0.38));
+  const hubSize = Math.min(136, Math.max(88, radius * 0.58));
+  const nodeSize = Math.min(84, Math.max(52, radius * 0.36));
   const innerRing = radius * 0.7;
+  const stagePad = radius < 140 ? 40 : 72;
+  const stageWidth = radius * 2 + nodeSize + stagePad;
+  const stageHeight = radius * 2 + nodeSize + stagePad + 28;
 
   return (
     <div
       ref={containerRef}
       onClick={handleContainerClick}
       className={cn(
-        "relative flex w-full items-center justify-center overflow-visible bg-ivory",
+        "relative flex w-full max-w-full items-center justify-center overflow-x-clip overflow-y-visible bg-ivory",
         className,
       )}
       role="presentation"
     >
       <div
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[26rem] w-[26rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(184,115,74,0.28)_0%,rgba(243,237,227,0)_68%)]"
+        className="pointer-events-none absolute left-1/2 top-1/2 aspect-square w-[min(26rem,100%)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(184,115,74,0.28)_0%,rgba(243,237,227,0)_68%)]"
         aria-hidden="true"
       />
 
       {/* Fixed square stage so geometric center stays true */}
       <div
         ref={orbitRef}
-        className="relative mx-auto"
+        className="relative mx-auto max-w-full"
         style={{
-          width: Math.max(360, radius * 2 + nodeSize + 72),
-          height: Math.max(400, radius * 2 + nodeSize + 96),
+          width: stageWidth,
+          height: stageHeight,
         }}
       >
         {/* Outer dashed ring — centered on stage */}
@@ -301,7 +307,7 @@ export default function RadialOrbitalTimeline({
                 </span>
                 <span
                   className={cn(
-                    "mt-2.5 max-w-[5.5rem] text-center text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-charcoal transition-colors",
+                    "mt-2 max-w-[4.25rem] text-center text-[0.62rem] font-semibold uppercase tracking-[0.12em] text-charcoal transition-colors sm:mt-2.5 sm:max-w-[5.5rem] sm:text-[0.68rem] sm:tracking-[0.14em]",
                     isExpanded ? "text-charcoal" : "text-charcoal/80",
                   )}
                 >
