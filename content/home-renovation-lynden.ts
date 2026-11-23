@@ -12,9 +12,10 @@ export const lyndenHomeRenovationHero = {
 };
 
 export const lyndenHomeRenovationSeo = {
-  title: "Home Renovation Services in Lynden, WA",
+  title:
+    "Enhance Your Property with Professional Home Renovation, Remodeling & Custom Improvement Services in Lynden, WA | Joyner Construction LLC",
   description:
-    "Joyner Construction LLC provides full home renovation, kitchen and bathroom upgrades, and residential improvement services in Lynden, WA.",
+    "Give your home a fresh look with expert renovation services in Lynden, WA. Joyner Construction LLC provides quality home remodeling, interior renovations, exterior upgrades, and custom home improvement solutions. From small updates to major renovation projects, we focus on reliable service and quality workmanship. Contact us today to discuss your project!",
 };
 
 /** Swap the shared template copy for the Lynden home renovation page. Images stay in place. */

@@ -496,7 +496,11 @@ export function isIndexedLandingPage(
     isBellinghamFences(serviceSlug, areaSlug) ||
     isFerndaleFences(serviceSlug, areaSlug) ||
     isLyndenFences(serviceSlug, areaSlug) ||
-    isBurlingtonFences(serviceSlug, areaSlug)
+    isBurlingtonFences(serviceSlug, areaSlug) ||
+    isBellinghamHomeRenovation(serviceSlug, areaSlug) ||
+    isFerndaleHomeRenovation(serviceSlug, areaSlug) ||
+    isLyndenHomeRenovation(serviceSlug, areaSlug) ||
+    isBurlingtonHomeRenovation(serviceSlug, areaSlug)
   );
 }
 
