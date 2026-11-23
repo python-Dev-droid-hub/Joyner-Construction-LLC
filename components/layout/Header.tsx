@@ -49,10 +49,10 @@ export function Header() {
       className={`fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,backdrop-filter] duration-500 ${
         scrolled || open
           ? "bg-charcoal/95 shadow-[0_1px_0_rgba(243,237,227,0.08)] backdrop-blur-md"
-          : "bg-transparent"
+          : "bg-gradient-to-b from-charcoal/75 via-charcoal/35 to-transparent"
       }`}
     >
-      <div className="mx-auto flex h-[4.25rem] max-w-7xl items-center justify-between gap-4 px-5 md:h-[4.75rem] md:px-8">
+      <div className="mx-auto flex h-[var(--site-header-h)] max-w-7xl items-center justify-between gap-4 px-5 md:px-8">
         <Link
           href="/"
           className="relative z-10 flex shrink-0 items-center text-ivory focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-copper"

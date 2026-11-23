@@ -59,6 +59,13 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
   max-width: 100%;
+  --site-header-h: 4.25rem;
+}
+
+@media (min-width: 768px) {
+  html {
+    --site-header-h: 4.75rem;
+  }
 }
 
 .hero-vignette {

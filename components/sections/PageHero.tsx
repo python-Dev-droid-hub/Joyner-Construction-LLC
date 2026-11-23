@@ -43,7 +43,7 @@ export function PageHero({
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-charcoal/80 via-transparent to-charcoal/40" />
       </div>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col justify-end px-5 pb-12 pt-28 md:px-8 md:pb-14 md:pt-32">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col justify-end px-5 pb-12 pt-[calc(var(--site-header-h)+1.75rem)] md:px-8 md:pb-14 md:pt-[calc(var(--site-header-h)+2.5rem)]">
         <p className="mb-3 text-[0.68rem] font-semibold uppercase tracking-[0.32em] text-copper-bright">
           {eyebrow}
         </p>
