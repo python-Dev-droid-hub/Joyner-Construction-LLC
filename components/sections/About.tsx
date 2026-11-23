@@ -4,12 +4,21 @@ import { useRef } from "react";
 import { AboutOrbit } from "@/components/sections/AboutOrbit";
 import { Button } from "@/components/ui/Button";
 import type { LandingPageContent } from "@/content/landing";
+import { getAreaBySlug, getServiceBySlug } from "@/content/pages";
+import { buildAboutInternalLinks } from "@/content/related-services";
 import { aboutContent } from "@/content/site";
 import { useReveal } from "@/hooks/useReveal";
+import { linkifyAboutParagraphs } from "@/lib/linkify-about";
 
 type AboutProps = {
   content?: LandingPageContent["about"];
 };
+
+/** Homepage About is framing × Bellingham — brand stays unlinked; related → ADU. */
+const homepageInternalLinks = buildAboutInternalLinks(
+  getServiceBySlug("framing")!,
+  getAreaBySlug("bellingham-wa")!,
+);
 
 export function About({ content }: AboutProps = {}) {
   const ref = useRef<HTMLElement>(null);
@@ -24,6 +33,14 @@ export function About({ content }: AboutProps = {}) {
   const orbit = content?.orbit
     ? content.orbit
     : { steps: { ...aboutContent.orbitSteps } };
+  const internalLinks = content
+    ? content.internalLinks
+    : homepageInternalLinks;
+  const body = internalLinks
+    ? linkifyAboutParagraphs(paragraphs, internalLinks)
+    : paragraphs.map((paragraph) => (
+        <p key={paragraph}>{paragraph}</p>
+      ));
 
   return (
     <section
@@ -48,9 +65,7 @@ export function About({ content }: AboutProps = {}) {
             {heading}
           </h2>
           <div className="about-body mt-6 space-y-4 text-base leading-relaxed text-stone-ink md:text-lg">
-            {paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
+            {body}
           </div>
           <div className="about-cta mt-8 flex flex-wrap gap-3">
             <Button href={cta.href} variant="primaryOnLight">

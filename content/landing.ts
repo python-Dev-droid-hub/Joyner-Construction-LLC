@@ -207,6 +207,10 @@ import {
   applyBurlingtonHomeRenovationContent,
   isBurlingtonHomeRenovation,
 } from "@/content/home-renovation-burlington";
+import {
+  buildAboutInternalLinks,
+  type AboutInternalLinks,
+} from "@/content/related-services";
 import { reviewsContent } from "@/content/site";
 
 export type LandingPageContent = {
@@ -219,6 +223,8 @@ export type LandingPageContent = {
     cta: { label: string; href: string };
     visualCaption: string;
     orbit: AboutOrbitContent;
+    /** Inline brand + related-service links for the About body. */
+    internalLinks?: AboutInternalLinks;
   };
   services: {
     title: string;
@@ -719,6 +725,7 @@ export function buildLandingContent(
     },
   };
 
+  const customized = (() => {
   if (isBellinghamSiding(service.slug, area.slug)) {
     return applyBellinghamSidingContent(content);
   }
@@ -924,4 +931,16 @@ export function buildLandingContent(
   }
 
   return content;
+  })();
+
+  const internalLinks = buildAboutInternalLinks(service, area);
+  if (!internalLinks) return customized;
+
+  return {
+    ...customized,
+    about: {
+      ...customized.about,
+      internalLinks,
+    },
+  };
 }
