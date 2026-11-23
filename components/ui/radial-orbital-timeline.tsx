@@ -55,19 +55,22 @@ export default function RadialOrbitalTimeline({
   const [autoRotate, setAutoRotate] = useState(true);
   const [pulseEffect, setPulseEffect] = useState<Record<number, boolean>>({});
   const [activeNodeId, setActiveNodeId] = useState<number | null>(null);
-  const [radius, setRadius] = useState(190);
+  const [radius, setRadius] = useState(120);
+  const [containerWidth, setContainerWidth] = useState(320);
   const containerRef = useRef<HTMLDivElement>(null);
   const orbitRef = useRef<HTMLDivElement>(null);
   const nodeRefs = useRef<Record<number, HTMLDivElement | null>>({});
 
   useEffect(() => {
     const updateRadius = () => {
-      const width = containerRef.current?.clientWidth ?? 320;
-      // Nodes + stage labels sit outside the dashed ring — keep the full
-      // composition inside the available column width (esp. mobile).
-      const edgePad = width < 420 ? 64 : 88;
-      const fitted = (width - edgePad) / 2;
-      setRadius(Math.min(220, Math.max(108, fitted)));
+      const width = Math.max(0, containerRef.current?.clientWidth ?? 320);
+      setContainerWidth(width);
+      const compact = width < 480;
+      // Farthest point from center ≈ radius + half node + small badge/label pad.
+      const nodeBudget = compact ? 46 : 84;
+      const edgeBudget = compact ? 6 : 32;
+      const fitted = width / 2 - nodeBudget / 2 - edgeBudget;
+      setRadius(Math.min(220, Math.max(64, fitted)));
     };
     updateRadius();
     window.addEventListener("resize", updateRadius);
@@ -165,32 +168,41 @@ export default function RadialOrbitalTimeline({
     }
   };
 
-  const hubSize = Math.min(136, Math.max(88, radius * 0.58));
-  const nodeSize = Math.min(84, Math.max(52, radius * 0.36));
+  const compact = containerWidth < 480;
+  const hubSize = compact
+    ? Math.min(92, Math.max(68, radius * 0.72))
+    : Math.min(136, Math.max(104, radius * 0.58));
+  const nodeSize = compact
+    ? Math.min(48, Math.max(40, radius * 0.4))
+    : Math.min(84, Math.max(68, radius * 0.38));
   const innerRing = radius * 0.7;
-  const stagePad = radius < 140 ? 40 : 72;
-  const stageWidth = radius * 2 + nodeSize + stagePad;
-  const stageHeight = radius * 2 + nodeSize + stagePad + 28;
+  // Stage is always column-width on mobile so nothing forces horizontal scroll.
+  const stageWidth = compact
+    ? containerWidth
+    : Math.min(containerWidth, radius * 2 + nodeSize + 72);
+  const stageHeight = compact
+    ? radius * 2 + nodeSize + 28
+    : radius * 2 + nodeSize + 100;
 
   return (
     <div
       ref={containerRef}
       onClick={handleContainerClick}
       className={cn(
-        "relative flex w-full max-w-full items-center justify-center overflow-x-clip overflow-y-visible bg-ivory",
+        "relative flex w-full max-w-full items-center justify-center overflow-hidden bg-ivory",
         className,
       )}
       role="presentation"
     >
       <div
-        className="pointer-events-none absolute left-1/2 top-1/2 aspect-square w-[min(26rem,100%)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(184,115,74,0.28)_0%,rgba(243,237,227,0)_68%)]"
+        className="pointer-events-none absolute left-1/2 top-1/2 aspect-square w-[min(26rem,92%)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(184,115,74,0.28)_0%,rgba(243,237,227,0)_68%)]"
         aria-hidden="true"
       />
 
       {/* Fixed square stage so geometric center stays true */}
       <div
         ref={orbitRef}
-        className="relative mx-auto max-w-full"
+        className="relative mx-auto w-full max-w-full"
         style={{
           width: stageWidth,
           height: stageHeight,
@@ -244,8 +256,9 @@ export default function RadialOrbitalTimeline({
           </div>
         </div>
         <div
-          className="absolute left-1/2 z-20 -translate-x-1/2 whitespace-nowrap rounded-full bg-charcoal px-3.5 py-1.5 text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-ivory shadow-lg"
-          style={{ top: `calc(50% + ${hubSize / 2 + 12}px)` }}
+          className="absolute left-1/2 z-20 max-w-[85%] -translate-x-1/2 truncate rounded-full bg-charcoal px-2.5 py-1 text-[0.55rem] font-semibold uppercase tracking-[0.14em] text-ivory shadow-lg sm:max-w-none sm:px-3.5 sm:py-1.5 sm:text-[0.62rem] sm:tracking-[0.18em]"
+          style={{ top: `calc(50% + ${hubSize / 2 + 10}px)` }}
+          title={centerLabel}
         >
           {centerLabel}
         </div>
@@ -302,12 +315,12 @@ export default function RadialOrbitalTimeline({
                     className="object-cover object-center contrast-[1.06] saturate-[1.1]"
                   />
                 </span>
-                <span className="absolute bottom-0 right-0 flex h-7 w-7 translate-x-0.5 translate-y-0.5 items-center justify-center rounded-full border border-charcoal/10 bg-ivory text-charcoal shadow-md">
-                  <Icon size={13} aria-hidden="true" />
+                <span className="absolute bottom-0 right-0 flex h-5 w-5 translate-x-0.5 translate-y-0.5 items-center justify-center rounded-full border border-charcoal/10 bg-ivory text-charcoal shadow-md sm:h-7 sm:w-7">
+                  <Icon size={compact ? 10 : 13} aria-hidden="true" />
                 </span>
                 <span
                   className={cn(
-                    "mt-2 max-w-[4.25rem] text-center text-[0.62rem] font-semibold uppercase tracking-[0.12em] text-charcoal transition-colors sm:mt-2.5 sm:max-w-[5.5rem] sm:text-[0.68rem] sm:tracking-[0.14em]",
+                    "mt-2 hidden max-w-[5.5rem] text-center text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-charcoal transition-colors sm:block",
                     isExpanded ? "text-charcoal" : "text-charcoal/80",
                   )}
                 >
@@ -317,7 +330,7 @@ export default function RadialOrbitalTimeline({
 
               {isExpanded ? (
                 <Card
-                  className="absolute left-1/2 top-[calc(100%+0.5rem)] z-30 w-64 -translate-x-1/2 border-charcoal/10 bg-ivory/98 text-charcoal shadow-2xl backdrop-blur-md"
+                  className="absolute left-1/2 top-[calc(100%+0.5rem)] z-30 w-[min(16rem,calc(100vw-2.5rem))] -translate-x-1/2 border-charcoal/10 bg-ivory/98 text-charcoal shadow-2xl backdrop-blur-md"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <div className="absolute -top-3 left-1/2 h-3 w-px -translate-x-1/2 bg-charcoal/25" />
