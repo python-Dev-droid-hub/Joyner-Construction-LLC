@@ -66,11 +66,11 @@ export default function RadialOrbitalTimeline({
       const width = Math.max(0, containerRef.current?.clientWidth ?? 320);
       setContainerWidth(width);
       const compact = width < 480;
-      // Farthest point from center ≈ radius + half node + small badge/label pad.
-      const nodeBudget = compact ? 46 : 84;
-      const edgeBudget = compact ? 6 : 32;
+      // Keep node centers + badges inside the column (no page-level overflow).
+      const nodeBudget = compact ? 44 : 84;
+      const edgeBudget = compact ? 14 : 36;
       const fitted = width / 2 - nodeBudget / 2 - edgeBudget;
-      setRadius(Math.min(220, Math.max(64, fitted)));
+      setRadius(Math.min(220, Math.max(58, fitted)));
     };
     updateRadius();
     window.addEventListener("resize", updateRadius);
@@ -170,18 +170,17 @@ export default function RadialOrbitalTimeline({
 
   const compact = containerWidth < 480;
   const hubSize = compact
-    ? Math.min(92, Math.max(68, radius * 0.72))
+    ? Math.min(84, Math.max(64, radius * 0.7))
     : Math.min(136, Math.max(104, radius * 0.58));
   const nodeSize = compact
-    ? Math.min(48, Math.max(40, radius * 0.4))
+    ? Math.min(44, Math.max(36, radius * 0.38))
     : Math.min(84, Math.max(68, radius * 0.38));
   const innerRing = radius * 0.7;
-  // Stage is always column-width on mobile so nothing forces horizontal scroll.
   const stageWidth = compact
-    ? containerWidth
+    ? "100%"
     : Math.min(containerWidth, radius * 2 + nodeSize + 72);
   const stageHeight = compact
-    ? radius * 2 + nodeSize + 28
+    ? radius * 2 + nodeSize + 24
     : radius * 2 + nodeSize + 100;
 
   return (
@@ -195,14 +194,14 @@ export default function RadialOrbitalTimeline({
       role="presentation"
     >
       <div
-        className="pointer-events-none absolute left-1/2 top-1/2 aspect-square w-[min(26rem,92%)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(184,115,74,0.28)_0%,rgba(243,237,227,0)_68%)]"
+        className="pointer-events-none absolute left-1/2 top-1/2 aspect-square w-[min(22rem,80%)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(184,115,74,0.28)_0%,rgba(243,237,227,0)_68%)]"
         aria-hidden="true"
       />
 
       {/* Fixed square stage so geometric center stays true */}
       <div
         ref={orbitRef}
-        className="relative mx-auto w-full max-w-full"
+        className="relative mx-auto w-full max-w-full overflow-hidden"
         style={{
           width: stageWidth,
           height: stageHeight,
@@ -330,7 +329,7 @@ export default function RadialOrbitalTimeline({
 
               {isExpanded ? (
                 <Card
-                  className="absolute left-1/2 top-[calc(100%+0.5rem)] z-30 w-[min(16rem,calc(100vw-2.5rem))] -translate-x-1/2 border-charcoal/10 bg-ivory/98 text-charcoal shadow-2xl backdrop-blur-md"
+                  className="absolute left-1/2 top-[calc(100%+0.5rem)] z-30 w-[min(16rem,100%)] max-w-[16rem] -translate-x-1/2 border-charcoal/10 bg-ivory/98 text-charcoal shadow-2xl backdrop-blur-md"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <div className="absolute -top-3 left-1/2 h-3 w-px -translate-x-1/2 bg-charcoal/25" />

@@ -46,10 +46,10 @@ export function About({ content }: AboutProps = {}) {
     <section
       id="about"
       ref={ref}
-      className="scroll-mt-24 border-t border-charcoal/10 bg-ivory px-5 py-14 text-charcoal md:px-8 md:py-20"
+      className="scroll-mt-24 overflow-x-hidden border-t border-charcoal/10 bg-ivory px-5 py-14 text-charcoal md:px-8 md:py-20"
       aria-labelledby="about-heading"
     >
-      <div className="about-inner mx-auto grid w-full max-w-7xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
+      <div className="about-inner mx-auto grid w-full max-w-7xl items-center gap-10 overflow-x-hidden lg:grid-cols-2 lg:gap-16">
         <div className="about-copy max-w-xl" data-reveal>
           <p className="about-eyebrow mb-4 text-[0.68rem] font-semibold uppercase tracking-[0.28em] text-copper">
             {eyebrow}
@@ -77,7 +77,7 @@ export function About({ content }: AboutProps = {}) {
           </div>
         </div>
 
-        <div className="about-visual w-full max-w-full" data-reveal>
+        <div className="about-visual w-full max-w-full overflow-hidden" data-reveal>
           <AboutOrbit content={orbit} />
           <p className="mt-2 text-center text-xs text-stone">{visualCaption}</p>
         </div>

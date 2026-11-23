@@ -143,8 +143,8 @@ export default function SpatialServiceShowcase({
       />
 
       <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-10 px-1 py-4 md:grid-cols-2 md:gap-12 md:py-6 lg:gap-16">
-        <div className="relative mx-auto flex w-full max-w-[28rem] items-center justify-center md:mx-0">
-          <div className="relative aspect-square w-full max-w-[26rem]">
+        <div className="relative mx-auto flex w-full max-w-[28rem] items-center justify-center overflow-hidden md:mx-0 md:overflow-visible">
+          <div className="relative aspect-square w-full max-w-[26rem] overflow-hidden md:overflow-visible">
             <div
               className="pointer-events-none absolute inset-[-6%] rounded-full border border-charcoal/[0.07]"
               aria-hidden="true"
