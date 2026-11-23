@@ -233,6 +233,26 @@ import {
   burlingtonFencesSeo,
   isBurlingtonFences,
 } from "@/content/fences-burlington";
+import {
+  ferndaleHomeRenovationHero,
+  ferndaleHomeRenovationSeo,
+  isFerndaleHomeRenovation,
+} from "@/content/home-renovation-ferndale";
+import {
+  bellinghamHomeRenovationHero,
+  bellinghamHomeRenovationSeo,
+  isBellinghamHomeRenovation,
+} from "@/content/home-renovation-bellingham";
+import {
+  lyndenHomeRenovationHero,
+  lyndenHomeRenovationSeo,
+  isLyndenHomeRenovation,
+} from "@/content/home-renovation-lynden";
+import {
+  burlingtonHomeRenovationHero,
+  burlingtonHomeRenovationSeo,
+  isBurlingtonHomeRenovation,
+} from "@/content/home-renovation-burlington";
 
 export type ServiceDef = {
   slug: string;
@@ -900,6 +920,38 @@ function getCustomPageCopy(
       supporting: burlingtonFencesHero.supporting,
       title: burlingtonFencesSeo.title,
       description: burlingtonFencesSeo.description,
+    };
+  }
+  if (isFerndaleHomeRenovation(service.slug, area.slug)) {
+    return {
+      headline: ferndaleHomeRenovationHero.headline,
+      supporting: ferndaleHomeRenovationHero.supporting,
+      title: ferndaleHomeRenovationSeo.title,
+      description: ferndaleHomeRenovationSeo.description,
+    };
+  }
+  if (isBellinghamHomeRenovation(service.slug, area.slug)) {
+    return {
+      headline: bellinghamHomeRenovationHero.headline,
+      supporting: bellinghamHomeRenovationHero.supporting,
+      title: bellinghamHomeRenovationSeo.title,
+      description: bellinghamHomeRenovationSeo.description,
+    };
+  }
+  if (isLyndenHomeRenovation(service.slug, area.slug)) {
+    return {
+      headline: lyndenHomeRenovationHero.headline,
+      supporting: lyndenHomeRenovationHero.supporting,
+      title: lyndenHomeRenovationSeo.title,
+      description: lyndenHomeRenovationSeo.description,
+    };
+  }
+  if (isBurlingtonHomeRenovation(service.slug, area.slug)) {
+    return {
+      headline: burlingtonHomeRenovationHero.headline,
+      supporting: burlingtonHomeRenovationHero.supporting,
+      title: burlingtonHomeRenovationSeo.title,
+      description: burlingtonHomeRenovationSeo.description,
     };
   }
   return undefined;

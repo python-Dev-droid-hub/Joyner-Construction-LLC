@@ -191,6 +191,22 @@ import {
   applyBurlingtonFencesContent,
   isBurlingtonFences,
 } from "@/content/fences-burlington";
+import {
+  applyFerndaleHomeRenovationContent,
+  isFerndaleHomeRenovation,
+} from "@/content/home-renovation-ferndale";
+import {
+  applyBellinghamHomeRenovationContent,
+  isBellinghamHomeRenovation,
+} from "@/content/home-renovation-bellingham";
+import {
+  applyLyndenHomeRenovationContent,
+  isLyndenHomeRenovation,
+} from "@/content/home-renovation-lynden";
+import {
+  applyBurlingtonHomeRenovationContent,
+  isBurlingtonHomeRenovation,
+} from "@/content/home-renovation-burlington";
 import { reviewsContent } from "@/content/site";
 
 export type LandingPageContent = {
@@ -889,6 +905,22 @@ export function buildLandingContent(
 
   if (isBurlingtonFences(service.slug, area.slug)) {
     return applyBurlingtonFencesContent(content);
+  }
+
+  if (isFerndaleHomeRenovation(service.slug, area.slug)) {
+    return applyFerndaleHomeRenovationContent(content);
+  }
+
+  if (isBellinghamHomeRenovation(service.slug, area.slug)) {
+    return applyBellinghamHomeRenovationContent(content);
+  }
+
+  if (isLyndenHomeRenovation(service.slug, area.slug)) {
+    return applyLyndenHomeRenovationContent(content);
+  }
+
+  if (isBurlingtonHomeRenovation(service.slug, area.slug)) {
+    return applyBurlingtonHomeRenovationContent(content);
   }
 
   return content;
