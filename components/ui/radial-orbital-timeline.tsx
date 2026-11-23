@@ -232,6 +232,7 @@ export default function RadialOrbitalTimeline({
               sizes="160px"
               quality={92}
               priority
+              unoptimized
               className="object-cover object-center contrast-[1.05] saturate-[1.08]"
             />
           </div>
@@ -291,6 +292,7 @@ export default function RadialOrbitalTimeline({
                     fill
                     sizes="96px"
                     quality={90}
+                    unoptimized
                     className="object-cover object-center contrast-[1.06] saturate-[1.1]"
                   />
                 </span>
